@@ -1,0 +1,13 @@
+ANÁLISE DOS RESULTADOS:
+MOTOR 1 - Não está pegando (pegou bem fraco em 1 teste);
+MOTOR 2 - Pegando;
+MOTOR 3 - Não está pegando;
+MOTOR 4 - Pegando às vezes (mas, quando pega, pega bem mais fraco que os outros);
+MOTOR 5 - Pegando;
+MOTOR 6 - Pegando (um pouco mais devagar que o motor 5);
+MOTOR 7 - Pegando;
+MOTOR 8 - Pegando;
+MOTOR 9 - Pegando (mas mais fraco que os outros dois motores);
+MOTOR 10 - Pegando;
+MOTOR 11 - Pegando;
+MOTOR 12 - Pegando;

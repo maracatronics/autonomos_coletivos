@@ -19,7 +19,7 @@ AcoesTiva::AcoesTiva(uint8_t i, uint8_t dri){
 }
 
 void AcoesTiva::configurarTiva(){
-  Serial2.begin(9600);
+  Serial4.begin(9600);
   pinMode(this->_infrared,INPUT);
   pinMode(this->_drible,OUTPUT);
 }
@@ -40,7 +40,7 @@ void AcoesTiva::enviarComando(char protocolo[]){          // Protocolo = {'M', b
   else                                                    // Caso contrário
     protocolo2[2] = '0';                                  // O último elemento enviado será que o robô não está com a bola
 
-  Serial2.write(protocolo2);
+  Serial4.write(protocolo2);
 }
 
 void AcoesTiva::driblar(char protocolo[]){            // Protocolo = {'M', byteAção+ID, byteVelocMotor1, byteVelocMotor2, byteVelocMotor3, 1}
