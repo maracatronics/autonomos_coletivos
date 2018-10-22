@@ -13,7 +13,7 @@ void setup() {
 void loop() {
   msp.receberComando();
   msp.carregarCapacitor();
-  msp.chutar();*/
+  msp.chutar();
   
   if(millis()-temp>=5){
     Serial.print(msp._mensagemRecebida[0]);
