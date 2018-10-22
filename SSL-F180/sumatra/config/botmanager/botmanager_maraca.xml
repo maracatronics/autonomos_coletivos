@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<botmanager>
+    <updateAll>
+        <useMulticast>false</useMulticast>
+    </updateAll>
+    <grSimNetwork id="0">
+        <ip>127.0.0.1</ip>
+        <port>20011</port>
+        <teamYellow>true</teamYellow>
+    </grSimNetwork>
+    <grSimNetwork id="1">
+        <ip>127.0.0.1</ip>
+        <port>20011</port>
+        <teamYellow>false</teamYellow>
+    </grSimNetwork>
+    <bots>
+        <bot id="0">
+            <name>Chico</name>
+            <type>grSim</type>
+            <color>YELLOW</color>
+            <mcastDelegateKey>0</mcastDelegateKey>
+            <baseStationKey>-1</baseStationKey>
+            <features>
+                <CHIP_KICKER>WORKING</CHIP_KICKER>
+                <STRAIGHT_KICKER>WORKING</STRAIGHT_KICKER>
+                <DRIBBLER>WORKING</DRIBBLER>
+                <MOVE>WORKING</MOVE>
+                <BARRIER>WORKING</BARRIER>
+            </features>
+            <networkState>ONLINE</networkState>
+        </bot>
+        <bot id="1">
+            <name>Joao Grilo</name>
+            <type>grSim</type>
+            <color>YELLOW</color>
+            <mcastDelegateKey>0</mcastDelegateKey>
+            <baseStationKey>-1</baseStationKey>
+            <features>
+                <CHIP_KICKER>WORKING</CHIP_KICKER>
+                <STRAIGHT_KICKER>WORKING</STRAIGHT_KICKER>
+                <DRIBBLER>WORKING</DRIBBLER>
+                <MOVE>WORKING</MOVE>
+                <BARRIER>WORKING</BARRIER>
+            </features>
+            <networkState>OFFLINE</networkState>
+        </bot>
+        <bot id="2">
+            <name>Chico</name>
+            <type>grSim</type>
+            <color>BLUE</color>
+            <mcastDelegateKey>1</mcastDelegateKey>
+            <baseStationKey>-1</baseStationKey>
+            <features>
+                <CHIP_KICKER>WORKING</CHIP_KICKER>
+                <STRAIGHT_KICKER>WORKING</STRAIGHT_KICKER>
+                <DRIBBLER>WORKING</DRIBBLER>
+                <MOVE>WORKING</MOVE>
+                <BARRIER>WORKING</BARRIER>
+            </features>
+            <networkState>ONLINE</networkState>
+        </bot>
+        <bot id="3">
+            <name>Joao Grilo</name>
+            <type>grSim</type>
+            <color>BLUE</color>
+            <mcastDelegateKey>1</mcastDelegateKey>
+            <baseStationKey>-1</baseStationKey>
+            <features>
+                <CHIP_KICKER>WORKING</CHIP_KICKER>
+                <STRAIGHT_KICKER>WORKING</STRAIGHT_KICKER>
+                <DRIBBLER>WORKING</DRIBBLER>
+                <MOVE>WORKING</MOVE>
+                <BARRIER>WORKING</BARRIER>
+            </features>
+            <networkState>ONLINE</networkState>
+        </bot>
+    </bots>
+</botmanager>

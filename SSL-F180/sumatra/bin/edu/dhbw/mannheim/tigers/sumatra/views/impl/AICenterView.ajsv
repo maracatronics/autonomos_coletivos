@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)--><ajsv>
+    <diagram creationDate="2014-Jul-31 12:39" licenseGrade="evaluation" licenseeName="anon" licenseeOrganization="unknown" version="1.7.17.v20140508-2136">
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.AICenterView" project="Sumatra" xLocation="0" yLocation="0"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.ASumatraView" project="Sumatra" xLocation="20" yLocation="20"/>
+    </diagram>
+</ajsv>

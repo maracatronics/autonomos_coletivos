@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)--><ajsv>
+    <diagram creationDate="2014-Jul-31 12:40" licenseGrade="evaluation" licenseeName="anon" licenseeOrganization="unknown" version="1.7.17.v20140508-2136">
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.RcmView" project="Sumatra" xLocation="0" yLocation="0"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.ConfigEditorView" project="Sumatra" xLocation="20" yLocation="20"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.AICenterView" project="Sumatra" xLocation="40" yLocation="40"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.VisualizerView" project="Sumatra" xLocation="60" yLocation="60"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.BotCenterView" project="Sumatra" xLocation="80" yLocation="80"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.TimerView" project="Sumatra" xLocation="100" yLocation="100"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.StatisticsView" project="Sumatra" xLocation="120" yLocation="120"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.WPCenterView" project="Sumatra" xLocation="140" yLocation="140"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.BotOverviewView" project="Sumatra" xLocation="160" yLocation="160"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.RefereeView" project="Sumatra" xLocation="180" yLocation="180"/>
+        <class className="edu.dhbw.mannheim.tigers.sumatra.views.impl.LogView" project="Sumatra" xLocation="200" yLocation="200"/>
+    </diagram>
+</ajsv>

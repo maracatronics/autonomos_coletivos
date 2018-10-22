@@ -1,0 +1,32 @@
+Regras para desenvolvimento de softwares Maraca
+
+-Nome do arquivo principal: 
+
+-Comentario Inicial: 
+			*Nome do Autor;
+			*Data de criacao;
+			*Explicacao Sucinta sobre o que o programa faz.
+
+-Variaveis: 
+			*O nome deve estar relacionado com sua funcao;
+			*Nomes com espacos devem ter underline no lugar do espaco;
+			*Todas as letras minusculas;
+			*Comentario com explicacao sucinta sobre sua funcao;
+			*Evitar ao maximo varaveis globais (so em casos extremos e serio).
+
+-Classes/Estruturas:
+			*O nome deve estar relacionado com sua funcao;
+			*Nomes com espaco devem ter underline no lugar do espaco;
+			*Primeira letra Maiuscula
+			*Comentario com explicacao sucinta sobre sua funcao.
+
+-Funcoes/Metodos:
+			*O nome deve estar relacionado com sua funcao;			
+			*Nomes com espacos devem ter underline no lugar do espaco;
+			*Todas as letras minusculas;
+			*Comentario com explicacao sucinta sobre sua funcao.
+-Defines/Typedef:
+			*O nome deve estar relacionado com sua funcao;			
+			*Nomes com espacos devem ter underline no lugar do espaco;
+			*Todas as letras maiusculas;
+			*Comentario com explicacao sucinta sobre sua funcao.
