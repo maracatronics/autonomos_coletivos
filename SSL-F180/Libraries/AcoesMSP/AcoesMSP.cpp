@@ -10,44 +10,47 @@
 AcoesMSP::AcoesMSP(){               
   this->_chutePWM = chute_PWM;               
   this->_disparo = disparo;                 
-  this->_adcChute = adc_chute;               
+  this->_adcChute = adc_chute;             
   this->_capacitorCarregado = false;         
 }
 
-AcoesMSP::AcoesMSP(uint8_t c, uint8_t dis, uint8_t adcC){
+AcoesMSP::AcoesMSP(uint8_t c, uint8_t dis, uint8_t adcChut){
   this->_chutePWM = c;
   this->_disparo = dis;
-  this->_adcChute = adcC;
+  this->_adcChute = adcChut;
   this->_capacitorCarregado = false;
 }
 
 // Métodos
 void AcoesMSP::configurarMSP(){
-  Serial.begin(9600);
-  analogFrequency(3000);                                    // Define a frequência do analogWrite como 3000
-
   pinMode(this->_chutePWM,OUTPUT);                          
   pinMode(this->_disparo,OUTPUT);
   pinMode(this->_adcChute,INPUT);
-  
-  digitalWrite(this->_disparo,LOW);
+  pinMode(P1_6, OUTPUT);                                    // Pino LED indicador da MSP ligada ou não
+    
+  digitalWrite(this->_disparo,HIGH);
+  digitalWrite(this->_chutePWM, LOW);                      // Impedir a corrente no transistor -novo
+  digitalWrite(P1_6, LOW);
+
+  Serial.begin(9600);
+  analogFrequency(3000);                                    // Define a frequência do analogWrite como 3000
 }
 
 void AcoesMSP::carregarCapacitor(){               
   int valor_capacitor, tensao_capacitor;
-  double carga_capacitor;
-  valor_capacitor = analogRead(this->_adcChute);            // Valor atual da capacitância
-  carga_capacitor = (DEN_CHUTE * valor_capacitor);          // Valor atual da carga do capacitor
+  valor_capacitor = analogRead(this->_adcChute);            // Valor atual da tensão no capacitor em unidades do ADC
+  this->_carga_capacitor = (DEN_CHUTE * valor_capacitor);   // Valor atual da carga do capacitor em volts
   if(this->_mensagemRecebida[1] == 'C')
     tensao_capacitor = 180;                                 // Valor pretendido para a carga do capacitor (CHUTE)
   else
     tensao_capacitor = 100;                                 // Valor pretendido para a carga do capacitor (DEFAULT)
-  if(carga_capacitor < tensao_capacitor){
+  if(this->_carga_capacitor < tensao_capacitor){
     analogWrite(this->_chutePWM, DUTY);                     // similar ao PWMWrite(pin, resolution, duty, frequency) -> frequency definida no configurarMSP
     this->_capacitorCarregado = false;
   }
   else
     this->_capacitorCarregado = true;                       // Capacitor já está carregado
+    digitalWrite(this->_chutePWM, LOW);                    // Entrada do transistor é barrada  -novo
 }
 
 void AcoesMSP::receberComando(){
@@ -73,10 +76,18 @@ void AcoesMSP::receberComando(){
 
 void AcoesMSP::chutar(){
   if(this->_capacitorCarregado && this->_mensagemRecebida[2] == '1' && this->_mensagemRecebida[1] != 'N'){  // Se o comando for chute ou passe 
-    digitalWrite(this->_disparo,HIGH);            // Realiza o disparo
+    digitalWrite(this->_disparo,LOW);            // Realiza o disparo
     this->_capacitorCarregado = false;            // Capacitor ficou descarregado
   }
   else{                                           // Caso contrário, realiza tudo o oposto
-    digitalWrite(this->_disparo,LOW);
+    digitalWrite(this->_disparo,HIGH); 
   }
+}
+
+void AcoesMSP::enviarInfo(){
+  int valor_capacitor = (int)(this->_carga_capacitor);
+  char mensagem_enviar[2];
+  mensagem_enviar[0]='M';
+  mensagem_enviar[1]=(char) (valor_capacitor);
+  Serial.write(mensagem_enviar);
 }

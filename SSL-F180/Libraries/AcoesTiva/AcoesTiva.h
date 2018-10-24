@@ -3,29 +3,39 @@
 
 #include "Arduino.h"
 
-#define MSG_SIZE 3
-#define DRIBLE_BIT 0x10                // Valor, em hexa, do bit de drible
-#define CHUTE_BIT 0x40                 // Valor, em hexa, do bit de chute
-#define PASSE_BIT 0x20                 // Valor, em hexa, do bit de passe
+#define MSG_SIZE 3                                      // Tamanho da mensagem enviada da MSP
+#define MSG_SIZE2 2                                     // Tamanho da mensagem recebida da MSP
+#define DRIBLE_BIT 0x10                                 // Valor, em hexa, do bit de drible
+#define CHUTE_BIT 0x40                                  // Valor, em hexa, do bit de chute
+#define PASSE_BIT 0x20                                  // Valor, em hexa, do bit de passe
+#define DEN_BATERIA 0.00349206446208139819721378494034  //Define-se o inverso do denominador da regra de 3 do chute para evitar divisões no código visto que divisões em MCUS são lentas => den_chute=(200*3.3)/(4095*div tensao)
 
 
 const uint8_t infrared = PE_4;         // Leitura do led infravermelho - verificar posse de bola
-const uint8_t drible = PE_5;           // Controle do drible
+const uint8_t drible = PE_5;           // Controle do drible  
+const uint8_t resetMSP = PA_5;         // Pino de reset da MSP
+const uint8_t adcBateria = PB_1;        // Canal A0 do ADC
 
 class AcoesTiva{
 public:
   // Construtores
-  AcoesTiva();                       // Inicialização dos atributos com os valores default
-  AcoesTiva(uint8_t, uint8_t);       // Inicialização dos pinos do infrared e do controle do drible manualmente
+  AcoesTiva();                                // Inicialização dos atributos com os valores default
+  AcoesTiva(uint8_t, uint8_t, uint8_t, uint8_t);       // Inicialização dos pinos do infrared e do controle do drible manualmente
 
   // Métodos
   boolean possedeBola();			       // Verifica se o robô está ou não com a posse de bola
   void enviarComando(char []);		   // Envia o comando de chutar, passar ou nada para a MSP
   void configurarTiva();			       // Realiza a inicialização dos pinos como entrada ou saída e da serial 
   void driblar(char []);			       // Comando para o drible
+  void nivelBat();
+  void horus(char sendFrame[], char id);
+  void receberComando();
+
+  char _carga_bateria;
+  char _carga_capacitor;
 
 private:
   // Atributos
-  uint8_t _infrared, _drible;		     // Pinos do LED infravermelho e do controle do drible
+  uint8_t _infrared, _drible, _resetMSP, _adcBateria;		     // Pinos do LED infravermelho e do controle do drible
 };
 #endif

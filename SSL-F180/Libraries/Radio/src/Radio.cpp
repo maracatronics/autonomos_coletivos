@@ -26,20 +26,21 @@ void Radio::setup(){
   	SPI.setDataMode(SPI_MODE0);
   	SPI.setBitOrder(MSBFIRST);
   	SPI.setModule(this->_spi_module);
-
+	
   	//Setup radio
   	Enrf24 radio(radio_pins[this->_radio_module][0], radio_pins[this->_radio_module][1], radio_pins[this->_radio_module][2]);
   	this->_radio = radio;
   	this->_radio.begin();
-
+	
 	//Setup modo de execução: RX/TX
   	this->_radio.setChannel(this->_canal);
     if(this->_modo == "TX") this->_radio.setTXaddress((void*)txaddr);
     else if(this->_modo=="RX"){
      	this->_radio.setRXaddress((void*)rxaddr);
+		this->_radio.setTXaddress((void*)txaddrhorus);
       	this->_radio.enableRX();
     }
-
+	
 	//Setup state led pins
     pinMode(led_pins[this->_radio_module][0], OUTPUT);
     pinMode(led_pins[this->_radio_module][1], OUTPUT);
