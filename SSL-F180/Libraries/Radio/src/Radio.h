@@ -33,6 +33,8 @@ public:
 	void send(boolean, char []);
 	void setup();
 	boolean receive(char [MSG_SIZE]);
+	void sendHorus(char []);
+	void setCanal(int);
 	boolean _led_state;
 
 private:

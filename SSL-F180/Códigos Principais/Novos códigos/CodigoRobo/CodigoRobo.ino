@@ -1,6 +1,8 @@
 #include <Radio.h>
-#include <Motor.h>
+//#include "wiring_analog.c"    // Necessário para o PWMWrite
 #include <AcoesTiva.h>
+#include <Motor.h>
+
 
 //PC_4 RX
 //PC_5 TX
@@ -30,7 +32,7 @@ void loop() {
   char sendFrame[7];
   static unsigned int tempo = millis();
   
-  tiva.receberComando();
+  //tiva.receberComando();
   if(radio.receive(msg)){
     if((msg[0] == 'M') && (msg[1] & ID)){
       for(int j = 0; j < 3; j++)
@@ -40,13 +42,12 @@ void loop() {
       tiva.enviarComando(msg);
       tempo = millis();
     }
-    if(msg[1] & 0x80){
+   
+    /*if(msg[1] & 0x80){
       //Fazer esperar
       tiva.horus(sendFrame, msg[1]);
-      radio.disableRX();
-      radio.send(true, sendFrame);
-      radio.enableRX();
-    }
+      radio.sendHorus(sendFrame);
+    }*/
   }
   else{
     if(millis() - tempo >= 500)

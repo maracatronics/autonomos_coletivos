@@ -37,7 +37,6 @@ void Radio::setup(){
     if(this->_modo == "TX") this->_radio.setTXaddress((void*)txaddr);
     else if(this->_modo=="RX"){
      	this->_radio.setRXaddress((void*)rxaddr);
-		this->_radio.setTXaddress((void*)txaddrhorus);
       	this->_radio.enableRX();
     }
 	
@@ -45,6 +44,11 @@ void Radio::setup(){
     pinMode(led_pins[this->_radio_module][0], OUTPUT);
     pinMode(led_pins[this->_radio_module][1], OUTPUT);
     pinMode(led_pins[this->_radio_module][2], OUTPUT);
+}
+
+void Radio::setCanal(int canal){
+	this->_canal = canal;
+	this->_radio.setChannel(this->_canal);
 }
 
 //Enviar mensagem
@@ -146,4 +150,12 @@ boolean Radio::receive(char msg[MSG_SIZE]){
 	}
 
 	return false;
+}
+
+void Radio::sendHorus(char sendFrame[]){
+	this->_radio.setTXaddress((void*)txaddrhorus);
+	this->_radio.disableRX();
+    this->send(true, sendFrame);
+    this->_radio.setRXaddress((void*)rxaddr);
+	this->_radio.enableRX();
 }
