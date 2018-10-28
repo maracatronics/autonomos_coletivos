@@ -13,7 +13,8 @@ AcoesMSP::AcoesMSP(){
   this->_disparo = disparo;                 
   this->_adcChute = adc_chute;             
   this->_capacitorCarregado = false; 
-  this->_estaChutando = false;        
+  this->_estaChutando = false;   
+  this->_descarregouCap = true;
 }
 
 AcoesMSP::AcoesMSP(uint8_t c, uint8_t dis, uint8_t adcChut){
@@ -21,6 +22,8 @@ AcoesMSP::AcoesMSP(uint8_t c, uint8_t dis, uint8_t adcChut){
   this->_disparo = dis;
   this->_adcChute = adcChut;
   this->_capacitorCarregado = false;
+  this->_estaChutando = false;   
+  this->_descarregouCap = true;
 }
 
 // Métodos
@@ -36,7 +39,6 @@ void AcoesMSP::configurarMSP(){
 
   Serial.begin(9600);
   analogFrequency(3000);                                   // Define a frequência do analogWrite como 3000
-  //analogResolution(255);                                    
 }
 
 void AcoesMSP::carregarCapacitor(){ 
@@ -45,13 +47,14 @@ void AcoesMSP::carregarCapacitor(){
   valor_capacitor = analogRead(this->_adcChute);            // Valor atual da tensão no capacitor em unidades do ADC
   this->_carga_capacitor = (DEN_CHUTE * valor_capacitor);   // Valor atual da carga do capacitor em volts
   if(this->_mensagemRecebida[1] == 'C')
-    tensao_capacitor = 130;                                 // Valor pretendido para a carga do capacitor (CHUTE)
+    tensao_capacitor = 100;                                 // Valor pretendido para a carga do capacitor (CHUTE)
   else
-    tensao_capacitor = 130;                                 // Valor pretendido para a carga do capacitor (DEFAULT)
+    tensao_capacitor = 100;                                 // Valor pretendido para a carga do capacitor (DEFAULT)
   if(!this->_estaChutando && this->_mensagemRecebida[1] != 'S'){
     if(this->_carga_capacitor < tensao_capacitor){
       if(millis() - tempoDelay >= 10){
         analogWrite(this->_chutePWM, DUTY);                   // similar ao PWMWrite(pin, resolution, duty, frequency) -> frequency definida no configurarMSP
+        this->_descarregouCap = false;
         tempoDelay = millis();
       }
       this->_capacitorCarregado = false;
@@ -88,9 +91,10 @@ void AcoesMSP::receberComando(){
 
 void AcoesMSP::chutar(){
   static unsigned long tempoDelay = millis();
-  if((this->_capacitorCarregado && this->_mensagemRecebida[2] == '1' && this->_mensagemRecebida[1] != 'N') || this->_mensagemRecebida[1] == 'S'){  // Se o comando for chute ou passe 
+  if((this->_capacitorCarregado && this->_mensagemRecebida[2] == '1' && this->_mensagemRecebida[1] != 'N') || (this->_mensagemRecebida[1] == 'S' && !this->_descarregouCap)){  // Se o comando for chute ou passe 
     digitalWrite(this->_disparo, HIGH);           // Realiza o disparo
     this->_capacitorCarregado = false;            // Capacitor ficou descarregado
+    this->_descarregouCap = true;
     tempoDelay = millis();
   }
   else{                                           // Caso contrário, realiza tudo o oposto 

@@ -16,7 +16,7 @@ void loop() {
   msp.receberComando(); 
   msp.carregarCapacitor();
   msp.chutar();
- // msp.enviarInfo();
+  //msp.enviarInfo();
         
 }
 

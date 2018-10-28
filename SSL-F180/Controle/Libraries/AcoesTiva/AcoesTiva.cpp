@@ -51,9 +51,10 @@ void AcoesTiva::enviarComando(char protocolo[], boolean radioParou){          //
       protocolo2[2] = '0';                                  // O último elemento enviado será que o robô não está com a bola
 
   }
-  else
+  else{
     protocolo2[1] = 'S';
     protocolo2[2] = '1';
+  }
   
   Serial4.write(protocolo2);
 }

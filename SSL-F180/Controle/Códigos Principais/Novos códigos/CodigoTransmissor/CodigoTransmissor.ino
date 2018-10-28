@@ -24,8 +24,8 @@ void loop(){
       tempo = millis();
     else
       msg[1] &= 0x7F;
-      
-    radio.send(true, msg);      
+    if(msg[0] == 'M')
+      radio.send(true, msg);      
   }
 
   else{

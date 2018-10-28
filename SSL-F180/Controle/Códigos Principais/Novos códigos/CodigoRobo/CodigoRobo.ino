@@ -34,17 +34,12 @@ void loop() {
   static unsigned int tempoRadioParado = millis(), tempoHorus;
   static boolean flagHorus = false;
   
-  //tiva.receberComando();
+  tiva.receberComando();
   if(radio.receive(msg, 6)){
     if((msg[0] == 'M') && (msg[1] & ID)){
       for(int j = 0; j < 3; j++)
         robo[j]->andar(msg);
-      for(int k = 2; k < 5; k++){
-        Serial.print((int)msg[k]);
-        Serial.print(" ");
-      }
-      Serial.println();
-  
+   
       tiva.driblar(msg);
       tiva.enviarComando(msg, false);
       tempoRadioParado = millis();

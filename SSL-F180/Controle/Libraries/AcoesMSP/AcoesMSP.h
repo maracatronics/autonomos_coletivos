@@ -12,7 +12,7 @@
 #define CHUTAR 67                                          // Valor, inteiro, do bit de chutar
 #define PASSAR 80                                          // Valor, inteiro, do bit de passe
 #define DUTY (int)(256 * 0.75)                             // 75% do máximo
-#define DEN_CHUTE 0.23                                     // Define-se o inverso do denominador da regra de 3 do chute para evitar divisões no código visto que divisões em MCUS são lentas => den_chute=tensão maxima/resolução ADC
+#define DEN_CHUTE 0.25                                     // Define-se o inverso do denominador da regra de 3 do chute para evitar divisões no código visto que divisões em MCUS são lentas => den_chute=tensão maxima/resolução ADC
 #define DEN_BATERIA 0.00349206446208139819721378494034     // Mesmo motivo do chute                     
 
 
@@ -38,7 +38,7 @@ public:
 public:
   // Atributos 
   char _mensagemRecebida[3];                  // Protocolo de comunicação recebido da TIVA (byte de start, ação, posse de bola)
-  boolean _capacitorCarregado, _estaChutando;                // Verifica se o capacitor está ou não carregado
+  boolean _capacitorCarregado, _estaChutando, _descarregouCap;                // Verifica se o capacitor está ou não carregado
   uint8_t _chutePWM, _disparo, _adcChute;     // Pinos de controle para o chute/passe
   double _carga_capacitor;                    // Carga do capacitor
 
