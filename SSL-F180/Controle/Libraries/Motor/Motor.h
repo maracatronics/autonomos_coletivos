@@ -14,6 +14,12 @@ const uint8_t motores_pins[3][3] = {
   {PB_2, PE_0, PF_0}      						// Sensor Hall Motor 1,2 e 3 respectivamente
 };
 
+// Pinos Tacômetro
+//const uint8_t tacometro1 PE_3 // Motor 1
+//const uint8_t tacometro2 PE_2 // Motor 2
+//const uint8_t tacometro3 PB_4 // Motor 3
+
+
 class Motor
 {
 	public:

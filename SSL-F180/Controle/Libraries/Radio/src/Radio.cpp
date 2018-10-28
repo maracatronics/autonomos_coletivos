@@ -46,11 +46,6 @@ void Radio::setup(){
     pinMode(led_pins[this->_radio_module][2], OUTPUT);
 }
 
-void Radio::setCanal(int canal){
-	this->_canal = canal;
-	this->_radio.setChannel(this->_canal);
-}
-
 //Enviar mensagem
 void Radio::send(boolean msg_received, char msg[]){
 
@@ -92,7 +87,7 @@ void Radio::send(boolean msg_received, char msg[]){
 }
 
 //Receber mensagem
-boolean Radio::receive(char msg[MSG_SIZE]){
+boolean Radio::receive(char msg[], int tamProtocolo){
 
 	//Se o rádio está presente
 	if(!this->_radio.radioState() == ENRF24_STATE_NOTPRESENT){
@@ -101,7 +96,7 @@ boolean Radio::receive(char msg[MSG_SIZE]){
 		if(this->_radio.available(true)){
 
 			//Armazena a mensagem no vetor msg
-			if(this->_radio.read(msg, MSG_SIZE)){
+			if(this->_radio.read(msg, tamProtocolo)){
 
 				//Se o armazenamento foi correto
 
@@ -119,7 +114,7 @@ boolean Radio::receive(char msg[MSG_SIZE]){
 		}
 		
 		//Se passou 500 milisegundos sem receber mensagem
-		if(millis()-this->_fail_safe > 500){
+		if(millis() - this->_fail_safe > 500){
 
 			//Feedback com leds
 			digitalWrite(led_pins[this->_radio_module][0], LOW);
@@ -128,7 +123,7 @@ boolean Radio::receive(char msg[MSG_SIZE]){
 		}
 
 		//Se passou 1 segundo sem receber mensagem
-		if(millis()-this->_fail_safe > 1000){
+		if(millis() - this->_fail_safe > 1000){
 
 			//Erro
 
@@ -153,9 +148,11 @@ boolean Radio::receive(char msg[MSG_SIZE]){
 }
 
 void Radio::sendHorus(char sendFrame[]){
-	this->_radio.setTXaddress((void*)txaddrhorus);
+	this->_radio.setChannel(CANALHORUS);
+	this->_radio.setTXaddress((void*)txaddr);
 	this->_radio.disableRX();
     this->send(true, sendFrame);
+	this->_radio.setChannel(this->_canal);
     this->_radio.setRXaddress((void*)rxaddr);
 	this->_radio.enableRX();
 }

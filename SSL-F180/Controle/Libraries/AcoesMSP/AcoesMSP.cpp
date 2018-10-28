@@ -45,10 +45,10 @@ void AcoesMSP::carregarCapacitor(){
   valor_capacitor = analogRead(this->_adcChute);            // Valor atual da tensão no capacitor em unidades do ADC
   this->_carga_capacitor = (DEN_CHUTE * valor_capacitor);   // Valor atual da carga do capacitor em volts
   if(this->_mensagemRecebida[1] == 'C')
-    tensao_capacitor = 180;                                 // Valor pretendido para a carga do capacitor (CHUTE)
+    tensao_capacitor = 130;                                 // Valor pretendido para a carga do capacitor (CHUTE)
   else
-    tensao_capacitor = 100;                                 // Valor pretendido para a carga do capacitor (DEFAULT)
-  if(!this->_estaChutando){
+    tensao_capacitor = 130;                                 // Valor pretendido para a carga do capacitor (DEFAULT)
+  if(!this->_estaChutando && this->_mensagemRecebida[1] != 'S'){
     if(this->_carga_capacitor < tensao_capacitor){
       if(millis() - tempoDelay >= 10){
         analogWrite(this->_chutePWM, DUTY);                   // similar ao PWMWrite(pin, resolution, duty, frequency) -> frequency definida no configurarMSP
@@ -76,7 +76,7 @@ void AcoesMSP::receberComando(){
        for(int n = 0; n < MSG_SIZE; n++){       
            aux[n] = Serial.read();                                                // Lê o conteúdo da serial até o tamanho da mensagem esperada
        }
-       if(aux[0] == 'M' && (aux[1] == 'C' || aux[1] == 'P' || aux[1] == 'N') && (aux[2] == '1' || aux[2] == '0')){
+       if(aux[0] == 'M' && (aux[1] == 'C' || aux[1] == 'P' || aux[1] == 'N' || aux[1] == 'S') && (aux[2] == '1' || aux[2] == '0')){
         this->_mensagemRecebida[0] = aux[0];
         this->_mensagemRecebida[1] = aux[1];
         this->_mensagemRecebida[2] = aux[2];
@@ -88,8 +88,8 @@ void AcoesMSP::receberComando(){
 
 void AcoesMSP::chutar(){
   static unsigned long tempoDelay = millis();
-  if(this->_capacitorCarregado && this->_mensagemRecebida[2] == '1' && this->_mensagemRecebida[1] != 'N'){  // Se o comando for chute ou passe 
-    digitalWrite(this->_disparo, HIGH);            // Realiza o disparo
+  if((this->_capacitorCarregado && this->_mensagemRecebida[2] == '1' && this->_mensagemRecebida[1] != 'N') || this->_mensagemRecebida[1] == 'S'){  // Se o comando for chute ou passe 
+    digitalWrite(this->_disparo, HIGH);           // Realiza o disparo
     this->_capacitorCarregado = false;            // Capacitor ficou descarregado
     tempoDelay = millis();
   }

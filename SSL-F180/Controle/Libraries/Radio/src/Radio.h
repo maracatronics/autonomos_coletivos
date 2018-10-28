@@ -5,6 +5,7 @@
 #include <SPI.h>
 
 #define MSG_SIZE 6
+#define CANALHORUS 2
 
 //Testando
 const uint8_t radio_pins[5][3] = {
@@ -12,7 +13,7 @@ const uint8_t radio_pins[5][3] = {
 	{PF_3, PC_6, PC_7},
 	{PB_5, PC_4, PC_5},
 	{PD_1, PB_2, PC_5},
-	{PE_2, PE_1, PF_4}		//Modulo da placa de comunicação nova
+	{PE_2, PE_1, PF_4}		//Modulo da placa de comunicação nova (CS/CE (PD_1), CSN, IRQ) 
 };
 const uint8_t led_pins[5][3] = {
 	// R           G            B
@@ -23,7 +24,7 @@ const uint8_t led_pins[5][3] = {
 	{RED_LED,   GREEN_LED,   BLUE_LED}
 };
 const uint8_t txaddr[5] = {0x11, 0x22, 0x33, 0x44, 0x55};
-const uint8_t txaddrhorus[5] = {0xAA, 0xBB, 0xCC, 0xDD, 0xEE};
+//const uint8_t txaddrhorus[5] = {0xAA, 0xBB, 0xCC, 0xDD, 0xEE};
 const uint8_t rxaddr[5] = {0x11, 0x22, 0x33, 0x44, 0x55};
 
 class Radio{
@@ -32,9 +33,8 @@ public:
 	Radio(int, String);
 	void send(boolean, char []);
 	void setup();
-	boolean receive(char [MSG_SIZE]);
+	boolean receive(char [], int);
 	void sendHorus(char []);
-	void setCanal(int);
 	boolean _led_state;
 
 private:

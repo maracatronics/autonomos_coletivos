@@ -11,10 +11,7 @@ AcoesTiva::AcoesTiva(){
   this->_infrared = infrared;            
   this->_drible = drible;  
   this->_resetMSP = resetMSP;
-  this->_adcBateria = adcBateria;
-  //this->_adcChute = adc_chute;
-  //this->_chutePWM = chute_PWM;
-  //this->_disparo = disparo;                
+  this->_adcBateria = adcBateria;              
 }
 
 // Construtores para a Tiva
@@ -28,35 +25,36 @@ AcoesTiva::AcoesTiva(uint8_t i, uint8_t dri, uint8_t reset, uint8_t adcBat){
 void AcoesTiva::configurarTiva(){
   pinMode(this->_resetMSP, OUTPUT);
   digitalWrite(this->_resetMSP, HIGH);                   // Reset na MSP quando for 0
+
   Serial.begin(9600);
   Serial4.begin(9600);
-  //pinMode(this->_chutePWM, OUTPUT);
+
   pinMode(this->_infrared,INPUT);
   pinMode(this->_drible,OUTPUT);
   pinMode(this->_adcBateria, INPUT);
-  //pinMode(this->_adcChute, INPUT);
-  //pinMode(this->_disparo, OUTPUT);
-
-  //digitalWrite(this->_disparo,HIGH);
-  //digitalWrite(this->_chutePWM, LOW);                      // Impedir a corrente no transistor - novo
 }
 
-void AcoesTiva::enviarComando(char protocolo[]){          // Protocolo = {'M', byteAção+ID, byteVelocMotor1, byteVelocMotor2, byteVelocMotor3, 1}
+void AcoesTiva::enviarComando(char protocolo[], boolean radioParou){          // Protocolo = {'M', byteAção+ID, byteVelocMotor1, byteVelocMotor2, byteVelocMotor3, 1}
   char protocolo2[MSG_SIZE];                              // Cria um vetor de tam 3 para ser enviado para MSP
   protocolo2[0] = protocolo[0];                           // O primeiro elemento enviado será o byte de start do protocolo de comunicação ('M')
+  if(!radioParou){
+    if(protocolo[1] & CHUTE_BIT)                            // Verifica se é para chutar - AND bit a bit entre o byte de ações+id do protocolo recebido e o bit do chute
+      protocolo2[1] = 'C';                                  // O segundo elemento enviado será que é para chutar
+    else if(protocolo[1] & PASSE_BIT)                       // Verifica se é para passar - AND bit a bit entre o byte de ações+id do protocolo recebido e o bit do passe
+      protocolo2[1] = 'P';                                  // O segundo elemento enviado será que é para passar
+    else                                                    // Caso nenhum dos casos dê certo, não é para ele fazer nada
+      protocolo2[1] = 'N';                                  // O segundo elemento enviado será que é para fazer nada
 
-  if(protocolo[1] & CHUTE_BIT)                            // Verifica se é para chutar - AND bit a bit entre o byte de ações+id do protocolo recebido e o bit do chute
-    protocolo2[1] = 'C';                                  // O segundo elemento enviado será que é para chutar
-  else if(protocolo[1] & PASSE_BIT)                       // Verifica se é para passar - AND bit a bit entre o byte de ações+id do protocolo recebido e o bit do passe
-    protocolo2[1] = 'P';                                  // O segundo elemento enviado será que é para passar
-  else                                                    // Caso nenhum dos casos dê certo, não é para ele fazer nada
-    protocolo2[1] = 'N';                                  // O segundo elemento enviado será que é para fazer nada
+    if(this->possedeBola())                                 // Verifica se o robô está com posse de bola
+      protocolo2[2] = '1';                                  // O último elemento enviado será que o robô está com a bola
+    else                                                    // Caso contrário
+      protocolo2[2] = '0';                                  // O último elemento enviado será que o robô não está com a bola
 
-  if(this->possedeBola())                                 // Verifica se o robô está com posse de bola
-    protocolo2[2] = '1';                                  // O último elemento enviado será que o robô está com a bola
-  else                                                    // Caso contrário
-    protocolo2[2] = '0';                                  // O último elemento enviado será que o robô não está com a bola
-
+  }
+  else
+    protocolo2[1] = 'S';
+    protocolo2[2] = '1';
+  
   Serial4.write(protocolo2);
 }
 
@@ -127,32 +125,3 @@ void AcoesTiva::receberComando(){
     }
   }
 }
-
-/*
-void AcoesTiva::carregarCapacitor(char acao){               
-  int valor_capacitor, tensao_capacitor;
-  valor_capacitor = analogRead(this->_adcChute);            // Valor atual da tensão no capacitor em unidades do ADC
-  this->_carga_capacitor = (DEN_CHUTE * valor_capacitor);   // Valor atual da carga do capacitor em volts
-  if(acao & CHUTE_BIT)
-    tensao_capacitor = 180;                                 // Valor pretendido para a carga do capacitor (CHUTE)
-  else
-    tensao_capacitor = 100;                                 // Valor pretendido para a carga do capacitor (DEFAULT)
-  if(this->_carga_capacitor < tensao_capacitor){
-    PWMWrite(this->_chutePWM, 255, DUTY, 3000);             // PWMWrite(pin, resolution, duty, frequency);
-    this->_capacitorCarregado = false;
-  }
-  else
-    this->_capacitorCarregado = true;                       // Capacitor já está carregado
-    digitalWrite(this->_chutePWM, LOW);                    // Entrada do transistor é barrada  -novo
-}
-
-void AcoesTiva::chutar(char acao){
-  if(this->_capacitorCarregado && this->possedeBola() && (acao & CHUTE_BIT) && (acao & PASSE_BIT)){  // Se o comando for chute ou passe 
-    digitalWrite(this->_disparo, LOW);            // Realiza o disparo
-    this->_capacitorCarregado = false;            // Capacitor ficou descarregado
-  }
-  else{                                           // Caso contrário, realiza tudo o oposto
-    digitalWrite(this->_disparo, HIGH); 
-  }
-}
-*/
