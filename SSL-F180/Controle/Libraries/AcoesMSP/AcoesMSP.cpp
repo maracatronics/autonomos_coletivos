@@ -35,6 +35,7 @@ void AcoesMSP::configurarMSP(){
     
   digitalWrite(this->_disparo, LOW);
   digitalWrite(this->_chutePWM, LOW);                      // Impedir a corrente no transistor -novo
+  delay(500);
   digitalWrite(P1_6, HIGH);
 
   Serial.begin(9600);
@@ -83,8 +84,7 @@ void AcoesMSP::receberComando(){
         this->_mensagemRecebida[0] = aux[0];
         this->_mensagemRecebida[1] = aux[1];
         this->_mensagemRecebida[2] = aux[2];
-       }
-       
+       }       
     }
   }
 }

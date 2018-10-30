@@ -104,8 +104,8 @@ void AcoesTiva::receberComando(){
        if (aux[0] == 'M'){
          this->_carga_capacitor = aux[1];
          tempo = millis();
-         Serial.println(aux[0]);
-         Serial.println(aux[1]);
+         //Serial.println(aux[0]);
+         Serial.println(this->_carga_capacitor);
        }
     }
   }
@@ -121,8 +121,8 @@ void AcoesTiva::receberComando(){
         digitalWrite(this->_resetMSP, HIGH);
         resetou = true;
         mspAlive = false;
+        tempo = millis();
       }
-      tempo = millis();
     }
   }
 }

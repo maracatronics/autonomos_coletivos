@@ -36,6 +36,6 @@ private:
   uint8_t _chutePWM, _disparo, _adcChute;                    // Pinos de controle para o chute/passe
   boolean _capacitorCarregado;                               // Verifica se o capacitor está ou não carregado
   char _carga_bateria;
-  char _carga_capacitor;
+  int _carga_capacitor;
 };
 #endif

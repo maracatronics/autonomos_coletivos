@@ -13,7 +13,7 @@
 #define PASSAR 80                                          // Valor, inteiro, do bit de passe
 #define DUTY (int)(256 * 0.75)                             // 75% do máximo
 #define DEN_CHUTE 0.25                                     // Define-se o inverso do denominador da regra de 3 do chute para evitar divisões no código visto que divisões em MCUS são lentas => den_chute=tensão maxima/resolução ADC
-#define DEN_BATERIA 0.00349206446208139819721378494034     // Mesmo motivo do chute                     
+#define DEN_BATERIA 0.00349206446208139819721378494034     // Mesmo motivo do chute        
 
 
 const uint8_t chute_PWM = P2_1;        // PWM do chute 
