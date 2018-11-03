@@ -35,7 +35,7 @@ class Motor
 	  	void andarPID(double);					// Recebe um setpoint e realiza a ação de andar com o controle PID da velocidade dos motores
 	  	double PWMtoSpeed(byte);				// Recebe o valor de pwm pretendido e transforma num setpoint da velocidade do Motor
 
-	private:
+	public:
 	  	// Atributos
 	  	int _id;									// id = 1, 2 ou 3 (o id da Motor deve ser igual ao da roda que ele está acoplado) 
 	  	double _kp, _ki, _kd;						// kp = constante proporcional; ki = constante integrativa; kd = constante derivativa (constantes do PID)

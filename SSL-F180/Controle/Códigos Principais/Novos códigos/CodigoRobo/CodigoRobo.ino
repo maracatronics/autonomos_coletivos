@@ -15,7 +15,7 @@ AcoesTiva tiva;
 
 
 void setup() {  
-  //Serial.begin(9600);
+  Serial.begin(9600);
   for(int i = 0; i < 3; i++){
     robo[i] = new Motor(i+1);
     robo[i]->configurar();
@@ -30,31 +30,32 @@ void setup() {
 
 void loop() {
   char msg[6];
-  char sendFrame[7];
+  char sendFrame[6];
   static unsigned int tempoRadioParado = millis(), tempoHorus;
   static boolean flagHorus = false;
   
-  tiva.receberComando();
+  //tiva.receberComando();
   if(radio.receive(msg, 6)){
-    if((msg[0] == 'M') && (msg[1] & ID)){
+    if((msg[0] == 'M') && ((msg[1] & 0x07) == ID)){
       for(int j = 0; j < 3; j++)
         robo[j]->andar(msg);
-   
+    
       tiva.driblar(msg);
       tiva.enviarComando(msg, false);
       tempoRadioParado = millis();
+   
+      // Horus
+      if(msg[1] & 0x80 && !flagHorus){
+        tempoHorus = millis();
+        flagHorus = true;
+      }
+      if(flagHorus && millis() - tempoHorus >= ID * 100){
+        tiva.horus(sendFrame, msg[1]);
+        radio.sendHorus(sendFrame);
+        flagHorus = false;
+      }
     }
-   /*   // Horus
-    if(msg[1] & 0x80 && !flagHorus){
-      tempoHorus = millis();
-      flagHorus = true;
-    }
-    if(flagHorus && millis() - tempoHorus >= ID * 100){
-      tiva.horus(sendFrame, msg[1]);
-      radio.sendHorus(sendFrame);
-      flagHorus = false;
-    }
-    */
+    
   }
   else{
     if(millis() - tempoRadioParado >= 500)

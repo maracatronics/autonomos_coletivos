@@ -8,15 +8,17 @@ AcoesMSP msp;
 //P1_1 -> RX
 //P1_2 -> TX
 
+
 void setup() {
   msp.configurarMSP();
+  
 }
 
 void loop() {
   msp.receberComando(); 
   msp.carregarCapacitor();
   msp.chutar();
-  //msp.enviarInfo();
+  msp.enviarInfo();
         
 }
 

@@ -4,7 +4,7 @@
  * por Natália Souza Soares e Victor Lyra - <maracatronics@gmail.com> 
 **********************************************************************************************************************************/
 #include "Motor.h"
-#include "wiring_analog.c"    // Necessário para o PWMWrite
+//#include "wiring_analog.c"    // Necessário para o PWMWrite
 
 // Construtores 
 Motor::Motor(int id){ // Básico
@@ -76,7 +76,7 @@ void Motor::andar(char protocolo[]){                              // Protocolo =
     this->_output = (protocolo[(this->_id) + 1] & ANTI_HORARIO);  // Módulo 127
   }
 
-  PWMWrite(this->_velocidade, 127, this->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
+  //PWMWrite(this->_velocidade, 127, this->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
 }
 
 

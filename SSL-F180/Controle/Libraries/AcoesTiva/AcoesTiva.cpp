@@ -82,11 +82,10 @@ void AcoesTiva::horus(char sendFrame[], char id){
     
     sendFrame[0] = 'H';
     sendFrame[1] = (char) id & 0x07;                          // ID & 0b00000111
-    sendFrame[2] = (char) 10 * this->_carga_bateria;          // Para pegar a carga da bateria (valor int)
-    sendFrame[3] = (char) this->_carga_capacitor;             // Carga do capacitor
-    sendFrame[4] = digitalRead(this->_infrared);              // Posse de bola
-    sendFrame[5] = digitalRead(this->_drible);                // Status do drible
-    sendFrame[6] = 'M';
+    sendFrame[2] = (char) 85; //10 * this->_carga_bateria;          // Para pegar a carga da bateria (valor int)
+    sendFrame[3] = (char) 10; //this->_carga_capacitor;             // Carga do capacitor
+    sendFrame[4] = (char) 0; //digitalRead(this->_infrared);              // Posse de bola
+    sendFrame[5] = (char) 1; //digitalRead(this->_drible);                // Status do drible
 }
 
 void AcoesTiva::receberComando(){
