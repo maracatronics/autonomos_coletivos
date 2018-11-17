@@ -10,7 +10,7 @@
 // Pinos do microcontrolador que estão sendo utilizados para as rodas 1, 2 e 3
 const uint8_t motores_pins[3][3] = {
   {PB_5, PC_6, PC_7},     						// Velocidade roda 1,2 e 3 respectivamente
-  {PB_0, PA_4, PA_3},     						// Sentido da rotação do Motor 1,2 e 3 respectivamente
+  {PB_0, PA_4, PA_3},     						// Sentido da rotação do Motor 1,2 e 3 respectivamente (ROBÔ 1: Antigo - PB0, Novo - PA7)
   {PB_2, PE_0, PF_0}      						// Sensor Hall Motor 1,2 e 3 respectivamente
 };
 
@@ -37,10 +37,10 @@ class Motor
 
 	public:
 	  	// Atributos
-	  	int _id;									// id = 1, 2 ou 3 (o id da Motor deve ser igual ao da roda que ele está acoplado) 
+	  	int _id;									// id = 1, 2 ou 3 (o id do Motor deve ser igual ao da roda que ele está acoplado) 
 	  	double _kp, _ki, _kd;						// kp = constante proporcional; ki = constante integrativa; kd = constante derivativa (constantes do PID)
 	  	double _setpoint, _input, _output;			// setpoint = velocidade pretendida do Motor; input = velocidade atual do Motor; output = valor do pwm de saída (PID)
 	  	uint8_t _velocidade, _sentido, _hall;		// Pinos para saída do pwm da roda (velocidade), para o sentido da rotação do Motor e para a leitura da velocidade atual do Motor (hall)
-	  	boolean _status;							// Se o controlador e o sensor já foram atualizados (status = 1) ou não (status = 0)	  	
+	  	boolean _status;							// Se o controlador e o sensor já foram atualizados (status = 1) ou não (status = 0)	 	
 };
 #endif

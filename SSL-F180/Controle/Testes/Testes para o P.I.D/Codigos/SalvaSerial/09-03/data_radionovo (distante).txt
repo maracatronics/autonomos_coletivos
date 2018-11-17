@@ -1,0 +1,10856 @@
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 2
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 3
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 4
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 5
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 6
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 7
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 8
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 9
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 10
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 11
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 12
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 13
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 14
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 15
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 16
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 17
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 18
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 19
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 20
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 21
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 22
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 23
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 24
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 25
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 26
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 27
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 28
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 29
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 30
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 31
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 32
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 33
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 34
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 35
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 36
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 37
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 38
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 39
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 40
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 41
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 42
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 43
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 44
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 45
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 46
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 47
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 48
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 49
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 50
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 51
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 52
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 53
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 54
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 55
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 56
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 57
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 58
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 59
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 60
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 61
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 62
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 63
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 64
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 65
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 66
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 67
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 68
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 69
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 70
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 71
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 72
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 73
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 74
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 75
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 76
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 77
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 78
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 79
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 80
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 81
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 82
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 83
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 84
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 85
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 86
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 87
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 88
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 89
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 90
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 91
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 92
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 93
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 94
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 95
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 96
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 97
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 98
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 99
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 100
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 101
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 102
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 103
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 104
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 105
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 106
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 107
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 108
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 109
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 110
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 111
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 112
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 113
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 114
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 115
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 116
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 117
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 118
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 119
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 120
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 121
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 122
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 123
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 124
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 125
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 126
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 127
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 128
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 129
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 130
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 131
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 132
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 133
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 134
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 135
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 136
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 137
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 138
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 139
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 140
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 141
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 142
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 143
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 144
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 145
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 146
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 147
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 148
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 149
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 150
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 151
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 152
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 153
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 154
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 155
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 156
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 157
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 158
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 159
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 160
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 161
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 162
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 163
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 164
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 165
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 166
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 167
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 168
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 169
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 170
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 171
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 172
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 173
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 174
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 175
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 176
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 177
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 178
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 179
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 180
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 181
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 182
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 183
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 184
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 185
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 186
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 187
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 188
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 189
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 190
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 191
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 192
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 193
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 194
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 195
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 196
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 197
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 198
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 199
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 200
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 201
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 202
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 203
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 204
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 205
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 206
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 207
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 208
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 209
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 210
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 211
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 212
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 213
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 214
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 215
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 216
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 217
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 218
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 219
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 220
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 221
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 222
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 223
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 224
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 225
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 226
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 227
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 228
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 229
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 230
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 231
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 232
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 233
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 234
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 235
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 236
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 237
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 238
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 239
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 240
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 241
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 242
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 243
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 244
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 245
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 246
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 247
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 248
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 249
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 250
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 251
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 252
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 253
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 254
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 255
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 256
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 257
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 258
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 259
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 260
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 261
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 262
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 263
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 264
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 265
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 266
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 267
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 268
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 269
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 270
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 271
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 272
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 273
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 274
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 275
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 276
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 277
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 278
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 279
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 280
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 281
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 282
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 283
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 284
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 285
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 286
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 287
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 288
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 289
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 290
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 291
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 292
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 293
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 294
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 295
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 296
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 297
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 298
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 299
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 300
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 301
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 302
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 303
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 304
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 305
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 306
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 307
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 308
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 309
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 310
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 311
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 312
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 313
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 314
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 315
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 316
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 317
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 318
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 319
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 320
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 321
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 322
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 323
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 324
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 325
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 326
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 327
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 328
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 329
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 330
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 331
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 332
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 333
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 334
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 335
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 336
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 337
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 338
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 339
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 340
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 341
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 342
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 343
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 344
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 345
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 346
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 347
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 348
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 349
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 350
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 351
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 352
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 353
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 354
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 355
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 356
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 357
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 358
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 359
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 360
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 361
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 362
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 363
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 364
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 365
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 366
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 367
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 368
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 369
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 370
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 371
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 372
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 373
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 374
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 375
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 376
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 377
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 378
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 379
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 380
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 381
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 382
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 383
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 384
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 385
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 386
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 387
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 388
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 389
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 390
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 391
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 392
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 393
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 394
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 395
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 396
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 397
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 398
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 399
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 400
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 401
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 402
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 403
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 404
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 405
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 406
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 407
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 408
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 409
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 410
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 411
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 412
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 413
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 414
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 415
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 416
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 417
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 418
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 419
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 420
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 421
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 422
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 423
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 424
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 425
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 426
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 427
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 428
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 429
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 430
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 431
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 432
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 433
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 434
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 435
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 436
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 437
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 438
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 439
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 440
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 441
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 442
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 443
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 444
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 445
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 446
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 447
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 448
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 449
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 450
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 451
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 452
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 453
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 454
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 455
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 456
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 457
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 458
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 459
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 460
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 461
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 462
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 463
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 464
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 465
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 466
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 467
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 468
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 469
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 470
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 471
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 472
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 473
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 474
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 475
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 476
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 477
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 478
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 479
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 480
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 481
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 482
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 483
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 484
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 485
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 486
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 487
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 488
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 489
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 490
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 491
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 492
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 493
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 494
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 495
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 496
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 497
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 498
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 499
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 500
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 501
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 502
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 503
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 504
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 505
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 506
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 507
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 508
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 509
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 510
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 511
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 512
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 513
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 514
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 515
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 516
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 517
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 518
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 519
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 520
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 521
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 522
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 523
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 524
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 525
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 526
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 527
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 528
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 529
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 530
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 531
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 532
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 533
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 534
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 535
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 536
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 537
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 538
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 539
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 540
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 541
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 542
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 543
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 544
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 545
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 546
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 547
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 548
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 549
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 550
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 551
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 552
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 553
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 554
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 555
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 556
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 557
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 558
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 559
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 560
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 561
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 562
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 563
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 564
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 565
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 566
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 567
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 568
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 569
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 570
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 571
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 572
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 573
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 574
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 575
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 576
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 577
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 578
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 579
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 580
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 581
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 582
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 583
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 584
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 585
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 586
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 587
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 588
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 589
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 590
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 591
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 592
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 593
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 594
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 595
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 596
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 597
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 598
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 599
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 600
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 601
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 602
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 603
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 604
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 605
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 606
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 607
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 608
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 609
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 610
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 611
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 612
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 613
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 614
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 615
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 616
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 617
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 618
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 619
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 620
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 621
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 622
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 623
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 624
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 625
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 626
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 627
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 628
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 629
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 630
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 631
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 632
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 633
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 634
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 635
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 636
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 637
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 638
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 639
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 640
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 641
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 642
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 643
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 644
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 645
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 646
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 647
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 648
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 649
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 650
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 651
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 652
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 653
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 654
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 655
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 656
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 657
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 658
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 659
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 660
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 661
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 662
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 663
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 664
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 665
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 666
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 667
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 668
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 669
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 670
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 671
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 672
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 673
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 674
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 675
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 676
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 677
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 678
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 679
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 680
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 681
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 682
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 683
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 684
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 685
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 686
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 687
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 688
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 689
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 690
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 691
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 692
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 693
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 694
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 695
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 696
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 697
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 698
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 699
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 700
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 701
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 702
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 703
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 704
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 705
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 706
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 707
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 708
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 709
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 710
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 711
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 712
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 713
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 714
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 715
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 716
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 717
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 718
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 719
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 720
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 721
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 722
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 723
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 724
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 725
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 726
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 727
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 728
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 729
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 730
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 731
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 732
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 733
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 734
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 735
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 736
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 737
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 738
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 739
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 740
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 741
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 742
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 743
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 744
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 745
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 746
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 747
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 748
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 749
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 750
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 751
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 752
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 753
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 754
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 755
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 756
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 757
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 758
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 759
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 760
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 761
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 762
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 763
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 764
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 765
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 766
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 767
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 768
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 769
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 770
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 771
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 772
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 773
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 774
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 775
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 776
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 777
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 778
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 779
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 780
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 781
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 782
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 783
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 784
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 785
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 786
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 787
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 788
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 789
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 790
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 791
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 792
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 793
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 794
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 795
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 796
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 797
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 798
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 799
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 800
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 801
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 802
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 803
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 804
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 805
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 806
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 807
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 808
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 809
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 810
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 811
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 812
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 813
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 814
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 815
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 816
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 817
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 818
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 819
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 820
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 821
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 822
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 823
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 824
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 825
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 826
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 827
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 828
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 829
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 830
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 831
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 832
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 833
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 834
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 835
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 836
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 837
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 838
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 839
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 840
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 841
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 842
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 843
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 844
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 845
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 846
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 847
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 848
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 849
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 850
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 851
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 852
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 853
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 854
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 855
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 856
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 857
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 858
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 859
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 860
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 861
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 862
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 863
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 864
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 865
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 866
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 867
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 868
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 869
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 870
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 871
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 872
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 873
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 874
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 875
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 876
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 877
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 878
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 879
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 880
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 881
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 882
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 883
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 884
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 885
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 886
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 887
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 888
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 889
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 890
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 891
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 892
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 893
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 894
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 895
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 896
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 897
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 898
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 899
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 900
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 901
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 902
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 903
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 904
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 905
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 906
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 907
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 908
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 909
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 910
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 911
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 912
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 913
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 914
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 915
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 916
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 917
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 918
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 919
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 920
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 921
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 922
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 923
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 924
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 925
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 926
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 927
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 928
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 929
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 930
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 931
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 932
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 933
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 934
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 935
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 936
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 937
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 938
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 939
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 940
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 941
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 942
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 943
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 944
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 945
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 946
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 947
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 948
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 949
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 950
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 951
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 952
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 953
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 954
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 955
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 956
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 957
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 958
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 959
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 960
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 961
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 962
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 963
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 964
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 965
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 966
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 967
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 968
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 969
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 970
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 971
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 972
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 973
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 974
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 975
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 976
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 977
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 978
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 979
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 980
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 981
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 982
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 983
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 984
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 985
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 986
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 987
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 988
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 989
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 990
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 991
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 992
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 993
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 994
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 995
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 996
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 997
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 998
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 999
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1000
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1001
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1002
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1003
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1004
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1005
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1006
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1007
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1008
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1009
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1010
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1011
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1012
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1013
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1014
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1015
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1016
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1017
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1018
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1019
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1020
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1021
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1022
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1023
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1024
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1025
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1026
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1027
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1028
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1029
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1030
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1031
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1032
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1033
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1034
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1035
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1036
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1037
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1038
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1039
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1040
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1041
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1042
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1043
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1044
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1045
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1046
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1047
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1048
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1049
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1050
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1051
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1052
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1053
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1054
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1055
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1056
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1057
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1058
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1059
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1060
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1061
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1062
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1063
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1064
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1065
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1066
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1067
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1068
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1069
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1070
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1071
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1072
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1073
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1074
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1075
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1076
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1077
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1078
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1079
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1080
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1081
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1082
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1083
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1084
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1085
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1086
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1087
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1088
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1089
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1090
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1091
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1092
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1093
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1094
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1095
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1096
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1097
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1098
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1099
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1100
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1101
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1102
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1103
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1104
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1105
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1106
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1107
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1108
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1109
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1110
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1111
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1112
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1113
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1114
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1115
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1116
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1117
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1118
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1119
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1120
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1121
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1122
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1123
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1124
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1125
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1126
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1127
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1128
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1129
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1130
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1131
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1132
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1133
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1134
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1135
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1136
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1137
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1138
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1139
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1140
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1141
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1142
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1143
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1144
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1145
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1146
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1147
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1148
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1149
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1150
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1151
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1152
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1153
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1154
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1155
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1156
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1157
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1158
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1159
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1160
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1161
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1162
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1163
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1164
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1165
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1166
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1167
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1168
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1169
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1170
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1171
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1172
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1173
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1174
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1175
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1176
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1177
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1178
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1179
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1180
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1181
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1182
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1183
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1184
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1185
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1186
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1187
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1188
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1189
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1190
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1191
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1192
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1193
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1194
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1195
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1196
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1197
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1198
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1199
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1200
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1201
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1202
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1203
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1204
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1205
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1206
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1207
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1208
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1209
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1210
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1211
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1212
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1213
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1214
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1215
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1216
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1217
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1218
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1219
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1220
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1221
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1222
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1223
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1224
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1225
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1226
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1227
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1228
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1229
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1230
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1231
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1232
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1233
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1234
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1235
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1236
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1237
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1238
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1239
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1240
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1241
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1242
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1243
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1244
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1245
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1246
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1247
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1248
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1249
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1250
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1251
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1252
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1253
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1254
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1255
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1256
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1257
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1258
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1259
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1260
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1261
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1262
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1263
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1264
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1265
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1266
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1267
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1268
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1269
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1270
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1271
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1272
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1273
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1274
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1275
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1276
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1277
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1278
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1279
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1280
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1281
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1282
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1283
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1284
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1285
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1286
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1287
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1288
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1289
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1290
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1291
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1292
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1293
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1294
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1295
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1296
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1297
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1298
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1299
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1300
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1301
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1302
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1303
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1304
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1305
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1306
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1307
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1308
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1309
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1310
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1311
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1312
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1313
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1314
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1315
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1316
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1317
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1318
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1319
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1320
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1321
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1322
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1323
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1324
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1325
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1326
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1327
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1328
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1329
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1330
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1331
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1332
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1333
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1334
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1335
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1336
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1337
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1338
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1339
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1340
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1341
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1342
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1343
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1344
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1345
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1346
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1347
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1348
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1349
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1350
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1351
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1352
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1353
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1354
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1355
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1356
+
+ID 2
+
+, pwm1 1, pwm2 1, pwm3 1
+
+0
+
+contador: 1357
+

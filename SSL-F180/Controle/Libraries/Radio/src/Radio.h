@@ -4,7 +4,6 @@
 #include <Enrf24.h>
 #include <SPI.h>
 
-#define MSG_SIZE 6
 #define CANALHORUS 2
 
 //Testando
@@ -13,7 +12,7 @@ const uint8_t radio_pins[5][3] = {
 	{PF_3, PC_6, PC_7},
 	{PB_5, PC_4, PC_5},
 	{PD_1, PB_2, PC_5},
-	{PD_1, PE_1, PF_4}		//Modulo da placa de comunicação nova (CS/CE (PD_1), CSN, IRQ) //novo PD_1, antigo PE_2
+	{PE_2, PE_1, PF_4}		//Modulo da placa de comunicação nova (CS/CE (PD_1), CSN, IRQ) - novo PD_1, antigo PE_2
 };
 
 const uint8_t led_pins[5][3] = {

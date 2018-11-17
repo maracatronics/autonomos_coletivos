@@ -29,7 +29,7 @@ bool SerialCommunication::read(char msg[]){
        for(int n=0; n<MSG_SIZE; n++) msg[n] = Serial.read();
 
       //Ajusta o vetor
-       this->ajustArray(msg);
+      this->ajustArray(msg);
 
        return true;
     }
@@ -43,7 +43,9 @@ bool SerialCommunication::read(char msg[]){
       return false;
     }
   }
-  else return false;
+  else {
+    return false;
+  }
 }
 
 //Ajusta a mensagem recebida

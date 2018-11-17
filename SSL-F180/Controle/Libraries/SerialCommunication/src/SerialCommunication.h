@@ -1,9 +1,9 @@
 #ifndef SerialCommunication_h
 #define SerialCommunication_h
 
-#define MSG_SIZE 6
-#define START 0x4D      //byte de start 'M'
-#define FINAL 0x1
+#define MSG_SIZE 7
+#define START 0x4D      // Byte de start 'M'
+#define FINAL 0x46      // Byte de final 'F'
 
 class SerialCommunication{
 public:

@@ -37,8 +37,8 @@ Motor::Motor(double kp, double ki, double kd, int id){ // Básico com PID
 
 
 // Métodos 
-void Motor::configurar(){                     
-                       
+void Motor::configurar(){  
+                                   
   pinMode(this->_velocidade,OUTPUT);                  
   pinMode(this->_sentido,OUTPUT);
   pinMode(this->_hall,INPUT);

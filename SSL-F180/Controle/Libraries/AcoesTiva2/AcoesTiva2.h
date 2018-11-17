@@ -3,8 +3,6 @@
 
 #include "Arduino.h"
 
-#define MSG_SIZE 3                                      // Tamanho da mensagem enviada da MSP
-#define MSG_SIZE2 2                                     // Tamanho da mensagem recebida da MSP
 #define CHUTE_BIT 0x40                                  // Valor, em hexa, do bit de chute
 #define PASSE_BIT 0x20                                  // Valor, em hexa, do bit de passe
 #define DRIBLE_BIT 0x10                                 // Valor, em hexa, do bit de drible

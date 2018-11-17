@@ -31,10 +31,10 @@ AcoesTiva2::AcoesTiva2(uint8_t pinInfrared, uint8_t pinDrible, uint8_t pinAdcBat
 }
 
 void AcoesTiva2::configurarTiva(){
-  Serial.begin(9600);
+  Serial.begin(38400);
 
   pinMode(this->_infrared,INPUT);
-  pinMode(this->_drible,OUTPUT);
+  pinMode(this->_drible, OUTPUT);
   pinMode(this->_adcBateria, INPUT);
   pinMode(this->_chutePWM, OUTPUT);                          
   pinMode(this->_disparo, OUTPUT);
@@ -67,10 +67,10 @@ void AcoesTiva2::horus(char sendFrame[], char id){
     
     sendFrame[0] = 'H';
     sendFrame[1] = (char) id & 0x07;                          // ID & 0b00000111
-    sendFrame[2] = (char) 10 * this->_carga_bateria;          // Para pegar a carga da bateria (valor int)
-    sendFrame[3] = (char) this->_carga_capacitor;             // Carga do capacitor
-    sendFrame[4] = (char) this->possedeBola();                // Posse de bola
-    sendFrame[5] = digitalRead(this->_drible);                // Status do drible
+    sendFrame[2] = (char) 119; //10 * this->_carga_bateria;          // Para pegar a carga da bateria (valor int)
+    sendFrame[3] = (char) 132; //this->_carga_capacitor;             // Carga do capacitor
+    sendFrame[4] = (char) 1;//this->possedeBola();                // Posse de bola
+    sendFrame[5] = (char) 1;//digitalRead(this->_drible);                // Status do drible
 }
 
 boolean AcoesTiva2::carregarCapacitor(char protocolo[], boolean radioParou){ 
@@ -82,10 +82,10 @@ boolean AcoesTiva2::carregarCapacitor(char protocolo[], boolean radioParou){
   //Serial.println(this->_carga_capacitor);
 
   if(protocolo[1] & CHUTE_BIT) {                          // Verifica se é para chutar - AND bit a bit entre o byte de ações+id do protocolo recebido e o bit do chute
-    tensao_capacitor = 100;                               // Valor pretendido para a carga do capacitor (CHUTE)
+    tensao_capacitor = 130;                               // Valor pretendido para a carga do capacitor (CHUTE)
   }                           
   else if(protocolo[1] & PASSE_BIT){                      // Verifica se é para passar - AND bit a bit entre o byte de ações+id do protocolo recebido e o bit do passe
-    tensao_capacitor = 100;                               // Valor pretendido para a carga do capacitor (DEFAULT)
+    tensao_capacitor = 130;                               // Valor pretendido para a carga do capacitor (DEFAULT)
   }  
 
   if(!this->_estaChutando && !radioParou){

@@ -1,0 +1,255 @@
+ChnRF24L01+ Channel Activity Scan
+-------------------------------
+Channel 0 (2400MHz): 79
+******* 
+Channel 1 (2401MHz): 80
+******* 
+Channel 2 (2402MHz): 81
+******* 
+Channel 3 (2403MHz): 81
+******* 
+Channel 4 (2404MHz): 80
+******* 
+Channel 5 (2405MHz): 80
+******* 
+Channel 6 (2406MHz): 81
+******* 
+Channel 7 (2407MHz): 78
+******* 
+Channel 8 (2408MHz): 77
+******* 
+Channel 9 (2409MHz): 77
+******* 
+Channel 10 (2410MHz): 76
+******* 
+Channel 11 (2411MHz): 76
+******* 
+Channel 12 (2412MHz): 76
+******* 
+Channel 13 (2413MHz): 75
+******* 
+Channel 14 (2414MHz): 76
+******* 
+Channel 15 (2415MHz): 80
+******* 
+Channel 16 (2416MHz): 76
+******* 
+Channel 17 (2417MHz): 76
+******* 
+Channel 18 (2418MHz): 79
+******* 
+Channel 19 (2419MHz): 77
+******* 
+Channel 20 (2420MHz): 77
+******* 
+Channel 21 (2421MHz): 77
+******* 
+Channel 22 (2422MHz): 77
+******* 
+Channel 23 (2423MHz): 76
+******* 
+Channel 24 (2424MHz): 76
+******* 
+Channel 25 (2425MHz): 78
+******* 
+Channel 26 (2426MHz): 76
+******* 
+Channel 27 (2427MHz): 78
+******* 
+Channel 28 (2428MHz): 76
+******* 
+Channel 29 (2429MHz): 76
+******* 
+Channel 30 (2430MHz): 79
+******* 
+Channel 31 (2431MHz): 79
+******* 
+Channel 32 (2432MHz): 77
+******* 
+Channel 33 (2433MHz): 79
+******* 
+Channel 34 (2434MHz): 79
+******* 
+Channel 35 (2435MHz): 78
+******* 
+Channel 36 (2436MHz): 78
+******* 
+Channel 37 (2437MHz): 77
+******* 
+Channel 38 (2438MHz): 77
+******* 
+Channel 39 (2439MHz): 77
+******* 
+Channel 40 (2440MHz): 77
+******* 
+Channel 41 (2441MHz): 77
+******* 
+Channel 42 (2442MHz): 77
+******* 
+Channel 43 (2443MHz): 76
+******* 
+Channel 44 (2444MHz): 77
+******* 
+Channel 45 (2445MHz): 77
+******* 
+Channel 46 (2446MHz): 76
+******* 
+Channel 47 (2447MHz): 77
+******* 
+Channel 48 (2448MHz): 77
+******* 
+Channel 49 (2449MHz): 80
+******* 
+Channel 50 (2450MHz): 76
+******* 
+Channel 51 (2451MHz): 80
+******* 
+Channel 52 (2452MHz): 78
+******* 
+Channel 53 (2453MHz): 77
+******* 
+Channel 54 (2454MHz): 79
+******* 
+Channel 55 (2455MHz): 78
+******* 
+Channel 56 (2456MHz): 79
+******* 
+Channel 57 (2457MHz): 76
+******* 
+Channel 58 (2458MHz): 78
+******* 
+Channel 59 (2459MHz): 78
+******* 
+Channel 60 (2460MHz): 77
+******* 
+Channel 61 (2461MHz): 77
+******* 
+Channel 62 (2462MHz): 77
+******* 
+Channel 63 (2463MHz): 79
+******* 
+Channel 64 (2464MHz): 76
+******* 
+Channel 65 (2465MHz): 79
+******* 
+Channel 66 (2466MHz): 79
+******* 
+Channel 67 (2467MHz): 78
+******* 
+Channel 68 (2468MHz): 77
+******* 
+Channel 69 (2469MHz): 78
+******* 
+Channel 70 (2470MHz): 78
+******* 
+Channel 71 (2471MHz): 77
+******* 
+Channel 72 (2472MHz): 78
+******* 
+Channel 73 (2473MHz): 78
+******* 
+Channel 74 (2474MHz): 76
+******* 
+Channel 75 (2475MHz): 77
+******* 
+Channel 76 (2476MHz): 79
+******* 
+Channel 77 (2477MHz): 77
+******* 
+Channel 78 (2478MHz): 78
+******* 
+Channel 79 (2479MHz): 78
+******* 
+Channel 80 (2480MHz): 77
+******* 
+Channel 81 (2481MHz): 77
+******* 
+Channel 82 (2482MHz): 76
+******* 
+Channel 83 (2483MHz): 80
+******* 
+Channel 84 (2484MHz): 76
+******* 
+Channel 85 (2485MHz): 80
+******* 
+Channel 86 (2486MHz): 76
+******* 
+Channel 87 (2487MHz): 80
+******* 
+Channel 88 (2488MHz): 76
+******* 
+Channel 89 (2489MHz): 79
+******* 
+Channel 90 (2490MHz): 80
+******* 
+Channel 91 (2491MHz): 78
+******* 
+Channel 92 (2492MHz): 79
+******* 
+Channel 93 (2493MHz): 78
+******* 
+Channel 94 (2494MHz): 78
+******* 
+Channel 95 (2495MHz): 78
+******* 
+Channel 96 (2496MHz): 76
+******* 
+Channel 97 (2497MHz): 76
+******* 
+Channel 98 (2498MHz): 76
+******* 
+Channel 99 (2499MHz): 77
+******* 
+Channel 100 (2500MHz): 80
+******* 
+Channel 101 (2501MHz): 80
+******* 
+Channel 102 (2502MHz): 77
+******* 
+Channel 103 (2503MHz): 76
+******* 
+Channel 104 (2504MHz): 76
+******* 
+Channel 105 (2505MHz): 78
+******* 
+Channel 106 (2506MHz): 78
+******* 
+Channel 107 (2507MHz): 76
+******* 
+Channel 108 (2508MHz): 78
+******* 
+Channel 109 (2509MHz): 78
+******* 
+Channel 110 (2510MHz): 77
+******* 
+Channel 111 (2511MHz): 78
+******* 
+Channel 112 (2512MHz): 79
+******* 
+Channel 113 (2513MHz): 77
+******* 
+Channel 114 (2514MHz): 76
+******* 
+Channel 115 (2515MHz): 77
+******* 
+Channel 116 (2516MHz): 77
+******* 
+Channel 117 (2517MHz): 77
+******* 
+Channel 118 (2518MHz): 78
+******* 
+Channel 119 (2519MHz): 77
+******* 
+Channel 120 (2520MHz): 77
+******* 
+Channel 121 (2521MHz): 78
+******* 
+Channel 122 (2522MHz): 77
+******* 
+Channel 123 (2523MHz): 78
+******* 
+Channel 124 (2524MHz): 78
+******* 
+Channel 125 (2525MHz): 77
+******* 
+Channel scan done; halting CPU.  Hit RESET to do another scan.

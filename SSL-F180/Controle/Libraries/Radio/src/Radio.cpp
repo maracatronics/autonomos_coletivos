@@ -118,16 +118,9 @@ boolean Radio::receive(char msg[], int tamProtocolo){
 
 			//Feedback com leds
 			digitalWrite(led_pins[this->_radio_module][0], LOW);
-			digitalWrite(led_pins[this->_radio_module][1], LOW);
+			digitalWrite(led_pins[this->_radio_module][1], HIGH);
 			digitalWrite(led_pins[this->_radio_module][2], HIGH);
-		}
 
-		//Se passou 1 segundo sem receber mensagem
-		if(millis() - this->_fail_safe > 1000){
-
-			//Erro
-
-			//Reconfigura o rádio
 			setup();
 
 			//Reinicia o _fail_safe
@@ -142,6 +135,8 @@ boolean Radio::receive(char msg[], int tamProtocolo){
 		digitalWrite(led_pins[this->_radio_module][0], HIGH);
 		digitalWrite(led_pins[this->_radio_module][1], LOW);
 		digitalWrite(led_pins[this->_radio_module][2], LOW);
+
+		setup();
 	}
 
 	return false;
