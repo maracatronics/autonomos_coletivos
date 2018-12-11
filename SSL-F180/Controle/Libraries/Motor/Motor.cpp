@@ -19,6 +19,7 @@ Motor::Motor(int id){ // Básico
   this->_setpoint = 0;
   this->_output = 0;
   this->_status = false;
+  this->_tacometro = tacometro_pins[id - 1];
 }
 
 Motor::Motor(double kp, double ki, double kd, int id){ // Básico com PID
@@ -33,6 +34,7 @@ Motor::Motor(double kp, double ki, double kd, int id){ // Básico com PID
   this->_sentido = motores_pins[1][id-1];
   this->_hall = motores_pins[2][id-1];
   this->_status = false;
+  this->_tacometro = tacometro_pins[id - 1];
 }
 
 
@@ -42,6 +44,7 @@ void Motor::configurar(){
   pinMode(this->_velocidade,OUTPUT);                  
   pinMode(this->_sentido,OUTPUT);
   pinMode(this->_hall,INPUT);
+  pinMode(this->_tacometro, INPUT);
 }
 
 double Motor::PWMtoSpeed(byte setpoint_pwm){
@@ -75,6 +78,8 @@ void Motor::andar(char protocolo[]){                              // Protocolo =
     digitalWrite(this->_sentido, HIGH);
     this->_output = (protocolo[(this->_id) + 1] & ANTI_HORARIO);  // Módulo 127
   }
+ 
+  //Serial.println("xau");
 
   //PWMWrite(this->_velocidade, 127, this->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
 }

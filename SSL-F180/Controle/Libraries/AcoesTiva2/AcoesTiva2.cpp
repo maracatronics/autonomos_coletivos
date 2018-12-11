@@ -31,7 +31,7 @@ AcoesTiva2::AcoesTiva2(uint8_t pinInfrared, uint8_t pinDrible, uint8_t pinAdcBat
 }
 
 void AcoesTiva2::configurarTiva(){
-  Serial.begin(38400);
+ // Serial.begin(38400);
 
   pinMode(this->_infrared,INPUT);
   pinMode(this->_drible, OUTPUT);
