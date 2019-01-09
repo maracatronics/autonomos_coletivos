@@ -14,7 +14,10 @@ const uint8_t motores_pins[3][3] = {
   {PB_2, PE_0, PF_0}      						// Sensor Hall Motor 1,2 e 3 respectivamente
 };
 
-// Pinos Tacômetro
+// Pinos Tacômetro Motores 1, 2 e 3
+const uint8_t tacometro_pins[3] = {
+	PE_3, PE_2, PB_4
+};
 //const uint8_t tacometro1 PE_3 // Motor 1
 //const uint8_t tacometro2 PE_2 // Motor 2
 //const uint8_t tacometro3 PB_4 // Motor 3
@@ -37,10 +40,10 @@ class Motor
 
 	public:
 	  	// Atributos
-	  	int _id;									// id = 1, 2 ou 3 (o id do Motor deve ser igual ao da roda que ele está acoplado) 
-	  	double _kp, _ki, _kd;						// kp = constante proporcional; ki = constante integrativa; kd = constante derivativa (constantes do PID)
-	  	double _setpoint, _input, _output;			// setpoint = velocidade pretendida do Motor; input = velocidade atual do Motor; output = valor do pwm de saída (PID)
-	  	uint8_t _velocidade, _sentido, _hall;		// Pinos para saída do pwm da roda (velocidade), para o sentido da rotação do Motor e para a leitura da velocidade atual do Motor (hall)
-	  	boolean _status;							// Se o controlador e o sensor já foram atualizados (status = 1) ou não (status = 0)	 	
+	  	int _id;												// id = 1, 2 ou 3 (o id do Motor deve ser igual ao da roda que ele está acoplado) 
+	  	double _kp, _ki, _kd;									// kp = constante proporcional; ki = constante integrativa; kd = constante derivativa (constantes do PID)
+	  	double _setpoint, _input, _output;						// setpoint = velocidade pretendida do Motor; input = velocidade atual do Motor; output = valor do pwm de saída (PID)
+	  	uint8_t _velocidade, _sentido, _hall, _tacometro;		// Pinos para saída do pwm da roda (velocidade), para o sentido da rotação do Motor e para a leitura da velocidade atual do Motor (hall)
+	  	boolean _status;										// Se o controlador e o sensor já foram atualizados (status = 1) ou não (status = 0)	 	
 };
 #endif

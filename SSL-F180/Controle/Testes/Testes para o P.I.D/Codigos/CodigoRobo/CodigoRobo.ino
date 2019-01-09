@@ -1,4 +1,4 @@
-#include <Radio.h>
+ #include <Radio.h>
 #include "wiring_analog.c"    // Necessário para o PWMWrite
 #include <AcoesTiva2.h>
 #include <Motor.h>
@@ -72,22 +72,6 @@ void loop() {
       
       for(int j = 0; j < 3; j++){
          robo[j]->andar(msg);
-         PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
-      
-      
-      //Serial.println((int) msg[2]);
-      /*Serial.print((char)msg[0]);
-      Serial.print("    ");
-      Serial.print((int)msg[1]);
-      Serial.print("     ");
-      Serial.print((int)msg[2]);
-      Serial.print("     ");
-      Serial.print((int)msg[3]);
-      Serial.print("     ");
-      Serial.print((int)msg[4]);
-      Serial.print("     ");
-      Serial.println((int)msg[5]);*/
-      
          //Serial.print(hallMotores[j]->returnHall());
           
          Serial.print(analogRead(robo[j]->_tacometro));
@@ -155,3 +139,4 @@ void parar(){
   }
   tiva.driblar(protocol);
 }
+
