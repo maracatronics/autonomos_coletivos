@@ -1,4 +1,6 @@
+//***********************************************funciona na versao 3.3.6 *******************************************
 import processing.serial.*;
+
  
 int velocidade1, velocidade2, velocidade3;
 int ID = 3;
