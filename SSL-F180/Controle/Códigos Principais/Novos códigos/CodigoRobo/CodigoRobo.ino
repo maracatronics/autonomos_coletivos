@@ -11,6 +11,9 @@
 #define ID_ROBO 0x03
 
 void parar();
+void contagemPulsos1();
+void contagemPulsos2();
+void contagemPulsos3();
 
 Motor *robo[3];
 Hall *hallMotores[3];
@@ -21,6 +24,9 @@ int qntPulsos[3] = {48, 48, 48};
 boolean radioParou = true;
 
 unsigned int tempoRadioParado = millis();
+boolean flagTempo = true;
+int qntPulsosTotal1 = 0, qntPulsosTotal2 = 0, qntPulsosTotal3 = 0;
+unsigned int tempoTotal, tempoInicial, tempoPulso;
 
 void setup() {  
   Serial.begin(38400);
@@ -29,6 +35,10 @@ void setup() {
     robo[i]->configurar();
     hallMotores[i] = new Hall(robo[i]->_hall, qntPulsos[i]);
   }
+  
+  attachInterrupt(digitalPinToInterrupt(robo[0]->_hall), contagemPulsos1 , FALLING);
+  attachInterrupt(digitalPinToInterrupt(robo[1]->_hall), contagemPulsos2 , FALLING);
+  attachInterrupt(digitalPinToInterrupt(robo[2]->_hall), contagemPulsos3 , FALLING);
 
   tiva.configurarTiva();  
   
@@ -47,52 +57,33 @@ void loop() {
   static unsigned int tempoHorus, tempinho;
   static boolean flagHorus = false;
 
-  /*for(int j = 0; j < 3; j++){
-    Serial.print(analogRead(robo[j]->_tacometro));
-    Serial.print("   ");
-  }
-  Serial.println((int) msg[2]); */
-
-//  Serial.print((char)msg[0]);
-//  Serial.print("    ");
-//  Serial.print((int)msg[1]);
-//  Serial.print("     ");
-//  Serial.print((int)msg[2]);
-//  Serial.print("     ");
-//  Serial.print((int)msg[3]);
-//  Serial.print("     ");
-//  Serial.print((int)msg[4]);
-//  Serial.print("     ");
-//  Serial.println((int)msg[5]);
-
   if(radio.receive(msg, 7) && isChecksumOk(msg) && ((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO))){
-    //Serial.println("recebeu");
-    //Serial.println((int)(msg[1]));
-    //if((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO)){
-      
+      //Serial.println("recebeu");
+      if(flagTempo){
+        tempoInicial = millis();
+        qntPulsosTotal1 = 0, qntPulsosTotal2 = 0, qntPulsosTotal3 = 0;
+        flagTempo = false;
+      }
+      else{
+        tempoTotal = millis() - tempoInicial;
+      }
       for(int j = 0; j < 3; j++){
          robo[j]->andar(msg);
-         //Serial.print(hallMotores[j]->returnHall());
-          
-         Serial.print(analogRead(robo[j]->_tacometro));
-         Serial.print("   ");
          PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
       }
-      Serial.println((int) msg[2]);
-//      Serial.print((char)msg[0]);
-//      Serial.print("    ");
-//      Serial.print((int)msg[1]);
-//      Serial.print("     ");
-//      Serial.print((int)msg[2]);
-//      Serial.print("     ");
-//      Serial.print((int)msg[3]);
-//      Serial.print("     ");
-//      Serial.print((int)msg[4]);
-//      Serial.print("     ");
-//      Serial.println((int)msg[5]);
-//      
+  
+      Serial.print("tempo: ");
+      Serial.print(tempoTotal);    
+      Serial.print("  pul1: ");
+      Serial.print(qntPulsosTotal1);
+      Serial.print("  pul2: ");
+      Serial.print(qntPulsosTotal2);
+      Serial.print("  pul3: ");
+      Serial.println(qntPulsosTotal3);
+
+      
     
-      tiva.driblar(msg);
+      /*tiva.driblar(msg);
       
       if(tiva.carregarCapacitor(msg, false)){
        PWMWrite(tiva._chutePWM, 255, DUTY, 3000);       //PWMWrite(pin, resolution, duty, frequency);
@@ -100,7 +91,7 @@ void loop() {
       else{
         PWMWrite(tiva._chutePWM, 255, 0, 3000);       //PWMWrite(pin, resolution, duty, frequency);
       } 
-      tiva.chutar(msg, true);
+      tiva.chutar(msg, true);*/
       tempoRadioParado = millis();
       radioParou = false;
    
@@ -124,6 +115,19 @@ void loop() {
     if(millis() - tempoRadioParado >= 500)
       parar();  
   }  
+}
+
+
+void contagemPulsos1(){
+  qntPulsosTotal1++;
+}
+
+void contagemPulsos2(){
+  qntPulsosTotal2++;
+}
+
+void contagemPulsos3(){
+  qntPulsosTotal3++;
 }
 
 void parar(){
