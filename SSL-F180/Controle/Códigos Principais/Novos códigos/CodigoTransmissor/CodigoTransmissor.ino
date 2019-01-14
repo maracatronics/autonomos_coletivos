@@ -12,6 +12,8 @@ void setup(){
   radio.setup();
 }
 
+//iasjdasd9asjijdasasoin
+
 bool isChecksumOk(char msg[]) {
   return (msg[6] == (msg[0] ^ msg[1] ^ msg[2] ^ msg[3] ^ msg[4] ^ msg[5]));
 }
