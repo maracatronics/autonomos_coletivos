@@ -1,20 +1,23 @@
 #include <Radio.h>
-#include "wiring_analog.c"    // Necessário para o PWMWrite
+#include "wiring_analog.c"   // Necessário para o PWMWrite
 #include <AcoesTiva2.h>
 #include <Motor.h>
 #include <Hall.h>
+#include <FastCRC.h>
 
+#define ID_ROBO 0x03
+#define SIZE_MSG 7
 
 //PC_4 - RX
 //PC_5 - TX
 
-#define ID_ROBO 0x03
-
+bool crc_check(char msg[SIZE_MSG]);
 void parar();
 void contagemPulsos1();
 void contagemPulsos2();
 void contagemPulsos3();
 
+FastCRC16 CRC16;
 Motor *robo[3];
 Hall *hallMotores[3];
 Radio radio(109, "RX"); 
@@ -47,17 +50,10 @@ void setup() {
   parar();
 }
 
-bool isChecksumOk(char msg[]) {
-  return (msg[6] == (msg[0] ^ msg[1] ^ msg[2] ^ msg[3] ^ msg[4] ^ msg[5]));
-}
-
 void loop() {
-  char msg[7];
-  char sendFrame[6];
-  static unsigned int tempoHorus, tempinho;
-  static boolean flagHorus = false;
+  char msg[SIZE_MSG];
 
-  if(radio.receive(msg, 7) && isChecksumOk(msg) && ((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO))){
+  if(radio.receive(msg, SIZE_MSG) && crc_check(msg) && ((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO))){
       //Serial.println("recebeu");
       if(flagTempo){
         tempoInicial = millis();
@@ -95,28 +91,25 @@ void loop() {
       tempoRadioParado = millis();
       radioParou = false;
    
-      // Horus
-     /* if(msg[1] & 0x80 && !flagHorus){
-        tempoHorus = millis();
-        flagHorus = true;
-      }
-      if(flagHorus && millis() - tempoHorus >= ID_ROBO * 100){
-        PWMWrite(tiva._chutePWM, 255, 0, 3000);       //PWMWrite(pin, resolution, duty, frequency);
-        tiva.horus(sendFrame, msg[1]);
-        radio.sendHorus(sendFrame);
-        flagHorus = false;
-      }*/
     //}
     
   }
   else{
-    //Serial.println("nao recebeu");
     delay(1);
     if(millis() - tempoRadioParado >= 500)
       parar();  
   }  
 }
 
+// Checks if CRC is OK
+bool crc_check(char msg[SIZE_MSG]){
+  uint8_t msg_crc[SIZE_MSG];
+  for(int i=0; i < 7; i++){
+    msg_crc[i] = msg[i];
+  }
+
+  return (CRC16.xmodem(msg_crc, sizeof(msg_crc)) == 0);
+}
 
 void contagemPulsos1(){
   qntPulsosTotal1++;
