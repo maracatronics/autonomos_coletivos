@@ -39,24 +39,28 @@ void draw(){
     msg[6] = (byte) (msg[0] ^ msg[1] ^ msg[2] ^ msg[3] ^ msg[4] ^ msg[5]);
    
     myPort.write(msg);
-    //
-   /* if(millis() - tempo >= 5000){
-      if(estado == 0){
-        velocidade1 = 127;
-        velocidade2 = 127;
-        velocidade3 = 127;
+    
+    if(estado == 0){
+      velocidade1 = 127;
+      velocidade2 = 127;
+      velocidade3 = 127;
+      if(millis() - tempo >= 5000){
         estado = 1;
+        tempo = millis();
       }
-      else if(estado == 1){
-        velocidade1 = 1;
-        velocidade2 = 1;
-        velocidade3 = 1;
-        //estado = 0;
-      }
-      tempo = millis();
-  }*/
+     }
+     else if(estado == 1){
+       velocidade1 = 1;
+       velocidade2 = 1;
+       velocidade3 = 1;
+       if(millis() - tempo >= 5000){
+         estado = 0;
+         tempo = millis();
+       }
+     }
+      
     delay(10);  
- // }
+ 
   
   
   //ID++;

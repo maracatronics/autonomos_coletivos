@@ -5,8 +5,6 @@
 #include <Hall.h>
 
 #define ID_ROBO 0x03
-#define INTERVALO_MINIMO 700
-#define INTERVALO_MAXIMO 500
 
 void parar();
 bool isChecksumOk(char);
@@ -14,20 +12,9 @@ void contagemPulsos1();
 void contagemPulsos2();
 void contagemPulsos3();
 
-
-//void contagemSubida1();
-//void contagemDescida1();
-//void contagemSubida2();
-//void contagemDescida2();
-//void contagemSubida3();
-//void contagemDescida3();
-
-
-
-int valorRoda1, valorRoda2, valorRoda3, qntPulsosTotal[3] = {0};
+int qntPulsosTotal[3] = {0};
 unsigned long tempoRadioParado = millis(), tempoPulso1 = 0, tempoPulso2 = 0, tempoPulso3 = 0;
 boolean radioParou = true, interruptRoda1 = true, interruptRoda2 = true, interruptRoda3 = true;
-
 
 Motor *robo[3];
 Hall *hallMotores[3];
@@ -35,14 +22,13 @@ Radio radio(109, "RX");
 AcoesTiva2 tiva;
 
 void setup() {
-  //Serial.begin(38400);
-  Serial.begin(9600);
+  Serial.begin(38400);
+  //Serial.begin(9600);
   for (int i = 0; i < 3; i++) {
     robo[i] = new Motor(i + 1);
     robo[i]->configurar();
-    hallMotores[i] = new Hall(robo[i]->_hall, 8);
+    hallMotores[i] = new Hall(robo[i]->_hall, 24);
   }
-
 
   attachInterrupt(digitalPinToInterrupt(robo[0]->_hall), contagemPulsos1 , CHANGE);
   attachInterrupt(digitalPinToInterrupt(robo[1]->_hall), contagemPulsos2 , CHANGE);
@@ -55,13 +41,11 @@ void setup() {
 }
 
 
-
 void loop() {
   char msg[7];
   char sendFrame[6];
-  static unsigned int tempoHorus, tempoTotal, tempoInicial, tempoAtual, tempoPulso, tempoContagem, tempoAuxiliar;
+  static unsigned int tempoHorus, tempoAtual, tempoPulso;
   static boolean flagHorus = false, inicio = true;
-  static double rpm[3] = {0};
 
   // PRINTS PARA TESTES DA RODA GIRANDO NA MÃO
   /*  Serial.print("  pul1: ");
@@ -75,16 +59,17 @@ void loop() {
   if (radio.receive(msg, 7) && isChecksumOk(msg) && ((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO))) {
     //Serial.println("recebeu");
     if (inicio) {
-      tempoInicial = millis();
-      tempoRadioParado = tempoInicial;
-      tempoContagem = tempoInicial;
-      tempoAuxiliar = tempoInicial;
-      tempoPulso1 = tempoInicial;
-      tempoPulso2 = tempoInicial;
-      tempoPulso3 = tempoInicial;
+      tempoAtual = millis();
+      tempoRadioParado = tempoAtual;
+
+      tempoPulso1 = tempoAtual;
+      tempoPulso2 = tempoAtual;
+      tempoPulso3 = tempoAtual;
       for (int k = 0; k < 3; k++) {
         qntPulsosTotal[k] = 0;
+        hallMotores[k]->iniciar(tempoInicial);
       }
+      
       inicio = false;
       Serial.print("PWM");
       Serial.print("    RPM R1");
@@ -92,14 +77,12 @@ void loop() {
       Serial.println("    RPM R3");
     }
     else {
-      tempoAtual = millis();
-      tempoTotal = tempoAtual - tempoInicial;
-      tempoContagem = tempoAtual - tempoAuxiliar;
-      if (tempoContagem >= INTERVALO_MAXIMO){
-        for (int k = 0; k < 3; k++) {
+      tempoAtual = millis();      
+      for(int k = 0; k < 3; k++){
+        hallMotores[k]->atualizaTempo(tempoAtual);
+        if(hallMotores[k]->_tempoContagem >= INTERVALO_MAXIMO){
           qntPulsosTotal[k] = 0;
         }
-        tempoAuxiliar = tempoAtual;
       }
     }
 
@@ -107,28 +90,35 @@ void loop() {
       robo[j]->andar(msg);
       PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
     }
-
-    // PRINTS PARA TESTES DA RODA GIRANDO RECEBENDO PELO RÁDIO
-   /* Serial.print("tempo 1: ");
-    Serial.print(tempoPulso1);
-    Serial.print("tempo 2: ");
-    Serial.print(tempoPulso2);
-    Serial.print("tempo 3: ");
-    Serial.println(tempoPulso3);*/
+    
     for ( int i = 0; i < 3; i ++){
-      rpm[i] = (((double)qntPulsosTotal[i]/24)/tempoContagem)*1000*60;
+      //rpm[i] = hallMotores[i]->returnHall(tempoContagem, qntPulsosTotal[i]);
+      rpm[i] = hallMotores[i]->returnHall(qntPulsosTotal[i]);
+      //rpm[i] = (((double)qntPulsosTotal[i]/24)/tempoContagem)*1000*60;
     }
-   //Serial.print("  rpm1: ");
-   Serial.print((int) msg[3]);
-   Serial.print("    ");
-    Serial.print(rpm[0]);
-    Serial.print("    ");
-    //Serial.print("  rpm2: ");
-    Serial.print(rpm[1]);
-    Serial.print("    ");
-    //Serial.print("  rpm3: ");
-    Serial.println(rpm[2]);
 
+// PRINTS PARA TESTES DA RODA GIRANDO RECEBENDO PELO RÁDIO
+//    Serial.print("tempo 1: ");
+//    Serial.print(tempoPulso1);
+//    Serial.print("tempo 2: ");
+//    Serial.print(tempoPulso2);
+//    Serial.print("tempo 3: ");
+//    Serial.println(tempoPulso3);
+    
+//    Serial.print((int) msg[3]);
+//    Serial.print("    ");
+//    Serial.print(rpm[0]);
+//    Serial.print("    ");
+//    Serial.print(rpm[1]);
+//    Serial.print("    ");
+//    Serial.println(rpm[2]);
+
+//    Serial.print("  pul1: ");
+//    Serial.print(qntPulsosTotal[0]);
+//    Serial.print("  pul2: ");
+//    Serial.print(qntPulsosTotal[1]);
+//    Serial.print("  pul3: ");
+//    Serial.println(qntPulsosTotal[2]);
 
 
     tiva.driblar(msg);
@@ -138,7 +128,6 @@ void loop() {
       PWMWrite(tiva._chutePWM, 255, 0, 3000);       //PWMWrite(pin, resolution, duty, frequency);
     tiva.chutar(msg, true);
 
-    //tempoRadioParado = millis();
     tempoRadioParado = tempoAtual;
     radioParou = false;
 
