@@ -47,21 +47,10 @@ void loop() {
   static unsigned int tempoHorus, tempoAtual, tempoPulso;
   static boolean flagHorus = false, inicio = true;
 
-  // PRINTS PARA TESTES DA RODA GIRANDO NA MÃO
-  /*  Serial.print("  pul1: ");
-    Serial.print(qntPulsosTotal[0]);
-    Serial.print("  pul2: ");
-    Serial.print(qntPulsosTotal[1]);
-    Serial.print("  pul3: ");
-    Serial.println(qntPulsosTotal[2]);
-*/
-
   if (radio.receive(msg, 7) && isChecksumOk(msg) && ((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO))) {
-    //Serial.println("recebeu");
     if (inicio) {
       tempoAtual = millis();
       tempoRadioParado = tempoAtual;
-
       tempoPulso1 = tempoAtual;
       tempoPulso2 = tempoAtual;
       tempoPulso3 = tempoAtual;
@@ -69,8 +58,9 @@ void loop() {
         qntPulsosTotal[k] = 0;
         hallMotores[k]->iniciar(tempoInicial);
       }
-      
       inicio = false;
+
+      //PARA A DOCUMENTAÇÃO DO PID
       Serial.print("PWM");
       Serial.print("    RPM R1");
       Serial.print("    RPM R2");
@@ -92,9 +82,7 @@ void loop() {
     }
     
     for ( int i = 0; i < 3; i ++){
-      //rpm[i] = hallMotores[i]->returnHall(tempoContagem, qntPulsosTotal[i]);
       rpm[i] = hallMotores[i]->returnHall(qntPulsosTotal[i]);
-      //rpm[i] = (((double)qntPulsosTotal[i]/24)/tempoContagem)*1000*60;
     }
 
 // PRINTS PARA TESTES DA RODA GIRANDO RECEBENDO PELO RÁDIO
