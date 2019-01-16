@@ -25,7 +25,6 @@ AcoesTiva2 tiva;
 //************************************************************CONFIGURAÇÕES*****************************************************************************
 void setup() {
   Serial.begin(38400);
-  //Serial.begin(9600);
   for (int i = 0; i < 3; i++) {
     robo[i] = new Motor(i + 1);
     robo[i]->configurar();
@@ -61,12 +60,6 @@ void loop() {
         hallMotores[k]->iniciar(tempoAtual);
       }
       inicio = false;
-
-      //PRINTS PARA A DOCUMENTAÇÃO DO PID
-      Serial.print("PWM");
-      Serial.print("    RPM R1");
-      Serial.print("    RPM R2");
-      Serial.println("    RPM R3");
     }
     else {      
       for(int k = 0; k < 3; k++){
@@ -86,12 +79,18 @@ void loop() {
       hallMotores[i]->calcularVelocidade(qntPulsosTotal[i]);
     }
 
-// PRINTS PARA A DOCUMENTAÇÃO DO PID   
-    Serial.print((int) msg[3]);
-    for(int l = 0; l < 3; l++){
+    //PRINTS PARA A DOCUMENTAÇÃO DO PID   
+    if(msg[3] == 1 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0){
+      Serial.print((int) msg[3]);
+      for(int l = 0; l < 3; l++){
       Serial.print("    ");
-      Serial.println(hallMotores[l]->_rpm);
+      if(l == 2)
+        Serial.println(hallMotores[l]->_rpm);
+      else
+        Serial.print(hallMotores[l]->_rpm);
+      } 
     }
+
 
     tiva.driblar(msg);
     if (tiva.carregarCapacitor(msg, false))

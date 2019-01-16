@@ -39,12 +39,11 @@ Motor::Motor(double kp, double ki, double kd, int id){ // Básico com PID
 
 
 // Métodos 
-void Motor::configurar(){  
-                                   
-  pinMode(this->_velocidade,OUTPUT);                  
-  pinMode(this->_sentido,OUTPUT);
-  pinMode(this->_hall,INPUT);
-  pinMode(this->_tacometro, INPUT);
+void Motor::configurar(){                          
+  pinMode(_velocidade,OUTPUT);                  
+  pinMode(_sentido,OUTPUT);
+  pinMode(_hall,INPUT);
+  pinMode(_tacometro, INPUT);
 }
 
 double Motor::PWMtoSpeed(byte setpoint_pwm){
@@ -53,35 +52,31 @@ double Motor::PWMtoSpeed(byte setpoint_pwm){
 
 void Motor::andarPID(double setpoint_speed){
   // TODO
-  if(!_status){
-    PID motorPID(&(this->_input), &(this->_output), &(this->_setpoint), _kp, _ki, _kd, 0);         // Inicializa o controlador PID do motor
+  /*if(!_status){
+    PID motorPID(&(_input), &(t_output), &(_setpoint), _kp, _ki, _kd, 0);         // Inicializa o controlador PID do motor
     motorPID.SetMode(AUTOMATIC);
 
     Hall hallMotor(_hall,48);                                                                      // Inicializa o sensor Hall
 
-    this->_status = true; 
+    _status = true; 
   }
 
-  this->_input = analogRead(this->_hall);
-  this->_setpoint = setpoint_speed;
+  _input = analogRead(_hall);
+  _setpoint = setpoint_speed;
 
   //motorPID.Compute();
-  analogWrite(this->_velocidade, this->_output);
+  analogWrite(_velocidade, _output);*/
 }
 
 void Motor::andar(char protocolo[]){                              // Protocolo = {'M', byteAção+ID, byteVelocMotor1, byteVelocMotor2, byteVelocMotor3, 1}
-  if(protocolo[(this->_id) + 1] <= ANTI_HORARIO){                 // Se o pwm do motor <= 127 
-    digitalWrite(this->_sentido, LOW);                            // Rotação no sentido horário 
-    this->_output = protocolo[(this->_id) + 1];                   // Output recebe o pwm contido no byte de velocidade do motor específico (1,2 ou 3)
+  if(protocolo[_id + 1] <= ANTI_HORARIO){                 // Se o pwm do motor <= 127 
+    digitalWrite(_sentido, LOW);                            // Rotação no sentido horário 
+    _output = protocolo[_id + 1];                   // Output recebe o pwm contido no byte de velocidade do motor específico (1,2 ou 3)
   }
   else{                                                           // Se o pwm > 127 - rotação no sentido anti-horário
-    digitalWrite(this->_sentido, HIGH);
-    this->_output = (protocolo[(this->_id) + 1] & ANTI_HORARIO);  // Módulo 127
+    digitalWrite(_sentido, HIGH);
+    _output = (protocolo[_id + 1] & ANTI_HORARIO);  // Módulo 127
   }
- 
-  //Serial.println("xau");
-
-  //PWMWrite(this->_velocidade, 127, this->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
-}
+ }
 
 
