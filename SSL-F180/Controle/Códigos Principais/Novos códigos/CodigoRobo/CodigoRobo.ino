@@ -6,21 +6,23 @@
 
 #define ID_ROBO 0x03
 
+//DECLARAÇÃO DAS FUNÇÕES
 void parar();
 bool isChecksumOk(char);
 void contagemPulsos1();
 void contagemPulsos2();
 void contagemPulsos3();
 
+//DECLARAÇÃO DAS VARIÁVEIS GLOBAIS
 int qntPulsosTotal[3] = {0};
 unsigned long tempoRadioParado = millis(), tempoPulso1 = 0, tempoPulso2 = 0, tempoPulso3 = 0;
 boolean radioParou = true, interruptRoda1 = true, interruptRoda2 = true, interruptRoda3 = true;
-
 Motor *robo[3];
 Hall *hallMotores[3];
 Radio radio(109, "RX");
 AcoesTiva2 tiva;
 
+//************************************************************CONFIGURAÇÕES*****************************************************************************
 void setup() {
   Serial.begin(38400);
   //Serial.begin(9600);
@@ -40,7 +42,7 @@ void setup() {
   parar();
 }
 
-
+//************************************************************FUÇÃO PRINCIPAL*****************************************************************************
 void loop() {
   char msg[7];
   char sendFrame[6];
@@ -48,26 +50,25 @@ void loop() {
   static boolean flagHorus = false, inicio = true;
 
   if (radio.receive(msg, 7) && isChecksumOk(msg) && ((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO))) {
+    tempoAtual = millis();
     if (inicio) {
-      tempoAtual = millis();
       tempoRadioParado = tempoAtual;
       tempoPulso1 = tempoAtual;
       tempoPulso2 = tempoAtual;
       tempoPulso3 = tempoAtual;
       for (int k = 0; k < 3; k++) {
         qntPulsosTotal[k] = 0;
-        hallMotores[k]->iniciar(tempoInicial);
+        hallMotores[k]->iniciar(tempoAtual);
       }
       inicio = false;
 
-      //PARA A DOCUMENTAÇÃO DO PID
+      //PRINTS PARA A DOCUMENTAÇÃO DO PID
       Serial.print("PWM");
       Serial.print("    RPM R1");
       Serial.print("    RPM R2");
       Serial.println("    RPM R3");
     }
-    else {
-      tempoAtual = millis();      
+    else {      
       for(int k = 0; k < 3; k++){
         hallMotores[k]->atualizaTempo(tempoAtual);
         if(hallMotores[k]->_tempoContagem >= INTERVALO_MAXIMO){
@@ -82,32 +83,15 @@ void loop() {
     }
     
     for ( int i = 0; i < 3; i ++){
-      rpm[i] = hallMotores[i]->returnHall(qntPulsosTotal[i]);
+      hallMotores[i]->calcularVelocidade(qntPulsosTotal[i]);
     }
 
-// PRINTS PARA TESTES DA RODA GIRANDO RECEBENDO PELO RÁDIO
-//    Serial.print("tempo 1: ");
-//    Serial.print(tempoPulso1);
-//    Serial.print("tempo 2: ");
-//    Serial.print(tempoPulso2);
-//    Serial.print("tempo 3: ");
-//    Serial.println(tempoPulso3);
-    
-//    Serial.print((int) msg[3]);
-//    Serial.print("    ");
-//    Serial.print(rpm[0]);
-//    Serial.print("    ");
-//    Serial.print(rpm[1]);
-//    Serial.print("    ");
-//    Serial.println(rpm[2]);
-
-//    Serial.print("  pul1: ");
-//    Serial.print(qntPulsosTotal[0]);
-//    Serial.print("  pul2: ");
-//    Serial.print(qntPulsosTotal[1]);
-//    Serial.print("  pul3: ");
-//    Serial.println(qntPulsosTotal[2]);
-
+// PRINTS PARA A DOCUMENTAÇÃO DO PID   
+    Serial.print((int) msg[3]);
+    for(int l = 0; l < 3; l++){
+      Serial.print("    ");
+      Serial.println(hallMotores[l]->_rpm);
+    }
 
     tiva.driblar(msg);
     if (tiva.carregarCapacitor(msg, false))
@@ -119,7 +103,7 @@ void loop() {
     tempoRadioParado = tempoAtual;
     radioParou = false;
 
-    // Horus
+    //HORUS
     /* if(msg[1] & 0x80 && !flagHorus){
        tempoHorus = millis();
        flagHorus = true;
@@ -130,11 +114,8 @@ void loop() {
        radio.sendHorus(sendFrame);
        flagHorus = false;
       }*/
-    //}
-
   }
   else {
-    //Serial.println("nao recebeu");
     delay(1);
     if (millis() - tempoRadioParado >= 500)
       parar();
@@ -142,6 +123,8 @@ void loop() {
 }
 
 
+
+//************************************************************FUÇÕES AUXILIARES*****************************************************************************
 void parar() {
   char protocol[6] = {'M', ID_ROBO, 1, 1, 1, 1};
   for (int j = 0; j < 3; j++) {

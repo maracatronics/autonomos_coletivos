@@ -44,6 +44,7 @@ class Motor
 	  	double _kp, _ki, _kd;									// kp = constante proporcional; ki = constante integrativa; kd = constante derivativa (constantes do PID)
 	  	double _setpoint, _input, _output;						// setpoint = velocidade pretendida do Motor; input = velocidade atual do Motor; output = valor do pwm de saída (PID)
 	  	uint8_t _velocidade, _sentido, _hall, _tacometro;		// Pinos para saída do pwm da roda (velocidade), para o sentido da rotação do Motor e para a leitura da velocidade atual do Motor (hall)
-	  	boolean _status;										// Se o controlador e o sensor já foram atualizados (status = 1) ou não (status = 0)	 	
+	  	boolean _status;										// Se o controlador e o sensor já foram atualizados (status = 1) ou não (status = 0)	
+	  	//Hall(int pin, int qtdPulsos); 	
 };
 #endif
