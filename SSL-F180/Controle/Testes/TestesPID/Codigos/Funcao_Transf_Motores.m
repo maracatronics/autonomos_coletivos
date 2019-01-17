@@ -1,5 +1,6 @@
 clc
 % Importando os dados do txt onde as velocidades e input foram salvos
+
 dados111012 = importdata('C:\Users\natal\Desktop\teste_radio\teste\Teste_Novo\Motor 11, Motor 10, Motor 12(5).txt');
 %%
 %Inicializando as variáveis com os valores lidos do txt
