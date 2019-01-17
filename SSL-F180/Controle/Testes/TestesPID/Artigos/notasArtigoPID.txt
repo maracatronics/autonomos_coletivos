@@ -1,0 +1,37 @@
+(pg. 16)
+Te -> torque elétrico
+wn -> velocidade angular
+Tl -> suposta carga mecânica
+e -> back emf
+kf -> constante de fricção
+
+j = 92.5 gcm² (Inércia do rotor)
+ke = 0.076671122994 v-secs/rad (Constante de back emf)
+kt = 25.5 mNm/A (Constante de torque)
+R = 1.24 ? (Resistencia Terminal)
+L = 0.56 mH (Indutância Terminal)
+ks = 374 rpm/V (Constante de velocidade)
+p = 3 (Quantidade de bobinas)
+
+e = ke*wm
+Te = kt*wm
+
+DADOS DO MAXON:
+te = L/(3*R) =  150.5376344086667 H/ohm (CONSTANTE DE TEMPO - ELÉTRICA)
+tm = (R*j)/(ke*kt) =  17.6 ms (CONSTANTE DE TEMPO -  MECÂNICA)
+ke = (3*R*j)/(tm*kt) = 0.076671122994 v-secs/rad  (pg.20) 
+
+G(s) = (1/ke)/(tm*te*s^2 + tm*s + 1) = 13.0427201395/(2.64946236559e-06
+*s^2 + 0.0176*s + 1)
+
+NUM = [13.0427201395]
+DEN = [2.64946236559e-06 0.0176 1] 
+
+Kp = 0.988807823171913
+Ki = 191.690628105907
+Kd = 0.000253433211464183
+
+Kp = 1.34593531764331
+Ki = 381.621340361213
+Kd = -1.14172984271721e-05
+N = 117885.621211416   ou 1

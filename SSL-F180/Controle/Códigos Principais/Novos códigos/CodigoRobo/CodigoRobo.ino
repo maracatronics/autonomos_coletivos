@@ -48,7 +48,19 @@ void loop() {
   static unsigned int tempoHorus, tempoAtual, tempoPulso;
   static boolean flagHorus = false, inicio = true;
 
+  int velocidade1 = 100, velocidade2 = 100, velocidade3 = 100;
+  int DRIBLE = 16, CHUTE = 64, PASSE = 32;
+  
+//  msg[0] = (byte) 'M';   
+//  msg[1] = (byte) (ID_ROBO + DRIBLE + CHUTE);
+//  msg[2] = (byte) velocidade1;
+//  msg[3] = (byte) velocidade2;  
+//  msg[4] = (byte) velocidade3;
+//  msg[5] = (byte) 'F';
+//  msg[6] = (byte) (msg[0] ^ msg[1] ^ msg[2] ^ msg[3] ^ msg[4] ^ msg[5]);
+
   if (radio.receive(msg, 7) && isChecksumOk(msg) && ((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO))) {
+  //if (msg[0] == 'M' && (msg[1] & 0x07) == ID_ROBO) {
     tempoAtual = millis();
     if (inicio) {
       tempoRadioParado = tempoAtual;
@@ -80,16 +92,16 @@ void loop() {
     }
 
     //PRINTS PARA A DOCUMENTAÇÃO DO PID   
-    if(msg[3] == 1 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0){
-      Serial.print((int) msg[3]);
-      for(int l = 0; l < 3; l++){
-      Serial.print("    ");
-      if(l == 2)
-        Serial.println(hallMotores[l]->_rpm);
-      else
-        Serial.print(hallMotores[l]->_rpm);
-      } 
-    }
+//    if(msg[3] == 1 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0){
+//      Serial.print((int) msg[3]);
+//      for(int l = 0; l < 3; l++){
+//      Serial.print("    ");
+//      if(l == 2)
+//        Serial.println(hallMotores[l]->_rpm);
+//      else
+//        Serial.print(hallMotores[l]->_rpm);
+//      } 
+//    }
 
 
     tiva.driblar(msg);

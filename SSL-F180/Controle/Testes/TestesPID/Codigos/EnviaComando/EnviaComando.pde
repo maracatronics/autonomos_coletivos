@@ -31,7 +31,7 @@ void draw(){
     byte[] msg = new byte[7];
   
     msg[0] = (byte) 'M';   
-    msg[1] = (byte) (ID);
+    msg[1] = (byte) (ID + DRIBLE + CHUTE);
     msg[2] = (byte) velocidade1;
     msg[3] = (byte) velocidade2;  
     msg[4] = (byte) velocidade3;
@@ -40,7 +40,7 @@ void draw(){
    
     myPort.write(msg);
     
-    if(estado == 0){
+    /*if(estado == 0){
       velocidade1 = 127;
       velocidade2 = 127;
       velocidade3 = 127;
@@ -57,7 +57,7 @@ void draw(){
          estado = 0;
          tempo = millis();
        }
-     }
+     }*/
       
     delay(10);  
  
