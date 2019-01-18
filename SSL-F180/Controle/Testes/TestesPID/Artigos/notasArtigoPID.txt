@@ -1,3 +1,4 @@
+#DADOS GERAIS: 
 (pg. 16)
 Te -> torque elétrico
 wn -> velocidade angular
@@ -16,22 +17,39 @@ p = 3 (Quantidade de bobinas)
 e = ke*wm
 Te = kt*wm
 
-DADOS DO MAXON:
-te = L/(3*R) =  150.5376344086667 H/ohm (CONSTANTE DE TEMPO - ELÉTRICA)
-tm = (R*j)/(ke*kt) =  17.6 ms (CONSTANTE DE TEMPO -  MECÂNICA)
-ke = (3*R*j)/(tm*kt) = 0.076671122994 v-secs/rad  (pg.20) 
+#DADOS DO MAXON:
+te = L / (3*R) =  150.5376344086667 H/ohm (CONSTANTE DE TEMPO - ELÉTRICA)
+tm = (R*j) / (ke*kt) =  17.6 ms (CONSTANTE DE TEMPO -  MECÂNICA)
+ke = (3*R*j) / (tm*kt) = 0.076671122994 v-secs/rad  (pg.20) 
 
-G(s) = (1/ke)/(tm*te*s^2 + tm*s + 1) = 13.0427201395/(2.64946236559e-06
-*s^2 + 0.0176*s + 1)
+G(S) = (1/ke) / (tm*te*S^2 + tm*S + 1) = 13.0427201395 / (2.64946236559e-06*S^2 + 0.0176*S + 1)
+NUM_G(S) = [0 8,86102021885859 0,0363924868964624]
+DEN_G(S) = [2.64946236559e-06 0.0176 1]
 
-NUM = [13.0427201395]
-DEN = [2.64946236559e-06 0.0176 1] 
+G(Z) = (8.8610*Z^2 + 0.0364) / (Z^2 - 0.3178*Z) 
+NUM_G(Z) = [0 8.86102021885859 0.0363924868964624]
+DEN_G(Z) = [1 -0.317825376102872 0]
 
+
+#DADOS DO PID:
+G(S) = Kp + Ki*(1 / S) + Kd*S = (Kd*S^2 + Kp*S + Ki) / S
+NUM_GPID(S) = [Kd Kp Ki]
+DEN_GPID(S) = [0 1 0]
+
+G(Z) = (b0*Z^2 + b1*Z + b2) / (Z^2 - Z)
+b0 = Kp + Ki*(Ts/2) + Kd/Ts
+b1 = Ki*(Ts/2) - Kp - 2*(Kd/Ts)
+b2 = Kd/Ts
+NUM_GPID(Z) = [5.16157785633408 2.47141981581154 -0.000570864921358605]
+DEN_GPID(Z) = [1 -1 0]
+
+1ª TENTATIVA:
 Kp = 0.988807823171913
 Ki = 191.690628105907
 Kd = 0.000253433211464183
 
+2ª TENTATIVA (resposta mais rápida):
 Kp = 1.34593531764331
 Ki = 381.621340361213
-Kd = -1.14172984271721e-05
-N = 117885.621211416   ou 1
+Kd = -1.14172984271721e-5
+N = 117885.621211416   ou 1 ???
