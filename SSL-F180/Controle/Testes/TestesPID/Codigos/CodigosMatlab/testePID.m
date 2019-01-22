@@ -15,7 +15,7 @@ num = 1/Ke;
 den = [tm*te tm 1];
 
 G = tf(num,den);                %Função de Transferência (tempo contínuo)
-G_disc = c2d(G,Ts);                %Função de Transferência (tempo discreto)
+G_disc = c2d(G,Ts);             %Função de Transferência (tempo discreto)
 %%
 %Gráfico da resposta ao degrau unitário
 step(G, 0.5);
@@ -61,7 +61,7 @@ Kp = 1.34593531764331;
 Ki = 381.621340361213;
 Kd = -1.14172984271721e-5;
 
-b0 = Kp + Ki*(Ts/2) + Kd*(1/Ts);
+b0 = Kp + Ki*(Ts/2) + Kd*(1/Ts); 
 b1 = -Kp + Ki*(Ts/2) - 2*Kd*(1/Ts);
 b2 = Kd*(1/Ts);
 
@@ -93,4 +93,3 @@ title('Resposta ao degrau em malha fechada (tempo discreto)');
 xlabel('Tempo, (s)')
 ylabel('Tensão, (V)') 
 grid on;
-%%

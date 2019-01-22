@@ -85,23 +85,23 @@ void loop() {
 
     for (int j = 0; j < 3; j++) {
       hallMotores[j]->calcularVelocidade(qntPulsosTotal[j]);
-      //robo[j]->andarPID(setpoint_speed, hallMotores[j]->_rpm);
-      robo[j]->andar(msg);
+      robo[j]->andarPID(setpoint_speed, hallMotores[j]->_rpm);
+      //robo[j]->andar(msg);
       PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
     }
     
 
     //PRINTS PARA A DOCUMENTAÇÃO DO PID   
-//    if(msg[3] == 1 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0){
-//      Serial.print((int) msg[3]);
-//      for(int l = 0; l < 3; l++){
-//      Serial.print("    ");
-//      if(l == 2)
-//        Serial.println(hallMotores[l]->_rpm);
-//      else
-//        Serial.print(hallMotores[l]->_rpm);
-//      } 
-//    }
+    if(msg[3] == 1 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0){
+      Serial.print((int) msg[3]);
+      for(int l = 0; l < 3; l++){
+      Serial.print("    ");
+      if(l == 2)
+        Serial.println(hallMotores[l]->_rpm);
+      else
+        Serial.print(hallMotores[l]->_rpm);
+      } 
+    }
 
 
     tiva.driblar(msg);
