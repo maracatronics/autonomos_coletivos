@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -149,6 +150,13 @@ public:
     QCheckBox *checkBox_30;
     QCheckBox *checkBox_31;
     QPushButton *log_Button;
+    QWidget *verticalLayoutWidget_25;
+    QVBoxLayout *verticalLayout_5;
+    QComboBox *boxDevice;
+    QLabel *label_2;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
+    QLabel *label_14;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -290,7 +298,7 @@ public:
         checkBox_3->setGeometry(QRect(240, 240, 181, 23));
         maraca_Logo = new QLabel(centralWidget);
         maraca_Logo->setObjectName(QString::fromUtf8("maraca_Logo"));
-        maraca_Logo->setGeometry(QRect(580, 210, 201, 171));
+        maraca_Logo->setGeometry(QRect(50, 560, 121, 101));
         maraca_Logo->setTextFormat(Qt::PlainText);
         maraca_Logo->setPixmap(QPixmap(QString::fromUtf8("maracaTeste.png")));
         maraca_Logo->setScaledContents(true);
@@ -688,6 +696,31 @@ public:
         log_Button->setGeometry(QRect(810, 630, 89, 25));
         log_Button->setCheckable(true);
         log_Button->setChecked(false);
+        verticalLayoutWidget_25 = new QWidget(centralWidget);
+        verticalLayoutWidget_25->setObjectName(QString::fromUtf8("verticalLayoutWidget_25"));
+        verticalLayoutWidget_25->setGeometry(QRect(550, 100, 211, 21));
+        verticalLayout_5 = new QVBoxLayout(verticalLayoutWidget_25);
+        verticalLayout_5->setSpacing(6);
+        verticalLayout_5->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
+        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
+        boxDevice = new QComboBox(verticalLayoutWidget_25);
+        boxDevice->setObjectName(QString::fromUtf8("boxDevice"));
+
+        verticalLayout_5->addWidget(boxDevice);
+
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(550, 80, 67, 17));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(550, 130, 101, 25));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(660, 130, 101, 25));
+        label_14 = new QLabel(centralWidget);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+        label_14->setGeometry(QRect(550, 280, 121, 17));
         Brennand->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Brennand);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -756,6 +789,10 @@ public:
         checkBox_30->setText(QApplication::translate("Brennand", "Inverter", nullptr));
         checkBox_31->setText(QApplication::translate("Brennand", "Inverter", nullptr));
         log_Button->setText(QApplication::translate("Brennand", "Log", nullptr));
+        label_2->setText(QApplication::translate("Brennand", "Porta", nullptr));
+        pushButton->setText(QApplication::translate("Brennand", "Conectar", nullptr));
+        pushButton_2->setText(QApplication::translate("Brennand", "Desconectar", nullptr));
+        label_14->setText(QApplication::translate("Brennand", "A\303\247\303\265es comuns", nullptr));
     } // retranslateUi
 
 };

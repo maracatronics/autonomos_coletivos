@@ -69,6 +69,7 @@ private slots:
 
 private:
     Ui::Brennand *ui;
+    QStringList loadPorts();
 };
 
 #endif // BRENNAND_H

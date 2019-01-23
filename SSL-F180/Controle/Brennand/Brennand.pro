@@ -30,11 +30,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         brennand.cpp \
-    robot.cpp
+    robot.cpp \
+    serialconnection.cpp
 
 HEADERS += \
         brennand.h \
-    robot.h
+    robot.h \
+    serialconnection.h
 
 FORMS += \
         brennand.ui

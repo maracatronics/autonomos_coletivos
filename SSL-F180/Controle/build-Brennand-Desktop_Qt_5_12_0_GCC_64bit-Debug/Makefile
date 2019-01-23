@@ -52,10 +52,12 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../Brennand/main.cpp \
 		../Brennand/brennand.cpp \
-		../Brennand/robot.cpp moc_brennand.cpp
+		../Brennand/robot.cpp \
+		../Brennand/serialconnection.cpp moc_brennand.cpp
 OBJECTS       = main.o \
 		brennand.o \
 		robot.o \
+		serialconnection.o \
 		moc_brennand.o
 DIST          = /opt/Qt/5.12.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/common/unix.conf \
@@ -229,6 +231,7 @@ DIST          = /opt/Qt/5.12.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/spec_post.prf \
+		../Brennand/.qmake.stash \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -249,9 +252,11 @@ DIST          = /opt/Qt/5.12.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/lex.prf \
 		../Brennand/Brennand.pro ../Brennand/brennand.h \
-		../Brennand/robot.h ../Brennand/main.cpp \
+		../Brennand/robot.h \
+		../Brennand/serialconnection.h ../Brennand/main.cpp \
 		../Brennand/brennand.cpp \
-		../Brennand/robot.cpp
+		../Brennand/robot.cpp \
+		../Brennand/serialconnection.cpp
 QMAKE_TARGET  = Brennand
 DESTDIR       = 
 TARGET        = Brennand
@@ -435,6 +440,7 @@ Makefile: ../Brennand/Brennand.pro /opt/Qt/5.12.0/gcc_64/mkspecs/linux-g++/qmake
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/default_pre.prf \
@@ -632,6 +638,7 @@ Makefile: ../Brennand/Brennand.pro /opt/Qt/5.12.0/gcc_64/mkspecs/linux-g++/qmake
 /opt/Qt/5.12.0/gcc_64/mkspecs/features/qt_config.prf:
 /opt/Qt/5.12.0/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/Qt/5.12.0/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /opt/Qt/5.12.0/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/Qt/5.12.0/gcc_64/mkspecs/features/toolchain.prf:
 /opt/Qt/5.12.0/gcc_64/mkspecs/features/default_pre.prf:
@@ -671,8 +678,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /opt/Qt/5.12.0/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Brennand/brennand.h ../Brennand/robot.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Brennand/main.cpp ../Brennand/brennand.cpp ../Brennand/robot.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Brennand/brennand.h ../Brennand/robot.h ../Brennand/serialconnection.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Brennand/main.cpp ../Brennand/brennand.cpp ../Brennand/robot.cpp ../Brennand/serialconnection.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Brennand/brennand.ui $(DISTDIR)/
 
 
@@ -1063,11 +1070,134 @@ brennand.o: ../Brennand/brennand.cpp ../Brennand/brennand.h \
 		/opt/Qt/5.12.0/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt/5.12.0/gcc_64/include/QtGui/qicon.h \
-		ui_brennand.h
+		ui_brennand.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/QVariant \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QApplication \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qapplication.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtGui/qguiapplication.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtGui/qinputmethod.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QCheckBox \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qcheckbox.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QComboBox \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qcombobox.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qstyleoption.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtGui/qvalidator.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qslider.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qabstractslider.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qstyle.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qtabbar.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qrubberband.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qframe.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QLabel \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qlabel.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QLineEdit \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qlineedit.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QMenuBar \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qmenubar.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qmenu.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qaction.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qactiongroup.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QPushButton \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qpushbutton.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QSlider \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QStatusBar \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qstatusbar.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QToolBar \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qtoolbar.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QVBoxLayout \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qboxlayout.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qlayout.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qgridlayout.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o brennand.o ../Brennand/brennand.cpp
 
 robot.o: ../Brennand/robot.cpp ../Brennand/robot.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o robot.o ../Brennand/robot.cpp
+
+serialconnection.o: ../Brennand/serialconnection.cpp ../Brennand/serialconnection.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/QDebug \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qdebug.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qalgorithms.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qglobal.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qconfig.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qtcore-config.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qsystemdetection.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qprocessordetection.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qcompilerdetection.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qtypeinfo.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qsysinfo.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qlogging.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qflags.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qatomic.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qbasicatomic.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qgenericatomic.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qatomic_msvc.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qglobalstatic.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qmutex.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qnumeric.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qversiontagging.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qhash.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qchar.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qiterator.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qlist.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qrefcount.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qarraydata.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qhashfunctions.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qstring.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qbytearray.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qnamespace.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qstringliteral.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qstringalgorithms.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qstringview.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qstringbuilder.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qpair.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qbytearraylist.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qstringlist.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qregexp.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qstringmatcher.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qmap.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qtextstream.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qiodevice.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qobject.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qobjectdefs.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qcoreevent.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qscopedpointer.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qmetatype.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qvarlengtharray.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qcontainerfwd.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qobject_impl.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qlocale.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qvariant.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qshareddata.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qvector.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qpoint.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qset.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qcontiguouscache.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qsharedpointer.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtSerialPort/QSerialPort \
+		/opt/Qt/5.12.0/gcc_64/include/QtSerialPort/qserialport.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtSerialPort/qserialportglobal.h \
+		/opt/Qt/5.12.0/gcc_64/include/QtSerialPort/QSerialPortInfo \
+		/opt/Qt/5.12.0/gcc_64/include/QtSerialPort/qserialportinfo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o serialconnection.o ../Brennand/serialconnection.cpp
 
 moc_brennand.o: moc_brennand.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_brennand.o moc_brennand.cpp

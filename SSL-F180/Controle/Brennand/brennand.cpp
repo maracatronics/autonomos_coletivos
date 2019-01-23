@@ -1,8 +1,7 @@
 #include "brennand.h"
 #include "ui_brennand.h"
 #include "iostream"
-#include <QSerialPort>
-#include <QSerialPortInfo>
+
 
 
 
@@ -26,6 +25,7 @@ Brennand::Brennand(QWidget *parent) :
     ui->vel_Motor1_4->setText("0");
     ui->vel_Motor2_4->setText("0");
     ui->vel_Motor3_4->setText("0");
+
 
 
 }
@@ -191,3 +191,8 @@ void Brennand::on_vel_Motor3_4_textChanged(const QString &arg1)
     if(value >= 0 && value <= 127)
         ui->slider_motor3_4->setValue(value);
 }
+
+
+
+
+
