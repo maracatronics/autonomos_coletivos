@@ -6,7 +6,10 @@
 
 QT       += core gui
 
+QT += serialport
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
 
 TARGET = Brennand
 TEMPLATE = app
@@ -26,10 +29,12 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        brennand.cpp
+        brennand.cpp \
+    robot.cpp
 
 HEADERS += \
-        brennand.h
+        brennand.h \
+    robot.h
 
 FORMS += \
         brennand.ui
