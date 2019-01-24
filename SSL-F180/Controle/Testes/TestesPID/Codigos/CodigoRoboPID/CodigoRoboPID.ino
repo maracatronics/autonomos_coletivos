@@ -62,6 +62,7 @@ void loop() {
 //  msg[6] = (byte) (msg[0] ^ msg[1] ^ msg[2] ^ msg[3] ^ msg[4] ^ msg[5]);
 
   if (radio.receive(msg, 7) && isChecksumOk(msg) && ((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO))) {
+    
   //if (msg[0] == 'M' && (msg[1] & 0x07) == ID_ROBO) {
     tempoAtual = millis();
     if (inicio) {
@@ -77,6 +78,7 @@ void loop() {
     }
     else {      
       for(int k = 0; k < 3; k++){
+        //Serial.println("aqui");
         hallMotores[k]->atualizaTempo(tempoAtual);
         if(hallMotores[k]->_tempoContagem >= INTERVALO_MAXIMO){
           qntPulsosTotal[k] = 0;
@@ -85,10 +87,11 @@ void loop() {
     }
 
     //for (int j = 0; j < 3; j++) {
-      hallMotores[1]->calcularVelocidade(qntPulsosTotal[1]);
-      robo[1]->andarPID(setpoint_speed, hallMotores[1]->_rpm, flagPID);
+      //Serial.println("anda BB");
+      hallMotores[0]->calcularVelocidade(qntPulsosTotal[0]);
+      robo[0]->andarPID(setpoint_speed, hallMotores[0]->_rpm, flagPID);
       //robo[j]->andar(msg);
-      PWMWrite(robo[1]->_velocidade, 127, robo[1]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
+      PWMWrite(robo[0]->_velocidade, 127, robo[0]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
     //}
     
     if(flagPID < 3)
