@@ -36,7 +36,8 @@ SOURCES += \
 HEADERS += \
         brennand.h \
     robot.h \
-    serialconnection.h
+    serialconnection.h \
+    crc.h
 
 FORMS += \
         brennand.ui
