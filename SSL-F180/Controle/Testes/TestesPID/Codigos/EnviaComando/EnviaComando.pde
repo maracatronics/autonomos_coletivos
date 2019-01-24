@@ -2,7 +2,7 @@
 import processing.serial.*;
 
  
-int velocidade1 = 100, velocidade2 = 100, velocidade3 = 100;
+int velocidade1 = 1, velocidade2 = 1, velocidade3 = 1;
 int ID = 3;
 int DRIBLE = 16, CHUTE = 64, PASSE = 32;
 
@@ -13,17 +13,15 @@ void setup(){
 }
 
 long t1 = 0, tempo = millis();
-int contador = 0, INTERVALO=1000;
+int contador = 0, INTERVALO=60000;
 int estado = 0;
 
 //int velocidades[]={0, 25, 50, 75, 100, 125, 100, 75, 50, 25, 0};
-boolean enviar = false, control = true;  
+boolean enviar = true, control = true;  
 void draw(){
-  //if(enviar){
+  if(enviar){
     if(millis() - t1 >= INTERVALO){
-      if(contador < 10) contador++;
-  
-      t1 = millis();
+      enviar = !enviar;
     }
     
     //println(velocidades[contador]);
@@ -31,7 +29,7 @@ void draw(){
     byte[] msg = new byte[7];
   
     msg[0] = (byte) 'M';   
-    msg[1] = (byte) (ID + DRIBLE + CHUTE);
+    msg[1] = (byte) (ID);
     msg[2] = (byte) velocidade1;
     msg[3] = (byte) velocidade2;  
     msg[4] = (byte) velocidade3;
@@ -62,7 +60,7 @@ void draw(){
     delay(10);  
  
   
-  
+  }
   //ID++;
   //if(ID == 4)
    //ID = 2;

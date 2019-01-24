@@ -24,7 +24,7 @@ AcoesTiva2 tiva;
 
 //************************************************************CONFIGURAÇÕES*****************************************************************************
 void setup() {
-  Serial.begin(38400);
+  //Serial.begin(38400);
   for (int i = 0; i < 3; i++) {
     robo[i] = new Motor(i + 1);
     robo[i]->configurar();
@@ -47,7 +47,8 @@ void loop() {
   char sendFrame[6];
   static unsigned int tempoHorus, tempoAtual, tempoPulso;
   static boolean flagHorus = false, inicio = true;
-  static double setpoint_speed =1300;
+  static double setpoint_speed = 1000;
+  static int flagPID = 0;
 
   int velocidade1 = 100, velocidade2 = 100, velocidade3 = 100;
   int DRIBLE = 16, CHUTE = 64, PASSE = 32;
@@ -83,25 +84,33 @@ void loop() {
       }
     }
 
-    for (int j = 0; j < 3; j++) {
-      hallMotores[j]->calcularVelocidade(qntPulsosTotal[j]);
-      robo[j]->andarPID(setpoint_speed, hallMotores[j]->_rpm);
+    //for (int j = 0; j < 3; j++) {
+      hallMotores[1]->calcularVelocidade(qntPulsosTotal[1]);
+      robo[1]->andarPID(setpoint_speed, hallMotores[1]->_rpm, flagPID);
       //robo[j]->andar(msg);
-      PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
-    }
+      PWMWrite(robo[1]->_velocidade, 127, robo[1]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
+    //}
+    
+    if(flagPID < 3)
+      flagPID++;
     
 
     //PRINTS PARA A DOCUMENTAÇÃO DO PID   
-    if(msg[3] == 1 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0){
-      Serial.print((int) msg[3]);
-      for(int l = 0; l < 3; l++){
-      Serial.print("    ");
-      if(l == 2)
-        Serial.println(hallMotores[l]->_rpm);
-      else
-        Serial.print(hallMotores[l]->_rpm);
-      } 
-    }
+//    if(msg[3] != 1 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0){
+//      //Serial.print((int) msg[3]);
+//      for(int l = 0; l < 3; l++){
+//      Serial.print(robo[l]->_output);
+//      Serial.print("    ");
+//      if(l == 2)
+//        Serial.println(hallMotores[l]->_rpm);
+//      else
+//        Serial.print(hallMotores[l]->_rpm); 
+//      } 
+//    }
+
+//    Serial.print(robo[0]->_output);
+//    Serial.print("    ");
+//    Serial.println(hallMotores[0]->_rpm);
 
 
     tiva.driblar(msg);
@@ -114,17 +123,6 @@ void loop() {
     tempoRadioParado = tempoAtual;
     radioParou = false;
 
-    //HORUS
-    /* if(msg[1] & 0x80 && !flagHorus){
-       tempoHorus = millis();
-       flagHorus = true;
-      }
-      if(flagHorus && millis() - tempoHorus >= ID_ROBO * 100){
-       PWMWrite(tiva._chutePWM, 255, 0, 3000);       //PWMWrite(pin, resolution, duty, frequency);
-       tiva.horus(sendFrame, msg[1]);
-       radio.sendHorus(sendFrame);
-       flagHorus = false;
-      }*/
   }
   else {
     delay(1);
