@@ -35,7 +35,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Brennand1.0.0
-DISTDIR = /home/pedro_jorge/Documentos/Projetos/Futebol_F180/autonomos_coletivos/SSL-F180/Controle/build-Brennand-Desktop_Qt_5_12_0_GCC_64bit-Debug/.tmp/Brennand1.0.0
+DISTDIR = /home/victor/Área\ de\ Trabalho/Maraca/SSL-F180/Controle/build-Brennand-Desktop_Qt_5_12_0_GCC_64bit-Debug/.tmp/Brennand1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/opt/Qt/5.12.0/gcc_64/lib
 LIBS          = $(SUBLIBS) -L/opt/Qt/5.12.0/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5SerialPort -lQt5Core -lGL -lpthread   
@@ -253,7 +253,8 @@ DIST          = /opt/Qt/5.12.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.12.0/gcc_64/mkspecs/features/lex.prf \
 		../Brennand/Brennand.pro ../Brennand/brennand.h \
 		../Brennand/robot.h \
-		../Brennand/serialconnection.h ../Brennand/main.cpp \
+		../Brennand/serialconnection.h \
+		../Brennand/crc.h ../Brennand/main.cpp \
 		../Brennand/brennand.cpp \
 		../Brennand/robot.cpp \
 		../Brennand/serialconnection.cpp
@@ -678,7 +679,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /opt/Qt/5.12.0/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Brennand/brennand.h ../Brennand/robot.h ../Brennand/serialconnection.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Brennand/brennand.h ../Brennand/robot.h ../Brennand/serialconnection.h ../Brennand/crc.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../Brennand/main.cpp ../Brennand/brennand.cpp ../Brennand/robot.cpp ../Brennand/serialconnection.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Brennand/brennand.ui $(DISTDIR)/
 
@@ -824,7 +825,7 @@ moc_brennand.cpp: /opt/Qt/5.12.0/gcc_64/include/QtWidgets/QMainWindow \
 		../Brennand/brennand.h \
 		moc_predefs.h \
 		/opt/Qt/5.12.0/gcc_64/bin/moc
-	/opt/Qt/5.12.0/gcc_64/bin/moc $(DEFINES) --include /home/pedro_jorge/Documentos/Projetos/Futebol_F180/autonomos_coletivos/SSL-F180/Controle/build-Brennand-Desktop_Qt_5_12_0_GCC_64bit-Debug/moc_predefs.h -I/opt/Qt/5.12.0/gcc_64/mkspecs/linux-g++ -I/home/pedro_jorge/Documentos/Projetos/Futebol_F180/autonomos_coletivos/SSL-F180/Controle/Brennand -I/opt/Qt/5.12.0/gcc_64/include -I/opt/Qt/5.12.0/gcc_64/include/QtWidgets -I/opt/Qt/5.12.0/gcc_64/include/QtGui -I/opt/Qt/5.12.0/gcc_64/include/QtSerialPort -I/opt/Qt/5.12.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Brennand/brennand.h -o moc_brennand.cpp
+	/opt/Qt/5.12.0/gcc_64/bin/moc $(DEFINES) --include '/home/victor/Área de Trabalho/Maraca/SSL-F180/Controle/build-Brennand-Desktop_Qt_5_12_0_GCC_64bit-Debug/moc_predefs.h' -I/opt/Qt/5.12.0/gcc_64/mkspecs/linux-g++ -I'/home/victor/Área de Trabalho/Maraca/SSL-F180/Controle/Brennand' -I/opt/Qt/5.12.0/gcc_64/include -I/opt/Qt/5.12.0/gcc_64/include/QtWidgets -I/opt/Qt/5.12.0/gcc_64/include/QtGui -I/opt/Qt/5.12.0/gcc_64/include/QtSerialPort -I/opt/Qt/5.12.0/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Brennand/brennand.h -o moc_brennand.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -960,7 +961,8 @@ main.o: ../Brennand/main.cpp ../Brennand/brennand.h \
 		/opt/Qt/5.12.0/gcc_64/include/QtCore/qeventloop.h \
 		/opt/Qt/5.12.0/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt/5.12.0/gcc_64/include/QtGui/qguiapplication.h \
-		/opt/Qt/5.12.0/gcc_64/include/QtGui/qinputmethod.h
+		/opt/Qt/5.12.0/gcc_64/include/QtGui/qinputmethod.h \
+		../Brennand/crc.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Brennand/main.cpp
 
 brennand.o: ../Brennand/brennand.cpp ../Brennand/brennand.h \
