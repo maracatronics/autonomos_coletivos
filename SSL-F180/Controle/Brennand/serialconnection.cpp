@@ -1,11 +1,15 @@
 #include "serialconnection.h"
 #include <QSerialPort>
 #include <QSerialPortInfo>
+#include <iostream>
 
 serialConnection::serialConnection(QSerialPort *myDev)
 {
     devSerial=myDev;
 }
+
+serialConnection::~serialConnection()
+{}
 
 
 QStringList serialConnection::loadPorts()
@@ -16,9 +20,9 @@ QStringList serialConnection::loadPorts()
 
         devSerial->setPort(info);
 
-
-        if (devSerial->open(QIODevice::ReadWrite)) {
-            devSerial->close();
+        /*devSerial->open(QIODevice::ReadWrite)*/
+        if (true) {
+            //devSerial->close();
             devs << info.portName();
         }
 

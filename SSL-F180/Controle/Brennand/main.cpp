@@ -23,11 +23,11 @@ int main(int argc, char *argv[])
 
     calcCRC(comands, sizeof (comands), protocol);
 
-    for (int i=0; i < 9; i++) {
-        cout << *(protocol + i) << " ";
-    }
-    cout << std::hex << (int)protocol[9] << " ";
-    cout << std::hex << (int)protocol[10] << endl;
+//    for (int i=0; i < 9; i++) {
+//        cout << *(protocol + i) << " ";
+//    }
+//    cout << std::hex << static_cast<int>(protocol[9]) << " ";
+//    cout << std::hex << static_cast<int>(protocol[10]) << endl;
 
     return a.exec();
 }
@@ -36,6 +36,6 @@ int main(int argc, char *argv[])
 void calcCRC(unsigned char *comands, size_t tam, unsigned char *protocol) {
     std::copy(comands, comands + SIZE_COMANDS, protocol);
     uint16_t crc = CRC::Calculate(comands, tam, CRC::CRC_16_XMODEM());
-    protocol[SIZE_PROTOCOL-2] = (unsigned char)((crc >> 8) & 0xff);
-    protocol[SIZE_PROTOCOL-1] = (unsigned char)(crc & 0xff);
+    protocol[SIZE_PROTOCOL-2] = static_cast<unsigned char>((crc >> 8) & 0xff);
+    protocol[SIZE_PROTOCOL-1] = static_cast<unsigned char>(crc & 0xff);
 }

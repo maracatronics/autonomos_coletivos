@@ -1,7 +1,7 @@
 #include "brennand.h"
 #include "ui_brennand.h"
 #include "iostream"
-
+#include "serialconnection.h"
 
 
 
@@ -26,7 +26,10 @@ Brennand::Brennand(QWidget *parent) :
     ui->vel_Motor2_4->setText("0");
     ui->vel_Motor3_4->setText("0");
 
-
+    QSerialPort devSerial(this);
+    serialConnection procSerial(&devSerial);
+    QStringList dispSerial = procSerial.loadPorts();
+    ui->boxDevice->addItems(dispSerial);
 
 }
 

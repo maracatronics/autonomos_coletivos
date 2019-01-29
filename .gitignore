@@ -58,5 +58,8 @@
 *.autosave
 
 # Folders
+SSL-F180/Controle/build-Brennand-Desktop_Qt_5_12_0_GCC_64bit-Debug/
+
+
 
 # End of https://www.gitignore.io/api/c++
