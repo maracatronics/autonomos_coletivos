@@ -2,6 +2,9 @@
 #define BRENNAND_H
 
 #include <QMainWindow>
+#include "serialconnection.h"
+#include <QSerialPort>
+#include <QSerialPortInfo>
 
 namespace Ui {
 class Brennand;
@@ -67,9 +70,21 @@ private slots:
 
     void on_vel_Motor3_4_textChanged(const QString &arg1);
 
+    void on_iniciar_Button_clicked();
+
+    void on_parar_Button_clicked();
+
+    void on_connectButton_clicked();
+
+    void on_disconnectButton_clicked();
+
 private:
     Ui::Brennand *ui;
     QStringList loadPorts();
+    QSerialPort *devSerial;
+    serialConnection *procSerial;
+    bool controlePorta;
+    bool controleTransmissao;
 };
 
 #endif // BRENNAND_H

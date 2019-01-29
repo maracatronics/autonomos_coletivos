@@ -3,8 +3,9 @@
 #include "iostream"
 #include "serialconnection.h"
 
+#define BR_SERIAL 32400
 
-
+void controleThreads();
 Brennand::Brennand(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Brennand)
@@ -25,12 +26,14 @@ Brennand::Brennand(QWidget *parent) :
     ui->vel_Motor1_4->setText("0");
     ui->vel_Motor2_4->setText("0");
     ui->vel_Motor3_4->setText("0");
+    controlePorta=false;
+    controleTransmissao=false;
 
-    QSerialPort devSerial(this);
-    serialConnection procSerial(&devSerial);
-    QStringList dispSerial = procSerial.loadPorts();
+    devSerial = new QSerialPort(this);
+    procSerial = new serialConnection(devSerial);
+    QStringList dispSerial = procSerial->loadPorts();
     ui->boxDevice->addItems(dispSerial);
-
+    controleThreads();
 }
 
 Brennand::~Brennand()
@@ -196,6 +199,42 @@ void Brennand::on_vel_Motor3_4_textChanged(const QString &arg1)
 }
 
 
+void Brennand::on_connectButton_clicked()
+{
+    procSerial->connect(ui->boxDevice->currentText(),BR_SERIAL);
+    controlePorta=true;
+}
+
+void Brennand::on_disconnectButton_clicked()
+{
+    procSerial->disconnect();
+    controlePorta=false;
+}
+
+
+
+void Brennand::on_iniciar_Button_clicked()
+{
+    controleTransmissao=true;
+    if(controlePorta && controleTransmissao){
+        qDebug()<<"trasmissão iniciada";
+        //desbloquear controleThreads aqui
+    }else if (!controlePorta && controleTransmissao){
+        qDebug()<<"É preciso abrir a porta";
+    }
+}
+
+void Brennand::on_parar_Button_clicked()
+{
+    controleTransmissao=false;
+    if(controlePorta && !controleTransmissao){
+        qDebug()<<"trasmissão parada";
+    }
+}
+
+void controleThreads(){
+    //iniciar as threads aqui dentro
+}
 
 
 
