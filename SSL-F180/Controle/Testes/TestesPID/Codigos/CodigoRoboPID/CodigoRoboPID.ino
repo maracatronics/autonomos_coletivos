@@ -1,3 +1,4 @@
+
 #include <Radio.h>
 #include "wiring_analog.c"    // Necessário para o PWMWrite
 #include <AcoesTiva2.h>
@@ -45,9 +46,9 @@ void setup() {
 void loop() {
   char msg[7];
   char sendFrame[6];
-  static unsigned int tempoHorus, tempoAtual, tempoPulso;
+  static unsigned int tempoHorus, tempoAtual, tempoPulso, tempoVariacao;
   static boolean flagHorus = false, inicio = true;
-  static double setpoint_speed = 1000;
+  static double setpoint_speed = 800;
   static int flagPID = 0;
 
   int velocidade1 = 100, velocidade2 = 100, velocidade3 = 100;
@@ -70,6 +71,7 @@ void loop() {
       tempoPulso1 = tempoAtual;
       tempoPulso2 = tempoAtual;
       tempoPulso3 = tempoAtual;
+      tempoVariacao = tempoAtual;
       for (int k = 0; k < 3; k++) {
         qntPulsosTotal[k] = 0;
         hallMotores[k]->iniciar(tempoAtual);
@@ -86,18 +88,64 @@ void loop() {
       }
     }
 
-    //for (int j = 0; j < 3; j++) {
+    for (int j = 0; j < 2 ; j++) {
       //Serial.println("anda BB");
-      hallMotores[0]->calcularVelocidade(qntPulsosTotal[0]);
-      robo[0]->andarPID(setpoint_speed, hallMotores[0]->_rpm, flagPID);
+      hallMotores[j]->calcularVelocidade(qntPulsosTotal[j]);
+      robo[j]->andarPID(setpoint_speed, hallMotores[j]->_rpm, flagPID);
       //robo[j]->andar(msg);
-      PWMWrite(robo[0]->_velocidade, 127, robo[0]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
-    //}
+      if(j == 1)
+        digitalWrite(robo[j]->_sentido, HIGH);
+      PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
+    }
     
-    if(flagPID < 3)
-      flagPID++;
-    
+    Serial.print(setpoint_speed);
+    Serial.print("         ");
+    Serial.print(robo[0]->_input);
+    Serial.print("              ");
+    Serial.print(robo[0]->_output);
+    Serial.print("              ");
+    Serial.print(robo[1]->_input);
+    Serial.print("              ");
+    Serial.println(robo[1]->_output);
 
+    if(tempoAtual - tempoVariacao >= 10000){
+      if(setpoint_speed == 1000){
+        if(flagPID)
+          setpoint_speed = 0;
+        else
+          setpoint_speed = 800;
+      }
+      else if(setpoint_speed == 800){
+        if(flagPID)
+          setpoint_speed = 1000;
+        else
+          setpoint_speed = 0;
+      }
+      else{
+        if(flagPID){
+          setpoint_speed = 800;
+          flagPID = 0;
+        }
+        else{
+          setpoint_speed = 1000;
+          flagPID = 1;
+        }
+      }
+//        if(flagPID){
+//          if(setpoint_speed > 600)
+//            setpoint_speed -= 200;
+//          else
+//            flagPID = 0;
+//        }
+//        else
+//          setpoint_speed += 200;
+//      }        
+//      else{
+//        flagPID = 1;
+//        setpoint_speed = 900;
+//      }
+      tempoVariacao = tempoAtual;
+    }
     //PRINTS PARA A DOCUMENTAÇÃO DO PID   
 //    if(msg[3] != 1 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0){
 //      //Serial.print((int) msg[3]);
