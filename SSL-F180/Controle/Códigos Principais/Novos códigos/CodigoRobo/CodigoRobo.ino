@@ -48,6 +48,7 @@ void loop() {
   static unsigned int tempoHorus, tempoAtual, tempoPulso;
   static boolean flagHorus = false, inicio = true;
   static double setpoint_speed =1300;
+  double setpoint_speedR1 = 0;
 
   int velocidade1 = 100, velocidade2 = 100, velocidade3 = 100;
   int DRIBLE = 16, CHUTE = 64, PASSE = 32;
@@ -85,9 +86,16 @@ void loop() {
 
     for (int j = 0; j < 3; j++) {
       hallMotores[j]->calcularVelocidade(qntPulsosTotal[j]);
-      //robo[j]->andarPID(setpoint_speed, hallMotores[j]->_rpm);
-      robo[j]->andar(msg);
-      PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
+      setpoint_speedR1 = hallMotores[1]->_rpm;
+      if(j==0){
+        robo[j]->andarPID(setpoint_speedR1, hallMotores[j]->_rpm);
+        robo[j]->andar(msg);
+        PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000); 
+      } else if(j == 1){
+        robo[j]->andarPID(setpoint_speed, hallMotores[j]->_rpm);
+        robo[j]->andar(msg);
+        PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
+      }
     }
     
 

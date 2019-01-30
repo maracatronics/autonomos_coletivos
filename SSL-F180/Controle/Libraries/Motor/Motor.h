@@ -39,7 +39,7 @@ class Motor
 	  	void andar(char []);					// Recebe o protocolo de comunicação e realiza a ação de andar
 	  
 	  	// Métodos ainda não Implementados 
-	  	void andarPID(double, double, int);		// Recebe um setpoint e realiza a ação de andar com o controle PID da velocidade dos motores
+	  	void andarPID(double, double);			// Recebe um setpoint e realiza a ação de andar com o controle PID da velocidade dos motores
 	  	double PWMtoSpeed(byte);				// Recebe o valor de pwm pretendido e transforma num setpoint da velocidade do Motor
 
 	public:

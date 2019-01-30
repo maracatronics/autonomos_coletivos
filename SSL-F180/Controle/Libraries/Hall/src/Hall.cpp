@@ -5,6 +5,7 @@ Hall::Hall(int pin, int qtdPulsos){
   this->_qtdPulsos = qtdPulsos;
   this->_interruptFlag = true;
   this->_tempoPulso = 0;
+  this->_rpm = 0;
 }
 
 void Hall::iniciar(unsigned long tempoAtual){

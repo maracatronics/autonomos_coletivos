@@ -30,6 +30,7 @@ void Motor::configurar(){
   pinMode(_sentido,OUTPUT);
   pinMode(_hall,INPUT);
   pinMode(_tacometro, INPUT);
+  //Serial.begin(9600);
  
   if(_id == 1){
     _kp = MOTOR1_KP;
@@ -51,14 +52,13 @@ double Motor::PWMtoSpeed(byte setpoint_pwm){
   // TODO
 }
 
-void Motor::andarPID(double setpoint_speed, double current_speed, int flag){
+void Motor::andarPID(double setpoint_speed, double current_speed){
   //Serial.println("anda BB");
   // TODO
   if(_erro == _setpoint || current_speed != 0){
     _input = current_speed;
   }  
   _setpoint = setpoint_speed;
-  
 
 
   /*_erro = abs(_setpoint - _input); //distance away from setpoint
@@ -67,10 +67,7 @@ void Motor::andarPID(double setpoint_speed, double current_speed, int flag){
   else
    motorPID->SetTunings(_akp, _aki, _akd); */
 
-  motorPID->Compute();
-
- 
-  
+  motorPID->Compute();  
 }
 
 void Motor::andar(char protocolo[]){                              // Protocolo = {'M', byteAção+ID, byteVelocMotor1, byteVelocMotor2, byteVelocMotor3, 1}

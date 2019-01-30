@@ -25,7 +25,9 @@ AcoesTiva2 tiva;
 
 //************************************************************CONFIGURAÇÕES*****************************************************************************
 void setup() {
-  //Serial.begin(38400);
+  //Serial.begin(9600); 
+  Serial.begin(38400);
+
   for (int i = 0; i < 3; i++) {
     robo[i] = new Motor(i + 1);
     robo[i]->configurar();
@@ -49,21 +51,41 @@ void loop() {
   static unsigned int tempoHorus, tempoAtual, tempoPulso, tempoVariacao;
   static boolean flagHorus = false, inicio = true;
   static double setpoint_speed = 800;
-  static int flagPID = 0;
+  static double setpoint_speedR1 = 1000;
+  static int flagPID = 1;
 
   int velocidade1 = 100, velocidade2 = 100, velocidade3 = 100;
   int DRIBLE = 16, CHUTE = 64, PASSE = 32;
-  
-//  msg[0] = (byte) 'M';   
-//  msg[1] = (byte) (ID_ROBO + DRIBLE + CHUTE);
-//  msg[2] = (byte) velocidade1;
-//  msg[3] = (byte) velocidade2;  
-//  msg[4] = (byte) velocidade3;
-//  msg[5] = (byte) 'F';
-//  msg[6] = (byte) (msg[0] ^ msg[1] ^ msg[2] ^ msg[3] ^ msg[4] ^ msg[5]);
+  /*/////////////////////////////
+  tempoAtual = millis();
+    if (inicio) {
+      tempoRadioParado = tempoAtual;
+      tempoPulso1 = tempoAtual;
+      tempoPulso2 = tempoAtual;
+      tempoPulso3 = tempoAtual;
+      tempoVariacao = tempoAtual;
+      for (int k = 0; k < 3; k++) {
+        qntPulsosTotal[k] = 0;
+        hallMotores[k]->iniciar(tempoAtual);
+      }
+      inicio = false;
+    }
+    else {      
+      for(int k = 0; k < 3; k++){
+        //Serial.println("aqui");
+        hallMotores[k]->atualizaTempo(tempoAtual);
+        if(hallMotores[k]->_tempoContagem >= INTERVALO_MAXIMO){
+          qntPulsosTotal[k] = 0;
+        }
+      }
+    }
+  hallMotores[1]->calcularVelocidade(qntPulsosTotal[1]);
+  Serial.println(hallMotores[1]->_rpm);
+  ////////////////////////////////////////////*/
+
 
   if (radio.receive(msg, 7) && isChecksumOk(msg) && ((msg[0] == 'M') && ((msg[1] & 0x07) == ID_ROBO))) {
-    
+    //Serial.print("roger that");
   //if (msg[0] == 'M' && (msg[1] & 0x07) == ID_ROBO) {
     tempoAtual = millis();
     if (inicio) {
@@ -88,14 +110,30 @@ void loop() {
       }
     }
 
-    for (int j = 0; j < 2 ; j++) {
+    /*for (int j = 0; j < 2 ; j++) {
       //Serial.println("anda BB");
       hallMotores[j]->calcularVelocidade(qntPulsosTotal[j]);
-      robo[j]->andarPID(setpoint_speed, hallMotores[j]->_rpm, flagPID);
+      robo[j]->andarPID(setpoint_speed, hallMotores[j]->_rpm);
       //robo[j]->andar(msg);
       if(j == 1)
         digitalWrite(robo[j]->_sentido, HIGH);
       PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
+    }*/
+      
+      for (int j = 0; j < 3; j++) {
+      hallMotores[j]->calcularVelocidade(qntPulsosTotal[j]);
+      /*if(hallMotores[0]->_rpm > 750){
+        setpoint_speedR1 = 1000;
+      }*/
+      if(j==0){
+        robo[j]->andarPID(setpoint_speedR1, hallMotores[j]->_rpm);
+       // robo[j]->andar(msg);
+        PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000); 
+      } else{
+       // robo[j]->andarPID(setpoint_speed, hallMotores[j]->_rpm);
+        robo[j]->andar(msg);
+        PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000);          // PWMWrite(pin, resolution, duty, frequency);
+      }
     }
     
     Serial.print(setpoint_speed);
@@ -104,11 +142,12 @@ void loop() {
     Serial.print("              ");
     Serial.print(robo[0]->_output);
     Serial.print("              ");
-    Serial.print(robo[1]->_input);
+    Serial.print(hallMotores[1]->_rpm);
     Serial.print("              ");
-    Serial.println(robo[1]->_output);
+    Serial.println(hallMotores[2]->_rpm);
 
-    if(tempoAtual - tempoVariacao >= 10000){
+
+    /*if(tempoAtual - tempoVariacao >= 10000){
       if(setpoint_speed == 1000){
         if(flagPID)
           setpoint_speed = 0;
@@ -145,7 +184,7 @@ void loop() {
 //        setpoint_speed = 900;
 //      }
       tempoVariacao = tempoAtual;
-    }
+    }*/
     //PRINTS PARA A DOCUMENTAÇÃO DO PID   
 //    if(msg[3] != 1 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0 || hallMotores[0]->_rpm != 0){
 //      //Serial.print((int) msg[3]);
