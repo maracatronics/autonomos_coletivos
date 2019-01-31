@@ -18,12 +18,14 @@ class Brennand : public QMainWindow
     Q_OBJECT
 
 public:
+
     uint8_t protocol[5];
 
     explicit Brennand(QWidget *parent = nullptr);
     unsigned char velMotor(bool isChecked, int valorSlider);
+    void controleThreads();
+    static void CriaRobo(int id, unsigned char motor1, unsigned char motor2, unsigned char motor3);
     ~Brennand();
-
 
 private slots:
     void on_slider_motor1_valueChanged(int value);
@@ -81,6 +83,13 @@ private slots:
     void on_connectButton_clicked();
 
     void on_disconnectButton_clicked();
+
+
+
+    //static void CriaRobo(int id, QCheckBox &check1, QCheckBox &check2, QCheckBox &check3, QSlider &slider1, QSlider &slider2, QSlider &slider3 );
+
+
+
 
 private:
     Ui::Brennand *ui;

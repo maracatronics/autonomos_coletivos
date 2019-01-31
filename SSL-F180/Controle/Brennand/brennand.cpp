@@ -1,12 +1,15 @@
 #include "brennand.h"
 #include "ui_brennand.h"
-#include "iostream"
 #include "serialconnection.h"
 #include "robot.h"
+#include "iostream"
+#include "thread"
+
 
 #define BR_SERIAL 32400
 
-void controleThreads();
+//static void CriaRobo(int id, QCheckBox &check1, QCheckBox &check2, QCheckBox &check3, QSlider &slider1, QSlider &slider2, QSlider &slider3 );
+
 Brennand::Brennand(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Brennand)
@@ -221,9 +224,8 @@ void Brennand::on_iniciar_Button_clicked()
         qDebug()<<"trasmissão iniciada";
         //desbloquear controleThreads aqui
         if(ui->checkBox_13->isChecked()){
-            Robot robo1(1);
+            //CriaRobo(1, ui->checkBox_17, ui->slider_motor1->value());
             qDebug() << this->velMotor(ui->checkBox_17->isChecked(), ui->slider_motor1->value());
-            //robo1.mountPackage()
         }
     }else if (!controlePorta && controleTransmissao){
         qDebug()<<"É preciso abrir a porta";
@@ -238,13 +240,27 @@ void Brennand::on_parar_Button_clicked()
     }
 }
 
-void controleThreads(){
-    //iniciar as threads aqui dentro
-}
-
 unsigned char Brennand::velMotor(bool isChecked, int valorSlider){
     return isChecked? static_cast<unsigned char>(valorSlider | INVERTIDO) : static_cast<unsigned char>(valorSlider);
 }
 
+void Brennand::CriaRobo(int id, unsigned char motor1, unsigned char motor2, unsigned char motor3){
+    Robot robo(id);
+    robo.mountPackage(0,motor1,motor2,motor3);
+
+   // while(true){
+   // }
+
+}
+
+void Brennand :: controleThreads(){
+    unsigned char val1, val2,val3;
+    val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
+    val2 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor2->value());
+    val3 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor3->value());
+    std::thread th1 (Brennand::CriaRobo, 1,val1,val2,val3);
+    th1.join();
+    //iniciar as threads aqui dentro
+}
 
 

@@ -21,7 +21,7 @@ public:
     QString read(int TamanhoBuffer);
 
 protected:
-    QSerialPort *devSerial;
+   QSerialPort *devSerial;
 };
 
 #endif // SERIALCONNECTION_H
