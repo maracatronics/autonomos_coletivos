@@ -6,7 +6,8 @@ Instalar QSerialPort:
     2 - cd qtserialport && qmake qtserialport.pro
     3 - sudo make install
  
-Configurar porta serial:
-    Basta seguir o passo a passo encontrado neste link: 
+Configurar porta serial pelo terminal:
+    $ ls -l /dev/<nome da porta>
+    $ sudo usermod -a -G dialout <nome do usuario>
 
-    https://www.arduino.cc/en/guide/linux
+    <nome da porta> é ttyACM* para Tiva e ttyUSB* para arduino

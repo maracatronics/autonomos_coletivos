@@ -5,6 +5,9 @@
 #include "serialconnection.h"
 #include <QSerialPort>
 #include <QSerialPortInfo>
+#include "ui_brennand.h"
+
+#define INVERTIDO 128
 
 namespace Ui {
 class Brennand;
@@ -18,6 +21,7 @@ public:
     uint8_t protocol[5];
 
     explicit Brennand(QWidget *parent = nullptr);
+    unsigned char velMotor(bool isChecked, int valorSlider);
     ~Brennand();
 
 

@@ -2,6 +2,7 @@
 #include "ui_brennand.h"
 #include "iostream"
 #include "serialconnection.h"
+#include "robot.h"
 
 #define BR_SERIAL 32400
 
@@ -219,6 +220,11 @@ void Brennand::on_iniciar_Button_clicked()
     if(controlePorta && controleTransmissao){
         qDebug()<<"trasmissão iniciada";
         //desbloquear controleThreads aqui
+        if(ui->checkBox_13->isChecked()){
+            Robot robo1(1);
+            qDebug() << this->velMotor(ui->checkBox_17->isChecked(), ui->slider_motor1->value());
+            //robo1.mountPackage()
+        }
     }else if (!controlePorta && controleTransmissao){
         qDebug()<<"É preciso abrir a porta";
     }
@@ -234,6 +240,10 @@ void Brennand::on_parar_Button_clicked()
 
 void controleThreads(){
     //iniciar as threads aqui dentro
+}
+
+unsigned char Brennand::velMotor(bool isChecked, int valorSlider){
+    return isChecked? static_cast<unsigned char>(valorSlider | INVERTIDO) : static_cast<unsigned char>(valorSlider);
 }
 
 

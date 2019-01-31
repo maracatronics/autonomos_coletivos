@@ -1,7 +1,7 @@
 #include "robot.h"
 #include <iomanip>  // Includes std::hex
 #include "crc.h"
-//M id+flags V1 V2 V3 F CRC
+//M id+flags V1 V2 V3 CRC CRC
 
 Robot::Robot(int id)
 {
@@ -9,14 +9,16 @@ Robot::Robot(int id)
 
 }
 
+Robot::~Robot()
+{}
+
 void Robot::mountPackage(unsigned char flags, unsigned char v1, unsigned char v2, unsigned char v3){
-    comands[0]='M';
-    comands[1]=static_cast<unsigned char>(id+flags);
-    comands[2]=v1;
-    comands[3]=v2;
-    comands[4]=v3;
-    comands[5]='F';
-    this->calcCRC(comands, sizeof (comands), protocol);
+    this->comands[0]='M';
+    this->comands[1]=static_cast<unsigned char>(this->id+flags);
+    this->comands[2]=v1;
+    this->comands[3]=v2;
+    this->comands[4]=v3;
+    this->calcCRC(this->comands, sizeof (this->comands), this->protocol);
 }
 
 void Robot::calcCRC(unsigned char *comands, size_t tam, unsigned char *protocol) {

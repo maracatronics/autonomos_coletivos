@@ -5,7 +5,7 @@
 
 serialConnection::serialConnection(QSerialPort *myDev)
 {
-    devSerial=myDev;
+    this->devSerial=myDev;
 }
 
 serialConnection::~serialConnection()
@@ -18,11 +18,10 @@ QStringList serialConnection::loadPorts()
 
     foreach (const QSerialPortInfo info, QSerialPortInfo::availablePorts()) {
 
-        devSerial->setPort(info);
+        this->devSerial->setPort(info);
 
-        /*devSerial->open(QIODevice::ReadWrite)*/
-        if (true) {
-            //devSerial->close();
+        if (this->devSerial->open(QIODevice::ReadWrite)) {
+            this->devSerial->close();
             devs << info.portName();
         }
 

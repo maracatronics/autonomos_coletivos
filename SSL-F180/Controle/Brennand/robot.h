@@ -2,7 +2,7 @@
 #define ROBOT_H
 
 #include "crc.h"
-#define SIZE_COMANDS 9
+#define SIZE_COMANDS 5
 #define SIZE_PROTOCOL SIZE_COMANDS+2
 
 class Robot
