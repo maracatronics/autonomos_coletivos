@@ -1,0 +1,4 @@
+3c3
+< #include "corbainterfaces.hh"
+---
+> #include <GEARSystem/CORBAImplementations/corbainterfaces.hh>

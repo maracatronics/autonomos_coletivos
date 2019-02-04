@@ -1,0 +1,139 @@
+/*** GEARSystem - CORBA interfaces
+  ** GEAR - Grupo de Estudos Avancados em Robotica
+  ** Department of Electrical Engineering, University of Sao Paulo
+  ** http://www.sel.eesc.usp.br/gear
+  ** This file is part of the GEARSystem project
+  ***/
+
+
+// Defines the GEARSystem module
+module GEARSystem {
+    module CORBATypes {
+        struct Angle {
+            boolean isValid;
+            boolean isUnknown;
+            float   value;
+        };
+
+        struct Position {
+            boolean isValid;
+            boolean isUnknown;
+            float   x;
+            float   y;
+            float   z;
+        };
+
+        struct Velocity {
+            boolean isValid;
+            boolean isUnknown;
+            float   x;
+            float   y;
+        };
+
+        struct AngularSpeed {
+            boolean isValid;
+            boolean isUnknown;
+            float   value;
+        };
+    };
+
+    module CORBAInterfaces {
+        interface Actuator {
+            void setSpeed(in octet teamNum, in octet playerNum, in float x, in float y, in float theta);
+
+            void kick(in octet teamNum, in octet playerNum, in float power);
+            void chipKick(in octet teamNum, in octet playerNum, in float power);
+            void kickOnTouch(in octet teamNum, in octet playerNum, in boolean enable, in float power);
+            void chipKickOnTouch(in octet teamNum, in octet playerNum, in boolean enable, in float power);
+
+            void holdBall(in octet teamNum, in octet playerNum, in boolean enable);
+        };
+
+        interface Controller {
+            void teamName(in octet teamNum, out string name);
+            void teamNumber(in string name, out octet teamNum);
+            void teams(out string teamsStr, out octet nTeams, out boolean hasTeam0);
+
+            void players(in octet teamNum, out string playersStr, out octet nPlayers, out boolean hasPlayer0);
+
+            void balls(out string ballsStr, out octet nBalls, out boolean hasBall0);
+            void ballPosition(in octet ballNum, out CORBATypes::Position position);
+            void ballVelocity(in octet ballNum, out CORBATypes::Velocity velocity);
+
+            void playerPosition(in octet teamNum, in octet playerNum, out CORBATypes::Position position);
+            void playerOrientation(in octet teamNum, in octet playerNum, out CORBATypes::Angle orientation);
+            void playerVelocity(in octet teamNum, in octet playerNum, out CORBATypes::Velocity velocity);
+            void playerAngularSpeed(in octet teamNum, in octet playerNum, out CORBATypes::AngularSpeed angularSpeed);
+
+            void ballPossession(in octet teamNum, in octet playerNum, out boolean possession);
+            void fatigue(in octet teamNum, in octet playerNum, out float fatigue);
+
+            void setSpeed(in octet teamNum, in octet playerNum, in float x, in float y, in float theta);
+
+            void kick(in octet teamNum, in octet playerNum, in float power);
+            void chipKick(in octet teamNum, in octet playerNum, in float power);
+            void kickOnTouch(in octet teamNum, in octet playerNum, in boolean enable, in float power);
+            void chipKickOnTouch(in octet teamNum, in octet playerNum, in boolean enable, in float power);
+
+            void holdBall(in octet teamNum, in octet playerNum, in boolean enable);
+
+            void fieldTopRightCorner(out CORBATypes::Position position);
+            void fieldTopLeftCorner(out CORBATypes::Position position);
+            void fieldBottomLeftCorner(out CORBATypes::Position position);
+            void fieldBottomRightCorner(out CORBATypes::Position position);
+            void fieldCenter(out CORBATypes::Position position);
+
+            void leftGoal(out CORBATypes::Position left, out CORBATypes::Position right, out float depth, out float areaLength, out float areaWidth, out float areaRoundedRadius);
+            void rightGoal(out CORBATypes::Position left, out CORBATypes::Position right, out float depth, out float areaLength, out float areaWidth, out float areaRoundedRadius);
+
+            void leftPenaltyMark(out CORBATypes::Position position);
+            void rightPenaltyMark(out CORBATypes::Position position);
+
+            void fieldCenterRadius(out float centerRadius);
+        };
+
+        interface Sensor {
+            void addTeam(in octet teamNum, in string teamName);
+            void delTeam(in octet teamNum);
+
+            void addBall(in octet ballNum);
+            void delBall(in octet ballNum);
+
+            void setBallPosition(in octet ballNum, in CORBATypes::Position position);
+            void setBallVelocity(in octet ballNum, in CORBATypes::Velocity velocity);
+
+            void addPlayer(in octet teamNum, in octet playerNum);
+            void delPlayer(in octet teamNum, in octet playerNum);
+
+            void setPlayerPosition(in octet teamNum, in octet playerNum, in CORBATypes::Position position);
+            void setPlayerOrientation(in octet teamNum, in octet playerNum, in CORBATypes::Angle orientation);
+            void setPlayerVelocity(in octet teamNum, in octet playerNum, in CORBATypes::Velocity velocity);
+            void setPlayerAngularSpeed(in octet teamNum, in octet playerNum, in CORBATypes::AngularSpeed angularSpeed);
+
+            void setBallPossession(in octet teamNum, in octet playerNum, in boolean possession);
+            void setFatigue(in octet teamNum, in octet playerNum, in float fatigue);
+
+            void setFieldTopRightCorner(in CORBATypes::Position position);
+            void setFieldTopLeftCorner(in CORBATypes::Position position);
+            void setFieldBottomLeftCorner(in CORBATypes::Position position);
+            void setFieldBottomRightCorner(in CORBATypes::Position position);
+            void setFieldCenter(in CORBATypes::Position position);
+
+            void setLeftGoalPosts(in CORBATypes::Position left, in CORBATypes::Position right);
+            void setRightGoalPosts(in CORBATypes::Position left, in CORBATypes::Position right);
+
+            void setGoalArea(in float length, in float width, in float roundedRadius);
+            void setGoalDepth(in float depth);
+
+            void setLeftPenaltyMark(in CORBATypes::Position position);
+            void setRightPenaltyMark(in CORBATypes::Position position);
+
+            void setFieldCenterRadius(in float centerRadius);
+        };
+
+        interface CommandBus {
+            void addActuator(in string name, in string address);
+            void delActuator(in string name);
+        };
+    };
+};
