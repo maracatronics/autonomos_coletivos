@@ -1,0 +1,42 @@
+Ola segue-se aqui como se utilizar do GEARSystem. Esse exorbitante manual fora
+criado para que voce, pessoa que esta querendo se utilizar do gearsystem, nao possua trabalho em usufrui-lo.
+Para tal finalidade, siga os passos referidos para obter a experiencia completa :
+
+1. Use o Fedora, a versao 26 para ser mais exato. Nao funciona nem a pau no ubuntu.
+
+2. Para instalar, voce podera instalar diretamente com a versao do git, porem o jeito mais seguro, e oq gerou sucesso no presente caso, foi fazer a instalacao pela warthog.
+
+3. Primeiro, faca o download manual por esse link https://warthog.assembla.com/spaces/warthog-dia/subversion/source/HEAD/WRTools
+
+4. Execute os seguintes comandos:  
+
+cd warthog-dia/scripts/
+sh installSoftwares.sh
+
+Ele instalara TUDO da warthog.
+
+Entao voce deve ir para a pasto do GEARSystem e realize:
+
+5. Inicialize o gearsystem com esse comando: 
+sudo systemctl enable omniNames
+sudo systemctl start omniNames
+
+6. Libere a firewall com esse procedimento:
+
+Liberação do firewall
+Utilizando o menu iniciar do Fedora, procure por “firewall” e abra o “Firewall / Firewall configuration”. Digite sua senha quando solicitado.
+Mude a “Configuration” de “Runtime” para “Permanent”.
+Certifique-se de que a zona selecionada é “public”; clique na aba “Ports”; clicando em “Add”, adicione as seguintes portas/ranges: 10000-10030, UDP
+Após adicionar, vá em “Options” e clique em “Reload Firewalld”.
+
+7. E, para terminar, va para perto um lugar ao lado da pasta do GEARSystem
+
+8.Para se utilizar da biblioteca, use o #include<GEARSystem/gearsystem.hh>
+
+9. e, para terminar, use o comando g++ test.cpp -lomniORB4 -lomnithread -lGEARSystem para compilar
+
+10. Deite e role e fique feliz da vida, porque o GEARsystem esta instalado e rodando ;)
+
+Daniel Perazzo
+
+
