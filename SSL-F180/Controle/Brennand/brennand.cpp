@@ -3,12 +3,9 @@
 #include "serialconnection.h"
 #include "robot.h"
 #include "iostream"
-#include "thread"
-
 
 #define BR_SERIAL 32400
 
-//static void CriaRobo(int id, QCheckBox &check1, QCheckBox &check2, QCheckBox &check3, QSlider &slider1, QSlider &slider2, QSlider &slider3 );
 
 Brennand::Brennand(QWidget *parent) :
     QMainWindow(parent),
@@ -32,12 +29,13 @@ Brennand::Brennand(QWidget *parent) :
     ui->vel_Motor3_4->setText("0");
     controlePorta=false;
     controleTransmissao=false;
+    iniciouTransmissao = false;
 
     devSerial = new QSerialPort(this);
     procSerial = new serialConnection(devSerial);
     QStringList dispSerial = procSerial->loadPorts();
     ui->boxDevice->addItems(dispSerial);
-    controleThreads();
+
 }
 
 Brennand::~Brennand()
@@ -222,12 +220,9 @@ void Brennand::on_iniciar_Button_clicked()
     controleTransmissao=true;
     if(controlePorta && controleTransmissao){
         qDebug()<<"trasmissão iniciada";
-        //desbloquear controleThreads aqui
-        if(ui->checkBox_13->isChecked()){
-            //CriaRobo(1, ui->checkBox_17, ui->slider_motor1->value());
-            qDebug() << this->velMotor(ui->checkBox_17->isChecked(), ui->slider_motor1->value());
-        }
-    }else if (!controlePorta && controleTransmissao){
+        iniciouTransmissao = true;
+    }
+    else if (!controlePorta && controleTransmissao){
         qDebug()<<"É preciso abrir a porta";
     }
 }
@@ -237,6 +232,7 @@ void Brennand::on_parar_Button_clicked()
     controleTransmissao=false;
     if(controlePorta && !controleTransmissao){
         qDebug()<<"trasmissão parada";
+        iniciouTransmissao = false;
     }
 }
 
@@ -244,23 +240,25 @@ unsigned char Brennand::velMotor(bool isChecked, int valorSlider){
     return isChecked? static_cast<unsigned char>(valorSlider | INVERTIDO) : static_cast<unsigned char>(valorSlider);
 }
 
-void Brennand::CriaRobo(int id, unsigned char motor1, unsigned char motor2, unsigned char motor3){
+void Brennand::CriaRobo(int id){
     Robot robo(id);
-    robo.mountPackage(0,motor1,motor2,motor3);
-
-   // while(true){
-   // }
-
+    enviaComando(robo);
 }
 
-void Brennand :: controleThreads(){
+void Brennand :: enviaComando(Robot robo){
     unsigned char val1, val2,val3;
-    val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
-    val2 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor2->value());
-    val3 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor3->value());
-    std::thread th1 (Brennand::CriaRobo, 1,val1,val2,val3);
-    th1.join();
-    //iniciar as threads aqui dentro
+    qDebug() << "oi";
+    while (true) {
+        val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
+        val2 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor2->value());
+        val3 = velMotor(ui->checkBox_19->isChecked(),ui->slider_motor3->value());
+        robo.mountPackage(0, val1, val2, val3);
+        devSerial->write(robo.protocol, sizeof (robo.protocol));
+    }
+}
+
+bool Brennand::comecouTransmissao(){
+    return this->iniciouTransmissao;
 }
 
 

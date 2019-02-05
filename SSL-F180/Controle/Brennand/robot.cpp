@@ -14,7 +14,7 @@ Robot::~Robot()
 
 void Robot::mountPackage(unsigned char flags, unsigned char v1, unsigned char v2, unsigned char v3){
     this->comands[0]='M';
-    this->comands[1]=static_cast<unsigned char>(this->id+flags);
+    this->comands[1]= static_cast<unsigned char>(this->id+flags);
     this->comands[2]=v1;
     this->comands[3]=v2;
     this->comands[4]=v3;
