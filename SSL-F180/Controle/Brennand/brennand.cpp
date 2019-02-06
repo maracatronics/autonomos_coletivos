@@ -247,12 +247,12 @@ void Brennand::CriaRobo(int id){
 
 void Brennand :: enviaComando(Robot robo){
     unsigned char val1, val2,val3;
-    qDebug() << "oi";
     while (true) {
         val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
         val2 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor2->value());
         val3 = velMotor(ui->checkBox_19->isChecked(),ui->slider_motor3->value());
         robo.mountPackage(0, val1, val2, val3);
+        //qDebug() << "oi";
         devSerial->write(robo.protocol, sizeof (robo.protocol));
     }
 }
