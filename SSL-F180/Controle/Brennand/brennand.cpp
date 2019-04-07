@@ -6,6 +6,7 @@
 
 #define BR_SERIAL 32400
 
+using namespace std;
 
 Brennand::Brennand(QWidget *parent) :
     QMainWindow(parent),
@@ -31,16 +32,27 @@ Brennand::Brennand(QWidget *parent) :
     controleTransmissao=false;
     iniciouTransmissao = false;
 
-    devSerial = new QSerialPort(this);
-    procSerial = new serialConnection(devSerial);
-    QStringList dispSerial = procSerial->loadPorts();
-    ui->boxDevice->addItems(dispSerial);
+    ui->boxDevice->addItem("No Port Connected");
 
 }
 
 Brennand::~Brennand()
 {
     delete ui;
+}
+
+void Brennand::on_searchButton_clicked(){
+    QSerialPort *devSerial;
+    serialConnection *procSerial;
+
+    devSerial = new QSerialPort();
+    procSerial = new serialConnection(devSerial);
+
+    QStringList listPorts = procSerial->loadPorts();
+
+    ui->boxDevice->clear();
+    if(listPorts.isEmpty()) ui->boxDevice->addItem("No Port Connected");
+    else ui->boxDevice->addItems(listPorts);
 }
 
 void Brennand::on_slider_motor1_valueChanged(int value)

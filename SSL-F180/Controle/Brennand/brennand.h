@@ -7,6 +7,7 @@
 #include <QSerialPortInfo>
 #include "ui_brennand.h"
 #include "robot.h"
+#include <iostream>
 
 #define INVERTIDO 128
 
@@ -28,8 +29,11 @@ public:
     void CriaRobo(int id);
     bool comecouTransmissao();
     ~Brennand();
+    void changePorts(QStringList);
 
 private slots:
+    void on_searchButton_clicked();
+
     void on_slider_motor1_valueChanged(int value);
 
     void on_slider_motor2_valueChanged(int value);
@@ -95,7 +99,6 @@ private slots:
 
 private:
     Ui::Brennand *ui;
-    QStringList loadPorts();
     QSerialPort *devSerial;
     serialConnection *procSerial;
     bool controlePorta, controleTransmissao, iniciouTransmissao;

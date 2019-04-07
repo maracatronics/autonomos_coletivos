@@ -3,6 +3,10 @@
 #include <QSerialPortInfo>
 #include <iostream>
 
+using namespace std;
+
+string GetStdoutFromCommand(string cmd);
+
 serialConnection::serialConnection(QSerialPort *myDev)
 {
     this->devSerial=myDev;
@@ -15,6 +19,13 @@ serialConnection::~serialConnection()
 QStringList serialConnection::loadPorts()
 {
     QStringList devs;
+    string name;
+
+    name = system("whoami");
+
+    GetStdoutFromCommand("ls -l /dev/ttyACM*");
+    GetStdoutFromCommand("ls -l /dev/ttyUSB*");
+    //GetStdoutFromCommand("sudo usermod -a -G dialout " + name);
 
     foreach (const QSerialPortInfo info, QSerialPortInfo::availablePorts()) {
 
@@ -26,7 +37,28 @@ QStringList serialConnection::loadPorts()
         }
 
     }
+
     return devs;
+}
+
+string GetStdoutFromCommand(string cmd) {
+
+    string data;
+    FILE * stream;
+    const int max_buffer = 256;
+    char buffer[max_buffer];
+    cmd.append(" 2>&1");
+
+    stream = popen(cmd.c_str(), "r");
+
+    if (stream) {
+        while (!feof(stream))
+
+        if (fgets(buffer, max_buffer, stream) != NULL) data.append(buffer);
+
+        pclose(stream);
+    }
+    return data;
 }
 
 
