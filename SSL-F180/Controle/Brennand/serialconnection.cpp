@@ -2,7 +2,7 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include <iostream>
-
+#include <QThread>
 using namespace std;
 
 string GetStdoutFromCommand(string cmd);
@@ -146,7 +146,7 @@ bool serialConnection::disconnect()
     devSerial->close();
 
 
-    if(devSerial->error() == 0 || !devSerial->isOpen()) {
+    if(devSerial->error() == 0 && !devSerial->isOpen()) {
         qDebug() << "Porta serial fechada com sucesso!";
         return true;
     }
@@ -168,9 +168,11 @@ bool serialConnection::disconnect()
  */
 qint64 serialConnection::write(const char *cmd)
 {
+    //std::cout << "oi";
     qint64 writeLength;
-    writeLength = devSerial->write(cmd,qstrlen(cmd));
 
+    writeLength = devSerial->write(cmd,qstrlen(cmd));
+    //qDebug() << cmd;
     return writeLength;
 }
 

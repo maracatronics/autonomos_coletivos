@@ -25,8 +25,8 @@ public:
 
     explicit Brennand(QWidget *parent = nullptr);
     unsigned char velMotor(bool isChecked, int valorSlider);
-    void enviaComando(Robot robo);
-    void CriaRobo(int id);
+    void enviaComando();
+    void CriaRobo(int id, Brennand &);
     bool comecouTransmissao();
     ~Brennand();
     void changePorts(QStringList);
@@ -102,6 +102,7 @@ private:
     QSerialPort *devSerial;
     serialConnection *procSerial;
     bool controlePorta, controleTransmissao, iniciouTransmissao;
+    int cont = 0;
 };
 
 #endif // BRENNAND_H

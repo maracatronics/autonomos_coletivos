@@ -2,7 +2,7 @@
 #include <iomanip>  // Includes std::hex
 #include "crc.h"
 //M id+flags V1 V2 V3 CRC CRC
-
+#include "iostream"
 Robot::Robot(int id)
 {
     this->id=id;
