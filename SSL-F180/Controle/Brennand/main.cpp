@@ -2,9 +2,9 @@
 #include <QApplication>
 #include <iostream>
 #include "crc.h"
+#include <QObject>
 #include <QThread>
-#include <thread>
-
+#include "ser.h"
 //int DRIBLE = 16, CHUTE = 64, PASSE = 32;
 
 using namespace std;
@@ -19,7 +19,10 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     Brennand *w = new Brennand();
     w->show();
-    QThread *t1 = QThread::create(&Brennand::enviaComando, ref(*w));
+    ser s;
+    QObject::connect(&s, SIGNAL(transmitindo()),
+                     w, SLOT(enviaComando()));
+    QThread *t1 = QThread::create(&Brennand::CriaRobo, ref(*w), &s);
     t1->start();
 
     a.exec();

@@ -25,6 +25,9 @@ QStringList serialConnection::loadPorts()
 
     GetStdoutFromCommand("ls -l /dev/ttyACM*");
     GetStdoutFromCommand("ls -l /dev/ttyUSB*");
+    GetStdoutFromCommand("sudo");
+    GetStdoutFromCommand("#chademirtilo7892");
+
     //GetStdoutFromCommand("sudo usermod -a -G dialout " + name);
 
     foreach (const QSerialPortInfo info, QSerialPortInfo::availablePorts()) {
@@ -168,11 +171,9 @@ bool serialConnection::disconnect()
  */
 qint64 serialConnection::write(const char *cmd)
 {
-    //std::cout << "oi";
     qint64 writeLength;
 
     writeLength = devSerial->write(cmd,qstrlen(cmd));
-    //qDebug() << cmd;
     return writeLength;
 }
 

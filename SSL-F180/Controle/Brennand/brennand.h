@@ -8,6 +8,8 @@
 #include "ui_brennand.h"
 #include "robot.h"
 #include <iostream>
+#include "ser.h"
+//#include <global.h>
 
 #define INVERTIDO 128
 
@@ -25,8 +27,7 @@ public:
 
     explicit Brennand(QWidget *parent = nullptr);
     unsigned char velMotor(bool isChecked, int valorSlider);
-    void enviaComando();
-    void CriaRobo(int id, Brennand &);
+    void CriaRobo(ser*);
     bool comecouTransmissao();
     ~Brennand();
     void changePorts(QStringList);
@@ -90,7 +91,8 @@ private slots:
 
     void on_disconnectButton_clicked();
 
-
+public slots:
+    void enviaComando();
 
     //static void CriaRobo(int id, QCheckBox &check1, QCheckBox &check2, QCheckBox &check3, QSlider &slider1, QSlider &slider2, QSlider &slider3 );
 

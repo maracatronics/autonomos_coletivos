@@ -3,9 +3,10 @@
 #include "serialconnection.h"
 #include "robot.h"
 #include "iostream"
+#include "ser.h"
 #include <thread>
 #include <QThread>
-#define BR_SERIAL 38400
+#define BR_SERIAL 9600
 
 using namespace std;
 
@@ -47,7 +48,6 @@ Brennand::~Brennand()
 void Brennand::on_searchButton_clicked(){
 
     QStringList listPorts = procSerial->loadPorts();
-
     ui->boxDevice->clear();
     if(listPorts.isEmpty()) ui->boxDevice->addItem("No Port Connected");
     else ui->boxDevice->addItems(listPorts);
@@ -57,7 +57,6 @@ void Brennand::on_slider_motor1_valueChanged(int value)
 {
     QString valueString = QString::number(value);
     ui->vel_Motor1->setText(valueString);
-
 }
 
 void Brennand::on_slider_motor2_valueChanged(int value)
@@ -250,31 +249,30 @@ unsigned char Brennand::velMotor(bool isChecked, int valorSlider){
     return isChecked? static_cast<unsigned char>(valorSlider | INVERTIDO) : static_cast<unsigned char>(valorSlider);
 }
 
-void Brennand::CriaRobo(int id, Brennand &w){
-    Robot robo(id);
-
-    std::thread tRobo1;
-    tRobo1 = std::thread(&Brennand::enviaComando, std::ref(w));
+void Brennand::CriaRobo(ser *s){
+    while(true){
+        if(iniciouTransmissao){
+            //qDebug() << "oi";
+            emit s->transmitindo();
+        }
+    };
 }
 
 void Brennand :: enviaComando(){
-    Robot robo(++cont);
+    Robot robo(1);
     unsigned char val1, val2,val3;
-    std::thread tRobo1;
-    while (true) {
+    //std::thread tRobo1;
+    val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
+    val2 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor2->value());
+    val3 = velMotor(ui->checkBox_19->isChecked(),ui->slider_motor3->value());
 
-        if(iniciouTransmissao){
-            val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
-            val2 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor2->value());
-            val3 = velMotor(ui->checkBox_19->isChecked(),ui->slider_motor3->value());
+    robo.mountPackage(0, val1, val2, val3);
+    //QThread *t1 = QThread::create(&Brennand::enviaComando, ref(*w));
+    //QThread *t2 = QThread::create(&QSerialPort::write, ref(*devSerial), robo.protocol, sizeof(robo.protocol));
+    devSerial->write("a", sizeof (char));
+    qDebug() << "oi";
 
 
-            robo.mountPackage(0, val1, val2, val3);
-            //QThread *t1 = QThread::create(&Brennand::enviaComando, ref(*w));
-            //QThread *t1 = QThread::create(&QSerialPort::write, ref(*devSerial), robo.protocol, sizeof(robo.protocol));
-            procSerial->write(robo.protocol);
-        }
-    }
 }
 
 bool Brennand::comecouTransmissao(){
