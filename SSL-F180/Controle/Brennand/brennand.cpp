@@ -250,10 +250,21 @@ unsigned char Brennand::velMotor(bool isChecked, int valorSlider){
 }
 
 void Brennand::CriaRobo(ser *s){
+    QElapsedTimer timer;
+    bool startTime = true;
+
     while(true){
         if(iniciouTransmissao){
-            //qDebug() << "oi";
-            emit s->transmitindo();
+            if(startTime){
+                timer.start();
+                startTime = false;
+            }
+
+            if(timer.hasExpired(TAXA_TRANSMISSAO)){
+                emit s->transmitindo();
+
+                startTime = true;
+            }
         }
     };
 }
