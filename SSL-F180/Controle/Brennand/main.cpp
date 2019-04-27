@@ -20,8 +20,12 @@ int main(int argc, char *argv[])
     Brennand *w = new Brennand();
     w->show();
     ser s;
+
     QObject::connect(&s, SIGNAL(transmitindo()),
                      w, SLOT(enviaComando()));
+    QObject::connect(&s, SIGNAL(procurando()),
+                     w, SLOT(procurarPortas()));
+
     QThread *t1 = QThread::create(&Brennand::CriaRobo, ref(*w), &s);
     t1->start();
 

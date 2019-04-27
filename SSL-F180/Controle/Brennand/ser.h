@@ -12,6 +12,7 @@ public:
 
 signals:
     void transmitindo();
+    void procurando();
 };
 
 #endif

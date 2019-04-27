@@ -45,14 +45,6 @@ Brennand::~Brennand()
     delete ui;
 }
 
-void Brennand::on_searchButton_clicked(){
-
-    QStringList listPorts = procSerial->loadPorts();
-    ui->boxDevice->clear();
-    if(listPorts.isEmpty()) ui->boxDevice->addItem("No Port Connected");
-    else ui->boxDevice->addItems(listPorts);
-}
-
 void Brennand::on_slider_motor1_valueChanged(int value)
 {
     QString valueString = QString::number(value);
@@ -250,23 +242,46 @@ unsigned char Brennand::velMotor(bool isChecked, int valorSlider){
 }
 
 void Brennand::CriaRobo(ser *s){
-    QElapsedTimer timer;
-    bool startTime = true;
+    QElapsedTimer timer_transmissao;
+    QElapsedTimer timer_procura;
+    bool startTime_transmissao = true;
+    bool startTime_procura = true;
 
     while(true){
         if(iniciouTransmissao){
-            if(startTime){
-                timer.start();
-                startTime = false;
+            if(startTime_transmissao){
+                timer_transmissao.start();
+                startTime_transmissao = false;
             }
 
-            if(timer.hasExpired(TAXA_TRANSMISSAO)){
+            if(timer_transmissao.hasExpired(TAXA_TRANSMISSAO)){
                 emit s->transmitindo();
 
-                startTime = true;
+                startTime_transmissao = true;
+            }
+        }
+
+        if(!controlePorta){
+            if(startTime_procura){
+                timer_procura.start();
+                startTime_procura = false;
+            }
+
+            if(timer_procura.hasExpired(1000)){
+                qDebug() << "cheguei aqui";
+                emit s->procurando();
+
+                startTime_procura = true;
             }
         }
     };
+}
+
+void Brennand::procurarPortas(){
+    QStringList listPorts = procSerial->loadPorts();
+    ui->boxDevice->clear();
+    if(listPorts.isEmpty()) ui->boxDevice->addItem("No Port Connected");
+    else ui->boxDevice->addItems(listPorts);
 }
 
 void Brennand :: enviaComando(){
@@ -280,10 +295,7 @@ void Brennand :: enviaComando(){
     robo.mountPackage(0, val1, val2, val3);
     //QThread *t1 = QThread::create(&Brennand::enviaComando, ref(*w));
     //QThread *t2 = QThread::create(&QSerialPort::write, ref(*devSerial), robo.protocol, sizeof(robo.protocol));
-    devSerial->write("a", sizeof (char));
-    qDebug() << "oi";
-
-
+    devSerial->write(robo.protocol, sizeof(robo.protocol));
 }
 
 bool Brennand::comecouTransmissao(){

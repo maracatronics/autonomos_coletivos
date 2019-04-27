@@ -35,8 +35,6 @@ public:
     void changePorts(QStringList);
 
 private slots:
-    void on_searchButton_clicked();
-
     void on_slider_motor1_valueChanged(int value);
 
     void on_slider_motor2_valueChanged(int value);
@@ -95,6 +93,7 @@ private slots:
 
 public slots:
     void enviaComando();
+    void procurarPortas();
 
     //static void CriaRobo(int id, QCheckBox &check1, QCheckBox &check2, QCheckBox &check3, QSlider &slider1, QSlider &slider2, QSlider &slider3 );
 
