@@ -293,6 +293,7 @@ void Brennand :: enviaComando(){
     val3 = velMotor(ui->checkBox_19->isChecked(),ui->slider_motor3->value());
 
     robo.mountPackage(0, val1, val2, val3);
+
     //QThread *t1 = QThread::create(&Brennand::enviaComando, ref(*w));
     //QThread *t2 = QThread::create(&QSerialPort::write, ref(*devSerial), robo.protocol, sizeof(robo.protocol));
     devSerial->write(robo.protocol, sizeof(robo.protocol));
