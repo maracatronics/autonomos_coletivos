@@ -312,20 +312,36 @@ void Brennand::procurarPortas(){
 }
 
 void Brennand :: enviaComando(int i){
-    qDebug() << "oi" << i;
+
     Robot robo(i);
-    unsigned char val1, val2,val3;
-    //std::thread tRobo1;
-    val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
-    val2 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor2->value());
-    val3 = velMotor(ui->checkBox_19->isChecked(),ui->slider_motor3->value());
+    unsigned char val1=0,val2=0,val3=0;
+
+    if(i == 1){
+        val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
+        val2 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor2->value());
+        val3 = velMotor(ui->checkBox_19->isChecked(),ui->slider_motor3->value());
+    }
+
+    if(i==2){
+        val1 = velMotor(ui->checkBox_22->isChecked(),ui->slider_motor1_2->value());
+        val2 = velMotor(ui->checkBox_21->isChecked(),ui->slider_motor2_2->value());
+        val3 = velMotor(ui->checkBox_20->isChecked(),ui->slider_motor3_2->value());
+    }
+
+    if(i==3){
+        val1 = velMotor(ui->checkBox_27->isChecked(),ui->slider_motor1_3->value());
+        val2 = velMotor(ui->checkBox_28->isChecked(),ui->slider_motor2_3->value());
+        val3 = velMotor(ui->checkBox_26->isChecked(),ui->slider_motor3_3->value());
+    }
+
+    if(i==4){
+        val1 = velMotor(ui->checkBox_31->isChecked(),ui->slider_motor1_4->value());
+        val2 = velMotor(ui->checkBox_30->isChecked(),ui->slider_motor2_4->value());
+        val3 = velMotor(ui->checkBox_29->isChecked(),ui->slider_motor3_4->value());
+    }
 
     robo.mountPackage(0, val1, val2, val3);
 
-    qDebug() << robo.protocol;
-
-    //QThread *t1 = QThread::create(&Brennand::enviaComando, ref(*w));
-    //QThread *t2 = QThread::create(&QSerialPort::write, ref(*devSerial), robo.protocol, sizeof(robo.protocol));
     devSerial->write(robo.protocol, sizeof(robo.protocol));
 }
 

@@ -13,8 +13,6 @@ using namespace std;
 void watchPorts();
 void robotThread(Brennand &w);
 
-//Brennand *w;
-
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -52,26 +50,9 @@ int main(int argc, char *argv[])
     QThread *t4 = QThread::create(&Brennand::CriaRobo, ref(*w), &s4, 4);
     t4->start();
 
-
-
     a.exec();
     return 0;
 }
-
-/*void robotThread(Brennand &w){
-    bool transmitindo = false;
-    thread tRobo1;
-    while (true) {
-        if(w.comecouTransmissao() && !transmitindo){
-            tRobo1 = thread(&Brennand::CriaRobo, ref(w), 1, ref(w));
-            transmitindo = true;
-        }
-        else if(!w.comecouTransmissao() && transmitindo) {
-            transmitindo = false;
-            tRobo1.detach();
-        }
-    }    
-}*/
 
 
 
