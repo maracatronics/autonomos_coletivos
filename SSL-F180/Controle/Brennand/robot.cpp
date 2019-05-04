@@ -23,11 +23,6 @@ void Robot::mountPackage(unsigned char flags, unsigned char v1, unsigned char v2
     this->comands[3]= v2;
     this->comands[4]= v3;
     this->calcCRC(this->comands, sizeof (this->comands), this->protocol);
-    /*this->protocol[0]='M';
-    this->protocol[1]= static_cast<unsigned char>(this->id+flags);
-    this->protocol[2]=30;
-    this->protocol[3]=30;
-    this->protocol[4]=30;*/
 }
 
 void Robot::calcCRC(unsigned char *comands, size_t tam, char *protocol) {
