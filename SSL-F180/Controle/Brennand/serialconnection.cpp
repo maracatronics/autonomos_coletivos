@@ -19,16 +19,26 @@ serialConnection::~serialConnection()
 QStringList serialConnection::loadPorts()
 {
     QStringList devs;
-    string name;
+    string comand_str = "usermod -a -G dialout ";
+    //FILE *name;
+    //char user[255], *comand_char = NULL;
+    //int c1;
 
-    name = system("whoami");
+    system("ls -l /dev/ttyACM*");
+    system("ls -l /dev/ttyUSB*");
 
-    GetStdoutFromCommand("ls -l /dev/ttyACM*");
-    GetStdoutFromCommand("ls -l /dev/ttyUSB*");
-    GetStdoutFromCommand("sudo");
-    GetStdoutFromCommand("#chademirtilo7892");
-
-    //GetStdoutFromCommand("sudo usermod -a -G dialout " + name);
+    /*name = popen("whoami", "r");
+    fgets(user, sizeof(user), name);
+    pclose(name);
+    comand_char = (char *)realloc(comand_char, (comand_str.length() + strlen(user))*sizeof(char));
+    for(c1=0; c1<comand_str.length(); c1++){
+        comand_char[c1] = comand_str[c1];
+    }
+    for(int c2=0; c2<strlen(user); c1++, c2++){
+        comand_char[c1] = user[c2];
+    }
+    comand_char[c1] = '\0';
+    system(comand_char);*/
 
     foreach (const QSerialPortInfo info, QSerialPortInfo::availablePorts()) {
 
@@ -43,28 +53,6 @@ QStringList serialConnection::loadPorts()
 
     return devs;
 }
-
-string GetStdoutFromCommand(string cmd) {
-
-    string data;
-    FILE * stream;
-    const int max_buffer = 256;
-    char buffer[max_buffer];
-    cmd.append(" 2>&1");
-
-    stream = popen(cmd.c_str(), "r");
-
-    if (stream) {
-        while (!feof(stream))
-
-        if (fgets(buffer, max_buffer, stream) != NULL) data.append(buffer);
-
-        pclose(stream);
-    }
-    return data;
-}
-
-
 
 /**
  * @brief serialConnection::connect
