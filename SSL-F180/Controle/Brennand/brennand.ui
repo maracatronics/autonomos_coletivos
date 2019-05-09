@@ -38,8 +38,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>580</y>
+      <x>530</x>
+      <y>570</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -276,8 +276,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>580</y>
+      <x>640</x>
+      <y>570</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -308,8 +308,8 @@
    <widget class="QLabel" name="maraca_Logo">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>560</y>
+      <x>40</x>
+      <y>570</y>
       <width>121</width>
       <height>101</height>
      </rect>
@@ -1231,8 +1231,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>580</y>
+      <x>750</x>
+      <y>570</y>
       <width>89</width>
       <height>25</height>
      </rect>

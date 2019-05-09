@@ -13,7 +13,7 @@
 //#include <global.h>
 
 #define INVERTIDO 128
-#define TAXA_TRANSMISSAO 10 //Milisegundos
+#define TAXA_TRANSMISSAO 10//Milisegundos
 
 namespace Ui {
 class Brennand;
@@ -35,6 +35,22 @@ public:
     void changePorts(QStringList);
 
 private slots:
+
+    void on_kickButton_clicked();
+
+    void on_kickButton_2_clicked();
+
+    void on_kickButton_3_clicked();
+
+    void on_kickButton_4_clicked();
+
+    void on_checkBox_2_clicked();
+
+    void on_checkBox_12_clicked();
+
+    void on_checkBox_6_clicked();
+
+    void on_checkBox_10_clicked();
 
     void on_checkBox_13_clicked();
 
@@ -110,6 +126,8 @@ public slots:
 
 
 private:
+    bool chutes[4];
+    bool dribles[4];
     bool checkboxes[4];
     Ui::Brennand *ui;
     QSerialPort *devSerial;

@@ -201,6 +201,31 @@ void Brennand::on_vel_Motor3_4_textChanged(const QString &arg1)
         ui->slider_motor3_4->setValue(value);
 }
 
+
+void Brennand::on_kickButton_clicked(){
+
+    chutes[0] = true;
+
+}
+
+void Brennand::on_kickButton_3_clicked(){
+
+    chutes[1] = true;
+
+}
+
+void Brennand::on_kickButton_2_clicked(){
+
+    chutes[2] = true;
+
+}
+
+void Brennand::on_kickButton_4_clicked(){
+
+    chutes[3] = true;
+
+}
+
 void Brennand::on_checkBox_13_clicked(){
 
     checkboxes[0] = !checkboxes[0];
@@ -222,6 +247,30 @@ void Brennand::on_checkBox_15_clicked(){
 void Brennand::on_checkBox_16_clicked(){
 
     checkboxes[3] = !checkboxes[3];
+
+}
+
+void Brennand::on_checkBox_2_clicked(){
+
+    dribles[0] = !dribles[0];
+
+}
+
+void Brennand::on_checkBox_12_clicked(){
+
+    dribles[1] = !dribles[1];
+
+}
+
+void Brennand::on_checkBox_6_clicked(){
+
+    dribles[2] = !dribles[2];
+
+}
+
+void Brennand::on_checkBox_10_clicked(){
+
+    dribles[3] = !dribles[3];
 
 }
 
@@ -314,7 +363,16 @@ void Brennand::procurarPortas(){
 void Brennand :: enviaComando(int i){
 
     Robot robo(i);
-    unsigned char val1=0,val2=0,val3=0;
+    unsigned char val1=0,val2=0,val3=0,flag=0;
+
+    if(chutes[i-1]){
+        flag = 64;
+        chutes[i-1] = false;
+    }else{
+        if(dribles[i-1]){
+            flag = 16;
+        }
+    }
 
     if(i == 1){
         val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
@@ -340,7 +398,9 @@ void Brennand :: enviaComando(int i){
         val3 = velMotor(ui->checkBox_29->isChecked(),ui->slider_motor3_4->value());
     }
 
-    robo.mountPackage(0, val1, val2, val3);
+    robo.mountPackage(flag, val1, val2, val3);
+
+    qDebug() << (int)robo.protocol[1];
 
     devSerial->write(robo.protocol, sizeof(robo.protocol));
 }
@@ -348,5 +408,3 @@ void Brennand :: enviaComando(int i){
 bool Brennand::comecouTransmissao(){
     return this->iniciouTransmissao;
 }
-
-
