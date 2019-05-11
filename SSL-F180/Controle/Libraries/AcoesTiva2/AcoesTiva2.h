@@ -10,12 +10,12 @@
 #define DUTY (int)(256 * 0.75)                          // 75% do máximo
 #define DEN_CHUTE 0.08                                  // Define-se o inverso do denominador da regra de 3 do chute para evitar divisões no código visto que divisões em MCUS são lentas => den_chute=tensão maxima/resolução ADC
 
-const uint8_t drible = PE_5;           // Controle do drible  
-const uint8_t infrared = PA_6;         // Leitura do led infravermelho - verificar posse de bola
-const uint8_t adcBateria = PB_1;       // Canal A0 do ADC
-const uint8_t adcChute = PE_4;         // Canal A0 do ADC
-const uint8_t chutePWM = PC_4;         // PWM do chute 
-const uint8_t disparo = PC_5;          // Comando de chute
+const uint8_t drible = PC_6;           // Controle do drible  (placa antiga PE_5/ nova PC_6)
+const uint8_t infrared = PE_4;         // Leitura do led infravermelho - verificar posse de bola (placa antiga PA_6/ nova PE_4)
+const uint8_t adcBateria = PE_2;       // Canal A0 do ADC (placa antiga PB_1/ PE_2)
+const uint8_t adcChute = PE_3;         // Canal A0 do ADC(placa antiga PE_4/ PE_3)
+const uint8_t chutePWM = PC_4;         // PWM do chute (placa antiga PC_4/ PF_1) ******* erro led vermelho
+const uint8_t disparo = PA_7;          // Comando de chute (placa antiga PC_5/ PA_7)
 
 class AcoesTiva2{
 public:
