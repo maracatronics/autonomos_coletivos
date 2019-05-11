@@ -7,8 +7,13 @@
 #include <QSerialPortInfo>
 #include "ui_brennand.h"
 #include "robot.h"
+#include <iostream>
+#include "ser.h"
+#include <QElapsedTimer>
+//#include <global.h>
 
 #define INVERTIDO 128
+#define TAXA_TRANSMISSAO 10//Milisegundos
 
 namespace Ui {
 class Brennand;
@@ -24,12 +29,37 @@ public:
 
     explicit Brennand(QWidget *parent = nullptr);
     unsigned char velMotor(bool isChecked, int valorSlider);
-    void enviaComando(Robot robo);
-    void CriaRobo(int id);
+    void CriaRobo(ser*, int check);
     bool comecouTransmissao();
     ~Brennand();
+    void changePorts(QStringList);
 
 private slots:
+
+    void on_kickButton_clicked();
+
+    void on_kickButton_2_clicked();
+
+    void on_kickButton_3_clicked();
+
+    void on_kickButton_4_clicked();
+
+    void on_checkBox_2_clicked();
+
+    void on_checkBox_12_clicked();
+
+    void on_checkBox_6_clicked();
+
+    void on_checkBox_10_clicked();
+
+    void on_checkBox_13_clicked();
+
+    void on_checkBox_14_clicked();
+
+    void on_checkBox_15_clicked();
+
+    void on_checkBox_16_clicked();
+
     void on_slider_motor1_valueChanged(int value);
 
     void on_slider_motor2_valueChanged(int value);
@@ -84,9 +114,11 @@ private slots:
 
     void on_connectButton_clicked();
 
-    void on_disconnectButton_clicked();
+    void on_disconnectButton_clicked();  
 
-
+public slots:
+    void enviaComando(int i);
+    void procurarPortas();
 
     //static void CriaRobo(int id, QCheckBox &check1, QCheckBox &check2, QCheckBox &check3, QSlider &slider1, QSlider &slider2, QSlider &slider3 );
 
@@ -94,11 +126,14 @@ private slots:
 
 
 private:
+    bool chutes[4];
+    bool dribles[4];
+    bool checkboxes[4];
     Ui::Brennand *ui;
-    QStringList loadPorts();
     QSerialPort *devSerial;
     serialConnection *procSerial;
     bool controlePorta, controleTransmissao, iniciouTransmissao;
+    int cont = 0;
 };
 
 #endif // BRENNAND_H

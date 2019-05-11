@@ -2,6 +2,10 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include <iostream>
+#include <QThread>
+using namespace std;
+
+string GetStdoutFromCommand(string cmd);
 
 serialConnection::serialConnection(QSerialPort *myDev)
 {
@@ -15,6 +19,26 @@ serialConnection::~serialConnection()
 QStringList serialConnection::loadPorts()
 {
     QStringList devs;
+    string comand_str = "usermod -a -G dialout ";
+    //FILE *name;
+    //char user[255], *comand_char = NULL;
+    //int c1;
+
+    system("ls -l /dev/ttyACM*");
+    system("ls -l /dev/ttyUSB*");
+
+    /*name = popen("whoami", "r");
+    fgets(user, sizeof(user), name);
+    pclose(name);
+    comand_char = (char *)realloc(comand_char, (comand_str.length() + strlen(user))*sizeof(char));
+    for(c1=0; c1<comand_str.length(); c1++){
+        comand_char[c1] = comand_str[c1];
+    }
+    for(int c2=0; c2<strlen(user); c1++, c2++){
+        comand_char[c1] = user[c2];
+    }
+    comand_char[c1] = '\0';
+    system(comand_char);*/
 
     foreach (const QSerialPortInfo info, QSerialPortInfo::availablePorts()) {
 
@@ -26,10 +50,9 @@ QStringList serialConnection::loadPorts()
         }
 
     }
+
     return devs;
 }
-
-
 
 /**
  * @brief serialConnection::connect
@@ -114,7 +137,7 @@ bool serialConnection::disconnect()
     devSerial->close();
 
 
-    if(devSerial->error() == 0 || !devSerial->isOpen()) {
+    if(devSerial->error() == 0 && !devSerial->isOpen()) {
         qDebug() << "Porta serial fechada com sucesso!";
         return true;
     }
@@ -137,8 +160,8 @@ bool serialConnection::disconnect()
 qint64 serialConnection::write(const char *cmd)
 {
     qint64 writeLength;
-    writeLength = devSerial->write(cmd,qstrlen(cmd));
 
+    writeLength = devSerial->write(cmd,qstrlen(cmd));
     return writeLength;
 }
 

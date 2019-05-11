@@ -31,13 +31,14 @@ SOURCES += \
         main.cpp \
         brennand.cpp \
     robot.cpp \
-    serialconnection.cpp
-
+    serialconnection.cpp \
+    ser.cpp
 HEADERS += \
         brennand.h \
     robot.h \
     serialconnection.h \
-    crc.h
+    crc.h \
+    ser.h
 
 FORMS += \
         brennand.ui

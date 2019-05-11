@@ -5,6 +5,7 @@
 #define SIZE_COMANDS 5
 #define SIZE_PROTOCOL SIZE_COMANDS+2
 
+
 class Robot
 {
 
@@ -12,7 +13,6 @@ class Robot
 private:
     int id;
     unsigned char comands[SIZE_COMANDS];
-
 
 public:
     char protocol[SIZE_PROTOCOL];
