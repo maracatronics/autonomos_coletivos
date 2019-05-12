@@ -277,7 +277,7 @@ void Brennand::on_checkBox_10_clicked(){
 
 void Brennand::on_connectButton_clicked()
 {
-    procSerial->connect(ui->boxDevice->currentText(),BR_SERIAL);
+    procSerial->connect(ui->boxDevice->currentText());
     controlePorta=true;
 }
 
