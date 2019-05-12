@@ -12,8 +12,8 @@
 #include <QElapsedTimer>
 //#include <global.h>
 
-#define INVERTIDO 128
-#define TAXA_TRANSMISSAO 10//Milisegundos
+#define INVERTIDO 127
+#define TAXA_TRANSMISSAO 40//Milisegundos
 
 namespace Ui {
 class Brennand;

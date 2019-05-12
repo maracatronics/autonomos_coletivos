@@ -311,7 +311,8 @@ void Brennand::on_parar_Button_clicked()
 }
 
 unsigned char Brennand::velMotor(bool isChecked, int valorSlider){
-    return isChecked? static_cast<unsigned char>(valorSlider | INVERTIDO) : static_cast<unsigned char>(valorSlider);
+    return isChecked? static_cast<unsigned char>(valorSlider - INVERTIDO) : static_cast<unsigned char>(valorSlider);
+
 }
 
 void Brennand::CriaRobo(ser *s, int check){
@@ -399,10 +400,17 @@ void Brennand :: enviaComando(int i){
     }
 
     robo.mountPackage(flag, val1, val2, val3);
+    /*for(int x =0; x<7; x++){
+        qDebug() << (int)robo.protocol[x];
+    }*/
 
-    qDebug() << (int)robo.protocol[1];
-
-    devSerial->write(robo.protocol, sizeof(robo.protocol));
+    if(flag == 64){
+        for(int count = 0;count<=50;count++){
+            devSerial->write(robo.protocol, sizeof(robo.protocol));
+        }
+    }else{
+        devSerial->write(robo.protocol, sizeof(robo.protocol));
+    }
 }
 
 bool Brennand::comecouTransmissao(){

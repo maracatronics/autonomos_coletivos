@@ -68,11 +68,13 @@ bool serialConnection::connect(QString Port, u_int32_t bd)
     devSerial->setPortName(Port);
     qDebug() << "Dispositivo Porta Serial: " << Port;
 
+    devSerial->setBaudRate(QSerialPort::Baud38400);
+
 
      // Conectar SerialPort
 
         // BaudRate
-        switch (bd) {
+        /*switch (bd) {
         case 2400:
             qDebug() << "Baudrate: 2400";
             devSerial->setBaudRate(QSerialPort::Baud2400);
@@ -97,7 +99,7 @@ bool serialConnection::connect(QString Port, u_int32_t bd)
             qDebug() << "Baudrate: 115200";
             devSerial->setBaudRate(QSerialPort::Baud115200);
             break;
-        }
+        }*/
 
         // FlowControl
         devSerial->setFlowControl(QSerialPort::NoFlowControl);
