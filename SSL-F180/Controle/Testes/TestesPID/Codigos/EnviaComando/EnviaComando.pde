@@ -2,7 +2,7 @@
 import processing.serial.*;
 
  
-int velocidade1 = 1, velocidade2 = 1, velocidade3 = 1;
+int velocidade1 = 100, velocidade2 = 100, velocidade3 = 100;
 int ID = 3;
 int DRIBLE = 16, CHUTE = 64, PASSE = 32;
 
@@ -38,7 +38,7 @@ void draw(){
    
     myPort.write(msg);
     
-    /*if(estado == 0){
+    if(estado == 0){
       velocidade1 = 127;
       velocidade2 = 127;
       velocidade3 = 127;
@@ -55,8 +55,8 @@ void draw(){
          estado = 0;
          tempo = millis();
        }
-     }*/
-      
+     }
+    
     delay(10);  
  
   

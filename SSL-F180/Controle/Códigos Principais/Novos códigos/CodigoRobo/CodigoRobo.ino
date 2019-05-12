@@ -24,7 +24,7 @@ AcoesTiva2 tiva;
 
 //************************************************************CONFIGURAÇÕES*****************************************************************************
 void setup() {
-  Serial.begin(38400);
+  Serial.begin(9600);
   for (int i = 0; i < 3; i++) {
     robo[i] = new Motor(i + 1);
     robo[i]->configurar();

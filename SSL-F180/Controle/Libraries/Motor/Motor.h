@@ -15,15 +15,15 @@
 
 // Pinos do microcontrolador que estão sendo utilizados para as rodas 1, 2 e 3
 const uint8_t motores_pins[3][3] = {
-  {PB_5, PC_6, PC_7},     						// Velocidade roda 1,2 e 3 respectivamente
-  {PB_0, PA_4, PA_3},     						// Sentido da rotação do Motor 1,2 e 3 respectivamente (ROBÔ 1: Antigo - PB0, Novo - PA7)
-  {PB_2, PE_0, PF_0}      						// Sensor Hall Motor 1,2 e 3 respectivamente
+  {PB_4, PF_4, PC_7},     						// Velocidade roda 1,2 e 3 respectivamente {PB_5, PC_6, PC_7}  {PB_4, PF_4, PB_6} **** motor 3 erro radio
+  {PE_5, PD_7, PA_4},     						// Sentido da rotação do Motor 1,2 e 3 respectivamente (ROBÔ 1: Antigo - PB0, Novo - PA7) {PB_0, PA_4, PA_3} {PE_5, PD_7, PA_4}
+  {PB_5, PD_6, PB_7}      						// Sensor Hall Motor 1,2 e 3 respectivamente {PB_2, PE_0, PF_0} {PB_5, PD_6, PB_7}
 };
 
 // Pinos Tacômetro Motores 1, 2 e 3
-const uint8_t tacometro_pins[3] = {
-	PE_3, PE_2, PB_4
-};
+//const uint8_t tacometro_pins[3] = {
+//	PE_3, PE_2, PB_4
+//};
 //const uint8_t tacometro1 PE_3 // Motor 1
 //const uint8_t tacometro2 PE_2 // Motor 2
 //const uint8_t tacometro3 PB_4 // Motor 3

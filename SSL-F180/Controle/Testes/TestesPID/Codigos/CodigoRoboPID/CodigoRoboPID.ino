@@ -1,4 +1,3 @@
-
 #include <Radio.h>
 #include "wiring_analog.c"    // Necessário para o PWMWrite
 #include <AcoesTiva2.h>
@@ -25,8 +24,8 @@ AcoesTiva2 tiva;
 
 //************************************************************CONFIGURAÇÕES*****************************************************************************
 void setup() {
-  //Serial.begin(9600); 
-  Serial.begin(38400);
+  Serial.begin(9600); 
+  //Serial.begin(38400);
 
   for (int i = 0; i < 3; i++) {
     robo[i] = new Motor(i + 1);
@@ -34,9 +33,9 @@ void setup() {
     hallMotores[i] = new Hall(robo[i]->_hall, 24);
   }
 
-  attachInterrupt(digitalPinToInterrupt(robo[0]->_hall), contagemPulsos1 , CHANGE);
-  attachInterrupt(digitalPinToInterrupt(robo[1]->_hall), contagemPulsos2 , CHANGE);
-  attachInterrupt(digitalPinToInterrupt(robo[2]->_hall), contagemPulsos3 , CHANGE);
+  //attachInterrupt(digitalPinToInterrupt(robo[0]->_hall), contagemPulsos1 , CHANGE);
+  //attachInterrupt(digitalPinToInterrupt(robo[1]->_hall), contagemPulsos2 , CHANGE);
+  //attachInterrupt(digitalPinToInterrupt(robo[2]->_hall), contagemPulsos3 , CHANGE);
 
   tiva.configurarTiva();
   radio.setup();
@@ -50,9 +49,9 @@ void loop() {
   char sendFrame[6];
   static unsigned int tempoHorus, tempoAtual, tempoPulso, tempoVariacao;
   static boolean flagHorus = false, inicio = true;
-  static double setpoint_speed = 800;
-  static double setpoint_speedR1 = 1000;
-  static int flagPID = 1;
+  //static double setpoint_speed = 800;
+  //static double setpoint_speedR1 = 1000;
+  //static int flagPID = 1;
 
   int velocidade1 = 100, velocidade2 = 100, velocidade3 = 100;
   int DRIBLE = 16, CHUTE = 64, PASSE = 32;
@@ -126,7 +125,7 @@ void loop() {
         setpoint_speedR1 = 1000;
       }*/
       if(j==0){
-        robo[j]->andarPID(setpoint_speedR1, hallMotores[j]->_rpm);
+        //robo[j]->andarPID(setpoint_speedR1, hallMotores[j]->_rpm);
        // robo[j]->andar(msg);
         PWMWrite(robo[j]->_velocidade, 127, robo[j]->_output, 1000); 
       } else{
@@ -136,7 +135,7 @@ void loop() {
       }
     }
     
-    Serial.print(setpoint_speed);
+    /*Serial.print(setpoint_speed);
     Serial.print("         ");
     Serial.print(robo[0]->_input);
     Serial.print("              ");
@@ -145,7 +144,7 @@ void loop() {
     Serial.print(hallMotores[1]->_rpm);
     Serial.print("              ");
     Serial.println(hallMotores[2]->_rpm);
-
+*/
 
     /*if(tempoAtual - tempoVariacao >= 10000){
       if(setpoint_speed == 1000){

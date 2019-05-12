@@ -20,7 +20,7 @@ Motor::Motor(int id){ // Básico
   this->_output = 0;
   this->_erro = 0;
   this->_status = false;
-  this->_tacometro = tacometro_pins[id - 1];
+  //this->_tacometro = tacometro_pins[id - 1];
   this->motorPID = new PID(&(_input), &(_output), &(_setpoint), _kp, _ki, _kd, 0);         // Inicializa o controlador PID do motor
 }
 
@@ -29,7 +29,7 @@ void Motor::configurar(){
   pinMode(_velocidade,OUTPUT);                  
   pinMode(_sentido,OUTPUT);
   pinMode(_hall,INPUT);
-  pinMode(_tacometro, INPUT);
+  //pinMode(_tacometro, INPUT);
   //Serial.begin(9600);
  
   if(_id == 1){
