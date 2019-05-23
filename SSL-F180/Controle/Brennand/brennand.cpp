@@ -6,7 +6,7 @@
 #include "ser.h"
 #include <thread>
 #include <QThread>
-#define BR_SERIAL 9600
+#define BR_SERIAL 38400
 
 using namespace std;
 
@@ -33,6 +33,10 @@ Brennand::Brennand(QWidget *parent) :
     controlePorta=false;
     controleTransmissao=false;
     iniciouTransmissao = false;
+
+    for(int i = 0; i < 12 ; i++){
+       timer[i].start();
+    }
 
     ui->boxDevice->addItem("No Port Connected");
     devSerial = new QSerialPort();
@@ -274,6 +278,66 @@ void Brennand::on_checkBox_10_clicked(){
 
 }
 
+void Brennand::on_checkBox_17_clicked()
+{
+    timer[0].start();
+}
+
+void Brennand::on_checkBox_18_clicked()
+{
+    timer[1].start();
+}
+
+void Brennand::on_checkBox_19_clicked()
+{
+    timer[2].start();
+}
+
+
+void Brennand::on_checkBox_22_clicked()
+{
+    timer[3].start();
+}
+
+void Brennand::on_checkBox_21_clicked()
+{
+    timer[4].start();
+}
+
+void Brennand::on_checkBox_20_clicked()
+{
+    timer[5].start();
+}
+
+void Brennand::on_checkBox_27_clicked()
+{
+    timer[6].start();
+}
+
+void Brennand::on_checkBox_28_clicked()
+{
+    timer[7].start();
+}
+
+void Brennand::on_checkBox_26_clicked()
+{
+    timer[8].start();
+}
+
+void Brennand::on_checkBox_31_clicked()
+{
+    timer[9].start();
+}
+
+void Brennand::on_checkBox_30_clicked()
+{
+    timer[10].start();
+}
+
+void Brennand::on_checkBox_29_clicked()
+{
+    timer[11].start();
+}
 
 void Brennand::on_connectButton_clicked()
 {
@@ -311,7 +375,7 @@ void Brennand::on_parar_Button_clicked()
 }
 
 unsigned char Brennand::velMotor(bool isChecked, int valorSlider){
-    return isChecked? static_cast<unsigned char>(valorSlider - INVERTIDO) : static_cast<unsigned char>(valorSlider);
+    return isChecked? static_cast<unsigned char>(valorSlider | INVERTIDO) : static_cast<unsigned char>(valorSlider);
 
 }
 
@@ -375,33 +439,99 @@ void Brennand :: enviaComando(int i){
         }
     }
 
+
     if(i == 1){
-        val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
-        val2 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor2->value());
-        val3 = velMotor(ui->checkBox_19->isChecked(),ui->slider_motor3->value());
+
+        if(timer[0].elapsed() < 1000){
+            val1 = 0;
+        }else{
+            val1 = velMotor(ui->checkBox_17->isChecked(),ui->slider_motor1->value());
+        }
+
+        if(timer[1].elapsed() < 1000){
+            val2 = 0;
+        }else{
+            val2 = velMotor(ui->checkBox_18->isChecked(),ui->slider_motor2->value());
+        }
+
+        if(timer[2].elapsed() < 1000){
+            val3 = 0;
+        }else{
+            val3 = velMotor(ui->checkBox_19->isChecked(),ui->slider_motor3->value());
+        }
+
     }
 
     if(i==2){
-        val1 = velMotor(ui->checkBox_22->isChecked(),ui->slider_motor1_2->value());
-        val2 = velMotor(ui->checkBox_21->isChecked(),ui->slider_motor2_2->value());
-        val3 = velMotor(ui->checkBox_20->isChecked(),ui->slider_motor3_2->value());
+
+        if(timer[3].elapsed() < 1000){
+            val1 = 0;
+        }else{
+            val1 = velMotor(ui->checkBox_22->isChecked(),ui->slider_motor1_2->value());
+        }
+
+        if(timer[4].elapsed() < 1000){
+            val2 = 0;
+        }else{
+            val2 = velMotor(ui->checkBox_21->isChecked(),ui->slider_motor2_2->value());
+        }
+
+        if(timer[5].elapsed() < 1000){
+            val3 = 0;
+        }else{
+            val3 = velMotor(ui->checkBox_20->isChecked(),ui->slider_motor3_2->value());
+        }
+
     }
 
     if(i==3){
-        val1 = velMotor(ui->checkBox_27->isChecked(),ui->slider_motor1_3->value());
-        val2 = velMotor(ui->checkBox_28->isChecked(),ui->slider_motor2_3->value());
-        val3 = velMotor(ui->checkBox_26->isChecked(),ui->slider_motor3_3->value());
+
+        if(timer[6].elapsed() < 1000){
+            val1 = 0;
+        }else{
+            val1 = velMotor(ui->checkBox_27->isChecked(),ui->slider_motor1_3->value());
+        }
+
+        if(timer[7].elapsed() < 1000){
+            val2 = 0;
+        }else{
+            val2 = velMotor(ui->checkBox_28->isChecked(),ui->slider_motor2_3->value());
+        }
+
+        if(timer[8].elapsed() < 1000){
+            val3 = 0;
+        }else{
+            val3 = velMotor(ui->checkBox_26->isChecked(),ui->slider_motor3_3->value());
+        }
+
     }
 
     if(i==4){
-        val1 = velMotor(ui->checkBox_31->isChecked(),ui->slider_motor1_4->value());
-        val2 = velMotor(ui->checkBox_30->isChecked(),ui->slider_motor2_4->value());
-        val3 = velMotor(ui->checkBox_29->isChecked(),ui->slider_motor3_4->value());
+
+        if(timer[9].elapsed() < 1000){
+            val1 = 0;
+        }else{
+            val1 = velMotor(ui->checkBox_31->isChecked(),ui->slider_motor1_4->value());
+        }
+
+        if(timer[10].elapsed() < 1000){
+            val2 = 0;
+        }else{
+            val2 = velMotor(ui->checkBox_30->isChecked(),ui->slider_motor2_4->value());
+        }
+
+        if(timer[11].elapsed() < 1000){
+            val3 = 0;
+        }else{
+            val3 = velMotor(ui->checkBox_29->isChecked(),ui->slider_motor3_4->value());
+        }
+
     }
 
     robo.mountPackage(flag, val1, val2, val3);
-    /*for(int x =0; x<7; x++){
-        qDebug() << (int)robo.protocol[x];
+
+  /*for(int x =0; x<7; x++){
+        qDebug() << static_cast<u_int8_t>(robo.protocol[x]);
     }*/
 
     if(flag == 64){
@@ -416,3 +546,5 @@ void Brennand :: enviaComando(int i){
 bool Brennand::comecouTransmissao(){
     return this->iniciouTransmissao;
 }
+
+

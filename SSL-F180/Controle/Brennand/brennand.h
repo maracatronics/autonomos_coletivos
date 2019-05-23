@@ -12,7 +12,7 @@
 #include <QElapsedTimer>
 //#include <global.h>
 
-#define INVERTIDO 127
+#define INVERTIDO 128
 #define TAXA_TRANSMISSAO 40//Milisegundos
 
 namespace Ui {
@@ -116,6 +116,30 @@ private slots:
 
     void on_disconnectButton_clicked();  
 
+    void on_checkBox_17_clicked();
+
+    void on_checkBox_18_clicked();
+
+    void on_checkBox_19_clicked();
+
+    void on_checkBox_22_clicked();
+
+    void on_checkBox_21_clicked();
+
+    void on_checkBox_20_clicked();
+
+    void on_checkBox_27_clicked();
+
+    void on_checkBox_28_clicked();
+
+    void on_checkBox_26_clicked();
+
+    void on_checkBox_31_clicked();
+
+    void on_checkBox_30_clicked();
+
+    void on_checkBox_29_clicked();
+
 public slots:
     void enviaComando(int i);
     void procurarPortas();
@@ -126,6 +150,7 @@ public slots:
 
 
 private:
+    QElapsedTimer timer[12];
     bool chutes[4];
     bool dribles[4];
     bool checkboxes[4];
