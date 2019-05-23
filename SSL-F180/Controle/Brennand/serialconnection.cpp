@@ -62,7 +62,7 @@ QStringList serialConnection::loadPorts()
  * @param QString Port(Porta Serial), uint32_t bd(BaudRate), uint8_t fc(FlowControl)
  * @return
  */
-bool serialConnection::connect(QString Port)
+bool serialConnection::connect(QString Port, u_int32_t bd)
 {
     // Device Serial Port
     devSerial->setPortName(Port);
