@@ -13,7 +13,7 @@ public:
 
     QStringList loadPorts();
 
-    bool connect(QString Port, u_int32_t bd);
+    bool connect(QString Port);
     bool disconnect(void);
 
     qint64 write(const char *cmd);

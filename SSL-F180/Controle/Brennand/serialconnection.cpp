@@ -19,13 +19,13 @@ serialConnection::~serialConnection()
 QStringList serialConnection::loadPorts()
 {
     QStringList devs;
-    string comand_str = "usermod -a -G dialout ";
+   /* string comand_str = "usermod -a -G dialout ";
     //FILE *name;
     //char user[255], *comand_char = NULL;
     //int c1;
 
     system("ls -l /dev/ttyACM*");
-    system("ls -l /dev/ttyUSB*");
+    system("ls -l /dev/ttyUSB*");*/
 
     /*name = popen("whoami", "r");
     fgets(user, sizeof(user), name);
@@ -62,7 +62,7 @@ QStringList serialConnection::loadPorts()
  * @param QString Port(Porta Serial), uint32_t bd(BaudRate), uint8_t fc(FlowControl)
  * @return
  */
-bool serialConnection::connect(QString Port, u_int32_t bd)
+bool serialConnection::connect(QString Port)
 {
     // Device Serial Port
     devSerial->setPortName(Port);
