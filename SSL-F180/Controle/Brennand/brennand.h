@@ -29,10 +29,11 @@ public:
 
     explicit Brennand(QWidget *parent = nullptr);
     unsigned char velMotor(bool isChecked, int valorSlider);
-    void CriaRobo(ser*, int check);
+    [[ noreturn ]] void CriaRobo(ser*, int check);
+    [[ noreturn ]] void InitProcura(ser*);
     bool comecouTransmissao();
     ~Brennand();
-    void changePorts(QStringList);
+    [[ noreturn ]] void changePorts(QStringList);
 
 private slots:
 
@@ -143,11 +144,6 @@ private slots:
 public slots:
     void enviaComando(int i);
     void procurarPortas();
-
-    //static void CriaRobo(int id, QCheckBox &check1, QCheckBox &check2, QCheckBox &check3, QSlider &slider1, QSlider &slider2, QSlider &slider3 );
-
-
-
 
 private:
     QElapsedTimer timer[12];

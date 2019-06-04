@@ -381,9 +381,7 @@ unsigned char Brennand::velMotor(bool isChecked, int valorSlider){
 
 void Brennand::CriaRobo(ser *s, int check){
     QElapsedTimer timer_transmissao;
-    QElapsedTimer timer_procura;
     bool startTime_transmissao = true;
-    bool startTime_procura = true;
 
     checkboxes[check-1] = false;
 
@@ -401,7 +399,14 @@ void Brennand::CriaRobo(ser *s, int check){
                 startTime_transmissao = true;
             }
         }
+    };
+}
 
+void Brennand::InitProcura (ser *s){
+    QElapsedTimer timer_procura;
+    bool startTime_procura = true;
+
+    while(true){
         if(!controlePorta){
             if(startTime_procura){
                 timer_procura.start();
@@ -409,13 +414,12 @@ void Brennand::CriaRobo(ser *s, int check){
             }
 
             if(timer_procura.hasExpired(1000)){
-                qDebug() << "cheguei aqui";
                 emit s->procurando();
 
                 startTime_procura = true;
             }
         }
-    };
+    }
 }
 
 void Brennand::procurarPortas(){

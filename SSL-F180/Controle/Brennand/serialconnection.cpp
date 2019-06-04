@@ -19,15 +19,18 @@ serialConnection::~serialConnection()
 QStringList serialConnection::loadPorts()
 {
     QStringList devs;
-   /* string comand_str = "usermod -a -G dialout ";
-    //FILE *name;
-    //char user[255], *comand_char = NULL;
-    //int c1;
+
+    //O CÓDIGO ABAIXO SERVE PARA CONFIGURAR AS PORTAS PARA AMBIENTES LINUX
+    //*************************************************************************************************
+    /*string comand_str = "usermod -a -G dialout ";
+    FILE *name;
+    char user[255], *comand_char = NULL;
+    int c1;
 
     system("ls -l /dev/ttyACM*");
-    system("ls -l /dev/ttyUSB*");*/
+    system("ls -l /dev/ttyUSB*");
 
-    /*name = popen("whoami", "r");
+    name = popen("whoami", "r");
     fgets(user, sizeof(user), name);
     pclose(name);
     comand_char = (char *)realloc(comand_char, (comand_str.length() + strlen(user))*sizeof(char));
@@ -39,6 +42,7 @@ QStringList serialConnection::loadPorts()
     }
     comand_char[c1] = '\0';
     system(comand_char);*/
+    //*************************************************************************************************
 
     foreach (const QSerialPortInfo info, QSerialPortInfo::availablePorts()) {
 
@@ -200,7 +204,7 @@ QString serialConnection::read(int TamanhoBuffer)
     char buf[TamanhoBuffer];
 
     if (devSerial->canReadLine()) {
-        devSerial->read(buf, sizeof(buf));
+        devSerial->read(buf, qint64(sizeof(buf)));
     }
 
     return buf;
