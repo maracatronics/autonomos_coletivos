@@ -139,8 +139,7 @@ namespace CRCPP
         If compiling with C++11, the constexpr keyword is used liberally so that many calculations are
         performed at compile-time instead of at runtime.
 */
-class CRC
-{
+class CRC{
 public:
     // Forward declaration
     template <typename CRCType, crcpp_uint16 CRCWidth>
@@ -150,8 +149,7 @@ public:
         @brief CRC parameters.
     */
     template <typename CRCType, crcpp_uint16 CRCWidth>
-    struct Parameters
-    {
+    struct Parameters{
         CRCType polynomial;   ///< CRC polynomial
         CRCType initialValue; ///< Initial CRC value
         CRCType finalXOR;     ///< Value to XOR with the final CRC
@@ -166,8 +164,7 @@ public:
         @note A CRC table can be used for multiple CRC calculations.
     */
     template <typename CRCType, crcpp_uint16 CRCWidth>
-    struct Table
-    {
+    struct Table{
         // Constructors are intentionally NOT marked explicit.
         Table(const Parameters<CRCType, CRCWidth> & parameters);
 
@@ -313,8 +310,7 @@ private:
     @return CRC lookup table
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline CRC::Table<CRCType, CRCWidth> CRC::Parameters<CRCType, CRCWidth>::MakeTable() const
-{
+inline CRC::Table<CRCType, CRCWidth> CRC::Parameters<CRCType, CRCWidth>::MakeTable() const{
     // This should take advantage of RVO and optimize out the copy.
     return CRC::Table<CRCType, CRCWidth>(*this);
 }
@@ -366,8 +362,7 @@ inline const CRC::Parameters<CRCType, CRCWidth> & CRC::Table<CRCType, CRCWidth>:
     @return CRC table
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline const CRCType * CRC::Table<CRCType, CRCWidth>::GetTable() const
-{
+inline const CRCType * CRC::Table<CRCType, CRCWidth>::GetTable() const{
     return table;
 }
 
@@ -379,8 +374,7 @@ inline const CRCType * CRC::Table<CRCType, CRCWidth>::GetTable() const
     @return CRC table entry
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline CRCType CRC::Table<CRCType, CRCWidth>::operator[](unsigned char index) const
-{
+inline CRCType CRC::Table<CRCType, CRCWidth>::operator[](unsigned char index) const{
     return table[index];
 }
 
@@ -390,8 +384,7 @@ inline CRCType CRC::Table<CRCType, CRCWidth>::operator[](unsigned char index) co
     @tparam CRCWidth Number of bits in the CRC
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline void CRC::Table<CRCType, CRCWidth>::InitTable()
-{
+inline void CRC::Table<CRCType, CRCWidth>::InitTable(){
     // For masking off the bits for the CRC (in the event that the number of bits in CRCType is larger than CRCWidth)
     static crcpp_constexpr CRCType BIT_MASK((CRCType(1) << (CRCWidth - CRCType(1))) |
                                            ((CRCType(1) << (CRCWidth - CRCType(1))) - CRCType(1)));
@@ -402,8 +395,7 @@ inline void CRC::Table<CRCType, CRCWidth>::InitTable()
     unsigned char byte = 0;
 
     // Loop over each dividend (each possible number storable in an unsigned char)
-    do
-    {
+    do{
         crc = CRC::CalculateRemainder<CRCType, CRCWidth>(&byte, sizeof(byte), parameters, CRCType(0));
 
         // This mask might not be necessary; all unit tests pass with this line commented out,
@@ -419,8 +411,7 @@ inline void CRC::Table<CRCType, CRCWidth>::InitTable()
         }
 
         table[byte] = crc;
-    }
-    while (++byte);
+    }while (++byte);
 }
 
 /**
@@ -433,14 +424,14 @@ inline void CRC::Table<CRCType, CRCWidth>::InitTable()
     @return CRC
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Parameters<CRCType, CRCWidth> & parameters)
-{
+inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Parameters<CRCType, CRCWidth> & parameters){
     CRCType remainder = CalculateRemainder(data, size, parameters, parameters.initialValue);
 
     // No need to mask the remainder here; the mask will be applied in the Finalize() function.
 
     return Finalize<CRCType, CRCWidth>(remainder, parameters.finalXOR, parameters.reflectInput != parameters.reflectOutput);
 }
+
 /**
     @brief Appends additional data to a previous CRC calculation.
     @note This function can be used to compute multi-part CRCs.
@@ -453,8 +444,7 @@ inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Paramete
     @return CRC
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Parameters<CRCType, CRCWidth> & parameters, CRCType crc)
-{
+inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Parameters<CRCType, CRCWidth> & parameters, CRCType crc){
     CRCType remainder = UndoFinalize<CRCType, CRCWidth>(crc, parameters.finalXOR, parameters.reflectInput != parameters.reflectOutput);
 
     remainder = CalculateRemainder(data, size, parameters, remainder);
@@ -474,8 +464,7 @@ inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Paramete
     @return CRC
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Table<CRCType, CRCWidth> & lookupTable)
-{
+inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Table<CRCType, CRCWidth> & lookupTable){
     const Parameters<CRCType, CRCWidth> & parameters = lookupTable.GetParameters();
 
     CRCType remainder = CalculateRemainder(data, size, lookupTable, parameters.initialValue);
@@ -497,8 +486,7 @@ inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Table<CR
     @return CRC
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Table<CRCType, CRCWidth> & lookupTable, CRCType crc)
-{
+inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Table<CRCType, CRCWidth> & lookupTable, CRCType crc){
     const Parameters<CRCType, CRCWidth> & parameters = lookupTable.GetParameters();
 
     CRCType remainder = UndoFinalize<CRCType, CRCWidth>(crc, parameters.finalXOR, parameters.reflectInput != parameters.reflectOutput);
@@ -518,12 +506,10 @@ inline CRCType CRC::Calculate(const void * data, crcpp_size size, const Table<CR
     @return Reflected value
 */
 template <typename IntegerType>
-inline IntegerType CRC::Reflect(IntegerType value, crcpp_uint16 numBits)
-{
+inline IntegerType CRC::Reflect(IntegerType value, crcpp_uint16 numBits){
     IntegerType reversedValue(0);
 
-    for (crcpp_uint16 i = 0; i < numBits; ++i)
-    {
+    for(crcpp_uint16 i = 0; i < numBits; ++i){
         reversedValue = (reversedValue << 1) | (value & 1);
         value >>= 1;
     }
@@ -541,14 +527,12 @@ inline IntegerType CRC::Reflect(IntegerType value, crcpp_uint16 numBits)
     @return Final CRC
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline CRCType CRC::Finalize(CRCType remainder, CRCType finalXOR, bool reflectOutput)
-{
+inline CRCType CRC::Finalize(CRCType remainder, CRCType finalXOR, bool reflectOutput){
     // For masking off the bits for the CRC (in the event that the number of bits in CRCType is larger than CRCWidth)
     static crcpp_constexpr CRCType BIT_MASK = (CRCType(1) << (CRCWidth - CRCType(1))) |
                                              ((CRCType(1) << (CRCWidth - CRCType(1))) - CRCType(1));
 
-    if (reflectOutput)
-    {
+    if (reflectOutput){
         remainder = Reflect(remainder, CRCWidth);
     }
 
@@ -573,16 +557,14 @@ inline CRCType CRC::Finalize(CRCType remainder, CRCType finalXOR, bool reflectOu
     @return Un-finalized CRC remainder
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline CRCType CRC::UndoFinalize(CRCType crc, CRCType finalXOR, bool reflectOutput)
-{
+inline CRCType CRC::UndoFinalize(CRCType crc, CRCType finalXOR, bool reflectOutput){
     // For masking off the bits for the CRC (in the event that the number of bits in CRCType is larger than CRCWidth)
     static crcpp_constexpr CRCType BIT_MASK = (CRCType(1) << (CRCWidth - CRCType(1))) |
                                              ((CRCType(1) << (CRCWidth - CRCType(1))) - CRCType(1));
 
     crc = (crc & BIT_MASK) ^ finalXOR;
 
-    if (reflectOutput)
-    {
+    if (reflectOutput){
         crc = Reflect(crc, CRCWidth);
     }
 
@@ -600,8 +582,7 @@ inline CRCType CRC::UndoFinalize(CRCType crc, CRCType finalXOR, bool reflectOutp
     @return CRC remainder
 */
 template <typename CRCType, crcpp_uint16 CRCWidth>
-inline CRCType CRC::CalculateRemainder(const void * data, crcpp_size size, const Parameters<CRCType, CRCWidth> & parameters, CRCType remainder)
-{
+inline CRCType CRC::CalculateRemainder(const void * data, crcpp_size size, const Parameters<CRCType, CRCWidth> & parameters, CRCType remainder){
 #ifdef CRCPP_USE_CPP11
     // This static_assert is put here because this function will always be compiled in no matter what
     // the template parameters are and whether or not a table lookup or bit-by-bit algorithm is used.
@@ -616,16 +597,13 @@ inline CRCType CRC::CalculateRemainder(const void * data, crcpp_size size, const
 
     // Slightly different implementations based on the parameters. The current implementations try to eliminate as much
     // computation from the inner loop (looping over each bit) as possible.
-    if (parameters.reflectInput)
-    {
+    if (parameters.reflectInput){
         CRCType polynomial = CRC::Reflect(parameters.polynomial, CRCWidth);
-        while (size--)
-        {
+        while (size--){
             remainder ^= *current++;
 
             // An optimizing compiler might choose to unroll this loop.
-            for (crcpp_size i = 0; i < CHAR_BIT; ++i)
-            {
+            for (crcpp_size i = 0; i < CHAR_BIT; ++i){
 #ifdef CRCPP_BRANCHLESS
                 // Clever way to avoid a branch at the expense of a multiplication. This code is equivalent to the following:
                 // if (remainder & 1)
@@ -639,16 +617,14 @@ inline CRCType CRC::CalculateRemainder(const void * data, crcpp_size size, const
             }
         }
     }
-    else if (CRCWidth >= CHAR_BIT)
-    {
+    else if (CRCWidth >= CHAR_BIT){
         static crcpp_constexpr CRCType CRC_WIDTH_MINUS_ONE(CRCWidth - CRCType(1));
 #ifndef CRCPP_BRANCHLESS
         static crcpp_constexpr CRCType CRC_HIGHEST_BIT_MASK(CRCType(1) << CRC_WIDTH_MINUS_ONE);
 #endif
         static crcpp_constexpr CRCType SHIFT(BoundedConstexprValue(CRCWidth - CHAR_BIT));
 
-        while (size--)
-        {
+        while (size--){
             remainder ^= (static_cast<CRCType>(*current++) << SHIFT);
 
             // An optimizing compiler might choose to unroll this loop.
@@ -667,8 +643,7 @@ inline CRCType CRC::CalculateRemainder(const void * data, crcpp_size size, const
             }
         }
     }
-    else
-    {
+    else{
         static crcpp_constexpr CRCType CHAR_BIT_MINUS_ONE(CHAR_BIT - 1);
 #ifndef CRCPP_BRANCHLESS
         static crcpp_constexpr CRCType CHAR_BIT_HIGHEST_BIT_MASK(CRCType(1) << CHAR_BIT_MINUS_ONE);

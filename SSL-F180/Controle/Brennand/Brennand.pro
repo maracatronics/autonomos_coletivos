@@ -31,8 +31,7 @@ SOURCES += \
         main.cpp \
         brennand.cpp \
     robot.cpp \
-    serialconnection.cpp \
-    ser.cpp
+    serialconnection.cpp
 HEADERS += \
         brennand.h \
     robot.h \

@@ -3,12 +3,8 @@
 
 #include <QObject>
 
-class ser : public QObject
-{
+class ser : public QObject{
     Q_OBJECT
-
-public:
-    ser();
 
 signals:
     void transmitindo(int);

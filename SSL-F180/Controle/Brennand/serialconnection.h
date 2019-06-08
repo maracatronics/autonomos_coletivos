@@ -5,8 +5,7 @@
 #include <QSerialPort>
 #include <QSerialPortInfo>
 
-class serialConnection
-{
+class serialConnection{
 public:
     serialConnection(QSerialPort *myDev);
     ~serialConnection();
@@ -24,9 +23,4 @@ protected:
    QSerialPort *devSerial;
 };
 
-#endif // SERIALCONNECTION_H
-
-
-
-
-
+#endif

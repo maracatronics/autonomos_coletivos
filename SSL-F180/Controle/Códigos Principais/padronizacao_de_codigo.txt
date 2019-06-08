@@ -12,7 +12,9 @@ Regras para desenvolvimento de softwares Maraca
 			*Nomes com espacos devem ter underline no lugar do espaco;
 			*Todas as letras minusculas;
 			*Comentario com explicacao sucinta sobre sua funcao;
-			*Evitar ao maximo varaveis globais (so em casos extremos e serio).
+			*Evitar ao maximo varaveis globais (so em casos extremos e serio);
+			*Quando em classes nunca devem ser públicas, e serem acessadas e modificadas
+			 a partir de métodos publicos.
 
 -Classes/Estruturas:
 			*O nome deve estar relacionado com sua funcao;
@@ -29,4 +31,10 @@ Regras para desenvolvimento de softwares Maraca
 			*O nome deve estar relacionado com sua funcao;			
 			*Nomes com espacos devem ter underline no lugar do espaco;
 			*Todas as letras maiusculas;
-			*Comentario com explicacao sucinta sobre sua funcao.
+			*Comentario com explicacao sucinta sobre sua funcao;
+			*Se fizerem parte de uma classe, devem estar no arquivo .h .
+
+-Includes:		
+			*Feito primeiro logo após o comentário inicial;
+			*Se fizer parte de uma biblioteca, devem estar no arquivo .h, 
+			 com exceção dos includes da própria classe.

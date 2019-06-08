@@ -3,21 +3,19 @@
 #include <QSerialPortInfo>
 #include <iostream>
 #include <QThread>
+
 using namespace std;
 
 string GetStdoutFromCommand(string cmd);
 
-serialConnection::serialConnection(QSerialPort *myDev)
-{
+serialConnection::serialConnection(QSerialPort *myDev){
     this->devSerial=myDev;
 }
 
-serialConnection::~serialConnection()
-{}
+serialConnection::~serialConnection(){}
 
 
-QStringList serialConnection::loadPorts()
-{
+QStringList serialConnection::loadPorts(){
     QStringList devs;
 
     //O CÓDIGO ABAIXO SERVE PARA CONFIGURAR AS PORTAS PARA AMBIENTES LINUX
@@ -45,7 +43,6 @@ QStringList serialConnection::loadPorts()
     //*************************************************************************************************
 
     foreach (const QSerialPortInfo info, QSerialPortInfo::availablePorts()) {
-
         this->devSerial->setPort(info);
 
         if (this->devSerial->open(QIODevice::ReadWrite)) {
@@ -66,65 +63,58 @@ QStringList serialConnection::loadPorts()
  * @param QString Port(Porta Serial), uint32_t bd(BaudRate), uint8_t fc(FlowControl)
  * @return
  */
-bool serialConnection::connect(QString Port, u_int32_t bd)
-{
-    // Device Serial Port
+
+bool serialConnection::connect(QString Port, u_int32_t bd){
+    //Device Serial Port
     devSerial->setPortName(Port);
     qDebug() << "Dispositivo Porta Serial: " << Port;
 
-     // Conectar SerialPort
+    //BaudRate
+    switch (bd) {
+    case 2400:
+        qDebug() << "Baudrate: 2400";
+        devSerial->setBaudRate(QSerialPort::Baud2400);
+        break;
+    case 4800:
+        qDebug() << "Baudrate: 4800";
+        devSerial->setBaudRate(QSerialPort::Baud4800);
+        break;
+    case 9600:
+        qDebug() << "Baudrate: 9600";
+        devSerial->setBaudRate(QSerialPort::Baud9600);
+        break;
+    case 19200:
+        qDebug() << "Baudrate: 19200";
+        devSerial->setBaudRate(QSerialPort::Baud19200);
+        break;
+    case 38400:
+        qDebug() << "Baudrate: 38400";
+        devSerial->setBaudRate(QSerialPort::Baud38400);
+        break;
+    case 115200:
+        qDebug() << "Baudrate: 115200";
+        devSerial->setBaudRate(QSerialPort::Baud115200);
+        break;
+    }
 
-        // BaudRate
-        switch (bd) {
-        case 2400:
-            qDebug() << "Baudrate: 2400";
-            devSerial->setBaudRate(QSerialPort::Baud2400);
-            break;
-        case 4800:
-            qDebug() << "Baudrate: 4800";
-            devSerial->setBaudRate(QSerialPort::Baud4800);
-            break;
-        case 9600:
-            qDebug() << "Baudrate: 9600";
-            devSerial->setBaudRate(QSerialPort::Baud9600);
-            break;
-        case 19200:
-            qDebug() << "Baudrate: 19200";
-            devSerial->setBaudRate(QSerialPort::Baud19200);
-            break;
-        case 38400:
-            qDebug() << "Baudrate: 38400";
-            devSerial->setBaudRate(QSerialPort::Baud38400);
-            break;
-        case 115200:
-            qDebug() << "Baudrate: 115200";
-            devSerial->setBaudRate(QSerialPort::Baud115200);
-            break;
-        }
+    //FlowControl
+    devSerial->setFlowControl(QSerialPort::NoFlowControl);
 
-        // FlowControl
-        devSerial->setFlowControl(QSerialPort::NoFlowControl);
+    //Configurações adicionais
+    devSerial->setDataBits(QSerialPort::Data8);
+    devSerial->setParity(QSerialPort::NoParity);
+    devSerial->setStopBits(QSerialPort::OneStop);
 
-
-        // Configurações adicionais
-        devSerial->setDataBits(QSerialPort::Data8);
-        devSerial->setParity(QSerialPort::NoParity);
-        devSerial->setStopBits(QSerialPort::OneStop);
-
-
-        if(devSerial->open(QIODevice::ReadWrite)) {
-            qDebug() << "Porta serial aberta com sucesso!";
-            return true;
-        }
-        else {
-            qDebug() << "Falha ao abrir porta serial!";
-            qDebug() << "Erro: " << devSerial->error();
-            return false;
-        }
-
-
+    if(devSerial->open(QIODevice::ReadWrite)){
+        qDebug() << "Porta serial aberta com sucesso!";
+        return true;
+    }
+    else{
+        qDebug() << "Falha ao abrir porta serial!";
+        qDebug() << "Erro: " << devSerial->error();
+        return false;
+    }
 }
-
 
 /**
  * @brief serialConnection::disconnect
@@ -134,23 +124,19 @@ bool serialConnection::connect(QString Port, u_int32_t bd)
  * @param
  * @return
  */
-bool serialConnection::disconnect()
-{
+bool serialConnection::disconnect(){
     devSerial->clear();
     devSerial->close();
 
-
-    if(devSerial->error() == 0 && !devSerial->isOpen()) {
+    if(devSerial->error() == 0 && !devSerial->isOpen()){
         qDebug() << "Porta serial fechada com sucesso!";
         return true;
     }
-    else {
+    else{
         qDebug() << "Falha ao fechar a porta serial! ERRO: " << devSerial->error();
         return false;
     }
-
 }
-
 
 /**
  * @brief serialConnection::write
@@ -160,14 +146,12 @@ bool serialConnection::disconnect()
  * @param const char *cmd
  * @return void
  */
-qint64 serialConnection::write(const char *cmd)
-{
+qint64 serialConnection::write(const char *cmd){
     qint64 writeLength;
 
     writeLength = devSerial->write(cmd,qstrlen(cmd));
     return writeLength;
 }
-
 
 /**
  * @brief serialConnection::Read
@@ -177,8 +161,7 @@ qint64 serialConnection::write(const char *cmd)
  * @param
  * @return QString
  */
-QString serialConnection::read()
-{
+QString serialConnection::read(){
      QString bufRxSerial;
 
      /* Awaits read all the data before continuing */
@@ -187,7 +170,6 @@ QString serialConnection::read()
      }
      return bufRxSerial;
 }
-
 
 /**
  * @brief serialConnection::read
@@ -199,8 +181,7 @@ QString serialConnection::read()
  * @param int
  * @return QString
  */
-QString serialConnection::read(int TamanhoBuffer)
-{
+QString serialConnection::read(int TamanhoBuffer){
     char buf[TamanhoBuffer];
 
     if (devSerial->canReadLine()) {

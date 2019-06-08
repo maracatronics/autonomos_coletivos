@@ -1,48 +1,52 @@
-#include "brennand.h"
+/*
+    Brennand, interface de experimentação do Maracatronics
+
+    Autores:    Gabriel Souza Marques
+                Rafael Carneiro Reis de Souza
+                Leonardo
+                Pedro Jorge
+                Victor
+
+    Data:       08/06/2019
+*/
+
+#include <QSignalMapper>
 #include <QApplication>
 #include <iostream>
-#include "crc.h"
 #include <QObject>
 #include <QThread>
-#include <QSignalMapper>
+#include "brennand.h"
+#include "crc.h"
 #include "ser.h"
-//int DRIBLE = 16, CHUTE = 64, PASSE = 32;
 
 using namespace std;
 
-void watchPorts();
-void robotThread(Brennand &w);
-
 int main(int argc, char *argv[]){
-    QApplication a(argc, argv);
-    Brennand *w = new Brennand();
-    w->show();
-    ser s1,s2,s3,s4,s5;
+    QApplication app(argc, argv);
+    Brennand *brennand = new Brennand();
+    ser serial_signal;
 
-    QObject::connect(&s1, SIGNAL(transmitindo(int)), w, SLOT(enviaComando(int)));
-    QObject::connect(&s2, SIGNAL(transmitindo(int)), w, SLOT(enviaComando(int)));
-    QObject::connect(&s3, SIGNAL(transmitindo(int)), w, SLOT(enviaComando(int)));
-    QObject::connect(&s4, SIGNAL(transmitindo(int)), w, SLOT(enviaComando(int)));
-    QObject::connect(&s5, SIGNAL(procurando()), w, SLOT(procurarPortas()));
+    brennand->show();
 
-    QThread *t1 = QThread::create(&Brennand::CriaRobo, ref(*w), &s1, 1);
-    t1->start();
+    QObject::connect(&serial_signal, SIGNAL(transmitindo(int)), brennand, SLOT(enviaComando(int)));
+    QObject::connect(&serial_signal, SIGNAL(procurando()), brennand, SLOT(procurarPortas()));
 
-    QThread *t2 = QThread::create(&Brennand::CriaRobo, ref(*w), &s2, 2);
-    t2->start();
+    QThread *robo1 = QThread::create(&Brennand::CriaRobo, ref(*brennand), &serial_signal, 1);
+    robo1->start();
 
-    QThread *t3 = QThread::create(&Brennand::CriaRobo, ref(*w), &s3, 3);
-    t3->start();
+    QThread *robo2 = QThread::create(&Brennand::CriaRobo, ref(*brennand), &serial_signal, 2);
+    robo2->start();
 
-    QThread *t4 = QThread::create(&Brennand::CriaRobo, ref(*w), &s4, 4);
-    t4->start();
+    QThread *robo3 = QThread::create(&Brennand::CriaRobo, ref(*brennand), &serial_signal, 3);
+    robo3->start();
 
-    QThread *t5 = QThread::create(&Brennand::InitProcura, ref(*w), &s5);
-    t5->start();
+    QThread *robo4 = QThread::create(&Brennand::CriaRobo, ref(*brennand), &serial_signal, 4);
+    robo4->start();
 
-    a.exec();
+    QThread *usb_search = QThread::create(&Brennand::InitProcura, ref(*brennand), &serial_signal);
+    usb_search->start();
+
+    app.exec();
+
     return 0;
 }
-
-
-
