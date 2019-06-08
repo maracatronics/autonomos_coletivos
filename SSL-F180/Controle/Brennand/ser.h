@@ -11,7 +11,7 @@ public:
     ser();
 
 signals:
-    void transmitindo();
+    void transmitindo(int);
     void procurando();
 };
 

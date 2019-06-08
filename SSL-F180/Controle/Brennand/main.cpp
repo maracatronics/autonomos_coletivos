@@ -19,21 +19,11 @@ int main(int argc, char *argv[]){
     w->show();
     ser s1,s2,s3,s4,s5;
 
-
-    QSignalMapper* signalMapper = new QSignalMapper ();
-
-    QObject::connect(&s1, SIGNAL(transmitindo()), signalMapper, SLOT(map()));
-    QObject::connect(&s2, SIGNAL(transmitindo()), signalMapper, SLOT(map()));
-    QObject::connect(&s3, SIGNAL(transmitindo()), signalMapper, SLOT(map()));
-    QObject::connect(&s4, SIGNAL(transmitindo()), signalMapper, SLOT(map()));
+    QObject::connect(&s1, SIGNAL(transmitindo(int)), w, SLOT(enviaComando(int)));
+    QObject::connect(&s2, SIGNAL(transmitindo(int)), w, SLOT(enviaComando(int)));
+    QObject::connect(&s3, SIGNAL(transmitindo(int)), w, SLOT(enviaComando(int)));
+    QObject::connect(&s4, SIGNAL(transmitindo(int)), w, SLOT(enviaComando(int)));
     QObject::connect(&s5, SIGNAL(procurando()), w, SLOT(procurarPortas()));
-
-    signalMapper->setMapping(&s1, 1);
-    signalMapper->setMapping(&s2, 2);
-    signalMapper->setMapping(&s3, 3);
-    signalMapper->setMapping(&s4, 4);
-
-    QObject::connect(signalMapper, SIGNAL(mapped(int)), w, SLOT(enviaComando(int)));
 
     QThread *t1 = QThread::create(&Brennand::CriaRobo, ref(*w), &s1, 1);
     t1->start();

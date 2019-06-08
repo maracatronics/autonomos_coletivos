@@ -394,7 +394,7 @@ void Brennand::CriaRobo(ser *s, int check){
 
             if(timer_transmissao.hasExpired(TAXA_TRANSMISSAO) && checkboxes[check-1]){
 
-                emit s->transmitindo();
+                emit s->transmitindo(check);
 
                 startTime_transmissao = true;
             }
@@ -430,7 +430,7 @@ void Brennand::procurarPortas(){
 }
 
 void Brennand :: enviaComando(int i){
-
+    cout << "ID:" << i << endl;
     Robot robo(i);
     unsigned char val1=0,val2=0,val3=0,flag=0;
 
